@@ -1,0 +1,7 @@
+
+/** enforce a masonry tile layout  **/
+.organizer.standardContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
