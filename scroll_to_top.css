@@ -18,15 +18,15 @@
     /* display: none; */
     position: fixed;
     right: 20px;
-    z-index: 9999;
     will-change: scroll-position;
+    z-index: 9999;
 }
 
 .progressContainerWrapper {
-    position: fixed;
-    display: block;
     bottom: 0;
+    display: block;
     left: 0;
-    z-index: 1;
+    position: fixed;
     width: 100%;
+    z-index: 1;
 }
