@@ -14,8 +14,8 @@
 
 .backToTopLink {
     bottom: 40px;
-    display: block;
-    /* display: none; */
+    /* display: block; */
+    display: none;
     position: fixed;
     right: 20px;
     will-change: scroll-position;
@@ -24,7 +24,7 @@
 
 .progressContainerWrapper {
     bottom: 0;
-    display: block;
+    /* display: block; */
     left: 0;
     position: fixed;
     width: 100%;
