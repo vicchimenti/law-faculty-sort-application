@@ -5,3 +5,7 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
+.organizerTitle {
+    width: 100%;
+}
