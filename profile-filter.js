@@ -84,7 +84,7 @@
                         let typeKey = $(this).val();
                         // If Search Key is Not Null then Compare to the Type List Items in Each Content Item
                         if (typeKey) {
-                            $('.articleType').filter(function (i, e) {
+                            $('.status').filter(function (i, e) {
                                 var typeValue = $(this).text();
                                 // Check to see if the Key and Value are a Match
                                 if (typeValue.match(typeKey)) {
