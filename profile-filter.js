@@ -86,9 +86,14 @@
                         if (typeKey) {
                             $('.status').filter(function (i, e) {
                                 var typeValue = $(this).text();
-                                // Check to see if the Key and Value are a Match
-                                if (typeValue.match(typeKey)) {
-                                    $(this).parents('.facultyListItemWrapper').removeClass('hideByType');
+                                // Check to see if the Value is null
+                                if (typeValue != '') {
+                                    // Check to see if the Key and Value are a Match
+                                    if (typeValue.match(typeKey)) {
+                                        $(this).parents('.facultyListItemWrapper').removeClass('hideByType');
+                                    } else {
+                                        $(this).parents('.facultyListItemWrapper').addClass('hideByType');
+                                    }
                                 } else {
                                     $(this).parents('.facultyListItemWrapper').addClass('hideByType');
                                 }
