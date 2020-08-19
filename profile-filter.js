@@ -62,7 +62,7 @@
                         let keyword = $(this).val().toLowerCase();
                         // filter the education abroad items for the input key
                         $(function () {
-                            $('.knowledgeBaseItemWrapper').filter(function () {
+                            $('.facultyListItemWrapper').filter(function () {
                                 // when the search key is not present in the item then hide the item
                                 $(this).toggleClass('hideByText', !($(this).text().toLowerCase().indexOf(keyword) > -1));
                             });
@@ -88,14 +88,14 @@
                                 var typeValue = $(this).text();
                                 // Check to see if the Key and Value are a Match
                                 if (typeValue.match(typeKey)) {
-                                    $(this).parents('.knowledgeBaseItemWrapper').removeClass('hideByType');
+                                    $(this).parents('.facultyListItemWrapper').removeClass('hideByType');
                                 } else {
-                                    $(this).parents('.knowledgeBaseItemWrapper').addClass('hideByType');
+                                    $(this).parents('.facultyListItemWrapper').addClass('hideByType');
                                 }
                             });
                             // Else the Search Key is Null so Reset all Content Items to Visible
                         } else {
-                            $('.knowledgeBaseItemWrapper').removeClass('hideByType');
+                            $('.facultyListItemWrapper').removeClass('hideByType');
                         }
                         // parse out unselected content items and limit display to user selected items
                         parseItems.process();
