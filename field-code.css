@@ -1,0 +1,66 @@
+#pageTitle{
+  padding: 0 0 30px 0;
+}
+
+.noResultsToShow {
+    background: #e3e3da;
+    padding: 30px;
+    margin: 15px;
+}
+
+.summaryWrapper {
+    color: black;
+    display: block;
+    font-size: 1.5rem;
+    line-height: 20px;
+    min-height: 225px;
+    margin-bottom: 30px;
+    padding: 0 20px 20px 10px;
+    text-align: left;
+    text-decoration: none;
+}
+
+figure.programImageWrapper {
+    border: 1px solid #999;
+    /* display: inline-block; */
+    float: right;
+    height: auto;
+    margin: 0 0 10px 20px;
+    max-width: 50%;
+}
+
+figure img.programImage {
+    max-height: 225px;
+    padding: 15px 15px 10px 15px;
+    vertical-align: top;
+}
+
+figure figcaption.programImageCaption {
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+@media (max-width: 338px) {
+    figure figcaption.programImageCaption {
+        font-size: x-small;
+    }
+}
+
+@media (max-width: 256px) {
+    figure figcaption.programImageCaption {
+        font-size: xx-small;
+    }
+}
+
+@media (max-width:767.999px) {
+    figure.programImageWrapper {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+}
+
+/**  filter-search hidden classes  **/
+.hideByText, .hideByType, .hideResultsMessage {
+    display: none;
+}
