@@ -69,9 +69,16 @@
 
             <img src="<t4 type='content' name='Photo' output='imageurl' />"
                 alt="Photo of <t4 type='content' name='First Name' output='normal' modifiers='htmlentities' /> <t4 type='content' name='Last Name' output='normal' modifiers='htmlentities' />" />
-                
+
             <div class="clearfix"></div>
         </div>
+
+                    <!-- Media Library Image -->
+                    <div class="facultyListItemPhoto1">
+                        <t4 type="content" name="Profile Pic" output="selective-output" process-format="true"
+                            format="<div class=&quot;facultyPhoto&quot;>$value</div>" formatter="image/*"
+                            alt="Photo of<t4 type='content' name='First Name' output='normal' modifiers='htmlentities' /><t4 type='content' name='Last Name' output='normal' modifiers='htmlentities' />" />
+                    </div>
 
 
         <div class="clearfix"></div>
