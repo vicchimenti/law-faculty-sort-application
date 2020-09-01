@@ -4,6 +4,8 @@
     <a href="<t4 type='content' name='Name' output='fulltext' use-element='true' filename-element='Name' modifiers='htmlentities' />"
         title="Biography of <t4 type='content' name='First Name' output='normal' modifiers='htmlentities' /> <t4 type='content' name='Last Name' output='normal' modifiers='htmlentities' />">
         <div class="facultyListItem standardContent">
+
+
             <!-- External Image -->
             <div class="facultyListItemPhoto"
                 style="xbackground-image:url(<t4 type='content' name='Photo' output='imageurl' />);">
@@ -15,7 +17,13 @@
 
             <!-- Media Library Image -->
             <div class="facultyListItemPhoto1">
-                <t4 type="content" name="Profile Pic" output="selective-output" process-format="true" format="<div class=&quot;contactBoxPhoto&quot;>$value</div>" formatter="image/*" />
+                <t4 type="content"
+                    name="Profile Pic"
+                    output="selective-output"
+                    process-format="true"
+                    format="<div class=&quot;facultyPhoto&quot;>$value</div>"
+                    formatter="image/*"
+                    alt="Photo of<t4 type='content' name='First Name' output='normal' modifiers='htmlentities' /><t4 type='content' name='Last Name' output='normal' modifiers='htmlentities' />" />
             </div>
 
 
