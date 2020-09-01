@@ -1,0 +1,47 @@
+<div class="contactBoxWrapper contentItem contactBoxColor<t4 type='content' name='Color' output='normal' display_field='value' /> noGap"
+    id="id<t4 type='meta' meta='content_id' />" data-position-default="ZoneA" data-position-selected="<t4 type='content' name='Zone Option' output='normal' display_field='value' />">
+    <t4 type="meta" meta="html_anchor" />
+    <t4 type="content" name="Box Heading" output="selective-output" modifiers="striptags,htmlentities" format="<h2 class=&quot;contactBoxTitle&quot;>$value</h2>"
+    />
+
+    <div class="contactBoxes" data-box-shown='show1<t4 type="content" name="Contact Person #2 - Name" output="selective-output" modifiers="striptags,htmlentities" format="-show2" /><t4 type="content" name="Contact Person #3 - Name" output="selective-output" modifiers="striptags,htmlentities" format="-show3" />'>
+
+
+        <div class="contactBox contactBox1">
+            <t4 type="content" name="Contact Person #1 - Photo" output="selective-output" process-format="true" format="<div class=&quot;contactBoxPhoto&quot;>$value</div>"
+                formatter="image/*" />
+            <div class="contactBoxInfo">
+                <h3>
+                    <t4 type="content" name="Contact Person #1 - Name" output="normal" modifiers="striptags,htmlentities" />
+                </h3>
+                <t4 type="content" name="Contact Person #1 - Title" output="selective-output" modifiers="striptags,htmlentities" format='<p class="contactBoxInfoPosition">$value</p>'
+                />
+                <t4 type="content" name="Contact Person #1 - Phone" output="selective-output" modifiers="striptags,htmlentities" format='<p class="contactBoxInfoPhone">$value</p>'
+                />
+                <t4 type="content" name="Contact Person #1 - Email" output="selective-output" modifiers="striptags,htmlentities" format='<p class="contactBoxInfoEmail"><a href="mailto:$value" aria-label="Send an e-mail">$value</a></p>'
+                />
+            </div>
+        </div>
+
+        <t4 type="content" name="Contact Person #2 - Name" output="selective-output" process-format="true" format="    <div class=&quot;contactBox contactBox2&quot;>
+      <t4 type=&quot;content&quot; name=&quot;Contact Person #2 - Photo&quot; output=&quot;selective-output&quot; process-format=&quot;true&quot; format=&quot;<div class='contactBoxPhoto'>$value</div>&quot; formatter=&quot;image/*&quot; />    
+      <div class=&quot;contactBoxInfo&quot;>
+        <h3><t4 type=&quot;content&quot; name=&quot;Contact Person #2 - Name&quot; output=&quot;normal&quot; modifiers=&quot;striptags,htmlentities&quot; /></h3>
+        <t4 type=&quot;content&quot; name=&quot;Contact Person #2 - Title&quot; output=&quot;selective-output&quot; modifiers=&quot;striptags,htmlentities&quot; format='<p class=&quot;contactBoxInfoPosition&quot;>$value</p>' />
+        <t4 type=&quot;content&quot; name=&quot;Contact Person #2 - Phone&quot; output=&quot;selective-output&quot; modifiers=&quot;striptags,htmlentities&quot; format='<p class=&quot;contactBoxInfoPhone&quot;>$value</p>' />
+        <t4 type=&quot;content&quot; name=&quot;Contact Person #2 - Email&quot; output=&quot;selective-output&quot; modifiers=&quot;striptags,htmlentities&quot; format='<p class=&quot;contactBoxInfoEmail&quot;><a href=&quot;mailto:$value&quot; aria-label=&quot;Send an e-mail&quot;>$value</a></p>' />
+      </div>
+    </div>" />
+
+        <t4 type="content" name="Contact Person #3 - Name" output="selective-output" process-format="true" format="    <div class=&quot;contactBox contactBox3&quot;>
+      <t4 type=&quot;content&quot; name=&quot;Contact Person #3 - Photo&quot; output=&quot;selective-output&quot; process-format=&quot;true&quot; format=&quot;<div class='contactBoxPhoto'>$value</div>&quot; formatter=&quot;image/*&quot; />    
+      <div class=&quot;contactBoxInfo&quot;>
+        <h3><t4 type=&quot;content&quot; name=&quot;Contact Person #3 - Name&quot; output=&quot;normal&quot; modifiers=&quot;striptags,htmlentities&quot; /></h3>
+        <t4 type=&quot;content&quot; name=&quot;Contact Person #3 - Title&quot; output=&quot;selective-output&quot; modifiers=&quot;striptags,htmlentities&quot; format='<p class=&quot;contactBoxInfoPosition&quot;>$value</p>' />
+        <t4 type=&quot;content&quot; name=&quot;Contact Person #3 - Phone&quot; output=&quot;selective-output&quot; modifiers=&quot;striptags,htmlentities&quot; format='<p class=&quot;contactBoxInfoPhone&quot;>$value</p>' />
+        <t4 type=&quot;content&quot; name=&quot;Contact Person #3 - Email&quot; output=&quot;selective-output&quot; modifiers=&quot;striptags,htmlentities&quot; format='<p class=&quot;contactBoxInfoEmail&quot;><a href=&quot;mailto:$value&quot; aria-label=&quot;Send an e-mail&quot;>$value</a></p>' />
+      </div>
+    </div>" />
+        <div class="clearfix"></div>
+    </div>
+</div>
