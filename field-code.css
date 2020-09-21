@@ -21,6 +21,10 @@ input[type="radio"].form-check-input {
     justify-content: space-evenly;
 }
 
+.form-check-inline:hover {
+    text-decoration: underline;
+}
+
 div#filterForm {
     padding-top: 1rem;
 }
