@@ -18,6 +18,10 @@ input[type="radio"].form-check-input {
     justify-content: space-evenly;
 }
 
+div#filterForm {
+    padding-top: 1rem;
+}
+
 .summaryWrapper {
     color: black;
     display: block;
