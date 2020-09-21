@@ -22,6 +22,10 @@ div#filterForm {
     padding-top: 1rem;
 }
 
+div.col-xs-12.form-group.form-inline#keystroke_field {
+    float: right;
+}
+
 .summaryWrapper {
     color: black;
     display: block;
