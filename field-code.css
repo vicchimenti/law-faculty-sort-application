@@ -16,6 +16,8 @@ input[type="radio"].form-check-input {
     color: #AA0000;
     display: flex;
     flex-wrap: wrap;
+    font-size: medium;
+    font-weight: 500;
     justify-content: space-evenly;
 }
 
