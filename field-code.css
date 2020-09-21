@@ -8,8 +8,14 @@
     margin: 15px;
 }
 
-.form-check-input input[type="radio"] {
+input[type="radio"].form-check-input {
     display: none;
+}
+
+.form-check-inline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .summaryWrapper {
