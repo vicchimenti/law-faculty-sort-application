@@ -4,14 +4,19 @@
         <fieldset for="facultyFilter">
     
             <div class="col-xs-12 form-group form-inline">
-                <label for="keystroke_filter" class="col-sm-2 col-form-label">Keyword Search</label>
-                <input type="text" class="form-control-sm" name="facultyScan" value="" id="keystroke_filter"
-                    placeholder="Filter Instantly" autofocus aria-label="Filter Faculty" />
+                <label for="keystroke_filter" class="col-form-label">Keyword Search</label>
+                <input  type="text"
+                        class="form-control-sm"
+                        name="facultyScan"
+                        value=""
+                        id="keystroke_filter"
+                        placeholder="Filter Instantly"
+                        autofocus aria-label="Filter Faculty" />
             </div>
     
     
             <div class="col-xs-12 form-group form-check">
-                <div class="form-row">
+                <div class="form-row" id="radioLegend">
                     <legend for="SelectBox-ByType">Faculty Categories</legend>
                 </div>
     
@@ -25,15 +30,15 @@
                     <input type="radio" class="form-check-input" name="SelectBox-ByType" id="Emeriti" value="Emeriti" />
                     <label for="Emeriti" class="form-check-label">Emeriti</label>
     
-                    <input type="radio" class="form-check-input" name="SelectBox-ByType" id="Visiting/Affiliated"
-                        value="Visiting/Affiliated" />
+                    <input type="radio" class="form-check-input" name="SelectBox-ByType" id="Visiting/Affiliated" value="Visiting/Affiliated" />
                     <label for="Visiting/Affiliated" class="form-check-label">Visiting/Affiliated</label>
     
                     <input type="radio" class="form-check-input" name="SelectBox-ByType" id="Adjunct" value="Adjunct" />
                     <label for="Adjunct" class="form-check-label">Adjunct</label>
                 </div>
-    
             </div>
+
+
         </fieldset>
     </form>
 </div>
