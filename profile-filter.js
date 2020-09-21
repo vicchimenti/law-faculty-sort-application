@@ -2,9 +2,6 @@
 /***
 *   @author Victor Chimenti, MSCS-SE '20
 *   @file profile-filter.js
-*   @see UCOR, UNIVERSITY CORE CURRICULUM, https://www.seattleu.edu/core/for-students/courses/
-*   as an example of this filter engine
-*   This URI will change after launch to to suit the host department
 *
 *   jQuery
 *   This script searches the Law School faculty profile content items for matches to the
@@ -86,17 +83,17 @@
                         if (typeKey) {
                             $('.status').filter(function (i, e) {
                                 var typeValue = $(this).text();
-                                // Check to see if the Value is null
-                                if (typeValue != '') {
-                                    // Check to see if the Key and Value are a Match
-                                    if (typeValue.match(typeKey)) {
-                                        $(this).parents('.facultyListItemWrapper').removeClass('hideByType');
-                                    } else {
-                                        $(this).parents('.facultyListItemWrapper').addClass('hideByType');
-                                    }
+                                // // Check to see if the Value is null
+                                // if (typeValue != '') {
+                                // Check to see if the Key and Value are a Match
+                                if (typeValue.match(typeKey)) {
+                                    $(this).parents('.facultyListItemWrapper').removeClass('hideByType');
                                 } else {
                                     $(this).parents('.facultyListItemWrapper').addClass('hideByType');
                                 }
+                                // } else {
+                                //     $(this).parents('.facultyListItemWrapper').addClass('hideByType');
+                                // }
                             });
                             // Else the Search Key is Null so Reset all Content Items to Visible
                         } else {
@@ -108,5 +105,32 @@
                 });
             }, 10);
         });
-});
+    });
 </script>
+
+
+                // //   ***   Type Filter   ***   //
+                // $(function () {
+                //     // When the Dropdown Menu Selector Course Types Change - Execute change function
+                //     $('#SelectBox-ByType').change(function () {
+                //         // Assign Search Key
+                //         let typeKey = $(this).val();
+                //         // If Search Key is Not Null then Compare to the Type List Items in Each Content Item
+                //         if (typeKey) {
+                //             $('.articleType').filter(function (i, e) {
+                //                 var typeValue = $(this).text();
+                //                 // Check to see if the Key and Value are a Match
+                //                 if (typeValue.match(typeKey)) {
+                //                     $(this).parents('.knowledgeBaseItemWrapper').removeClass('hideByType');
+                //                 } else {
+                //                     $(this).parents('.knowledgeBaseItemWrapper').addClass('hideByType');
+                //                 }
+                //             });
+                //             // Else the Search Key is Null so Reset all Content Items to Visible
+                //         } else {
+                //             $('.knowledgeBaseItemWrapper').removeClass('hideByType');
+                //         }
+                //         // parse out unselected content items and limit display to user selected items
+                //         parseItems.process();
+                //     });
+                // });
