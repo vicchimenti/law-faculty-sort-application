@@ -2,7 +2,7 @@
     <!-- Search Field -->
     <fieldset for="facultyFilter">
 
-        <div class="col-xs-12 col-md-6 form-group">
+        <div class="col-xs-12 form-group">
             <label for="keystroke_filter">Keyword Search</label>
             <input type="text" class="form-control" name="facultyScan" value="" id="keystroke_filter"
                 placeholder="Filter Instantly" autofocus aria-label="Filter Faculty" />
@@ -12,8 +12,97 @@
             Option Values Need to be Converted to a List that the Content Items Pull From as values below will become inconsistent over time
          -->
          
-        <div class="col-xs-12 col-md-6 form-group">
-            <label for="SelectBox-ByType">Categories</label>
+        <div class="col-xs-12 form-group">
+            <legend for="SelectBox-ByType">Categories</legend>
+
+            <input type="checkbox" name="SelectBox-ByType" id="View All" value="View All" />
+            <label for="View All">View All</label>
+
+            <input type="checkbox" name="SelectBox-ByType" id="Career" value="Career" />
+            <label for="Career">Career</label>
+
+            <input type="checkbox" name="SelectBox-ByType" id="Emeriti" value="Emeriti" />
+            <label for="Emeriti">Emeriti</label>
+
+            <input type="checkbox" name="SelectBox-ByType" id="Visiting/Affiliated" value="Visiting/Affiliated" />
+            <label for="Visiting/Affiliated">Visiting/Affiliated</label>
+
+            <input type="checkbox" name="SelectBox-ByType" id="Adjunct" value="Adjunct" />
+            <label for="Adjunct">Adjunct</label>
+
+        </div>
+    </fieldset>
+</form>
+
+<!-- <form action="#" id="articleFilter"> -->
+    <!-- Search Field -->
+    <!-- <fieldset for="articleFilter">
+
+
+
+        <div class="col-xs-12 form-group">
+            <label for="keystroke_filter">Filter Articles</label>
+            <input type="text" class="form-control" name="articleScan" value="" id="keystroke_filter"
+                placeholder="Search" autofocus aria-label="Filter Articles" />
+        </div> -->
+
+
+
+        <!-- Search By Type -->
+        <!-- <div class="col-xs-12 form-group" id="SelectBox-ByType">
+            <legend for="SelectBox-ByType">Categories</legend>
+
+            <input type="checkbox" name="SelectBox-ByType" id="Resume Building" value="Resume Building" />
+            <label for="Resume Building">Resume Building</label><br />
+
+            <input type="checkbox" name="SelectBox-ByType" id="Cover Letter Writing" value="Cover Letter Writing" />
+            <label for="Cover Letter Writing">Cover Letter Writing</label><br />
+
+            <input type="checkbox" name="SelectBox-ByType" id="Career Exploration" value="Career Exploration" />
+            <label for="Career Exploration">Career Exploration</label><br />
+
+            <input type="checkbox" name="SelectBox-ByType" id="Job & Internship Search"
+                value="Job & Internship Search" />
+            <label for="Job & Internship Search">Job & Internship Search</label><br />
+
+            <input type="checkbox" name="SelectBox-ByType" id="Interview Preparation" value="Interview Preparation" />
+            <label for="Interview Preparation">Interview Preparation</label><br />
+
+            <input type="checkbox" name="SelectBox-ByType" id="Graduate School Preparation"
+                value="Graduate School Preparation" />
+            <label for="Graduate School Preparation">Graduate School Preparation</label><br />
+
+            <input type="checkbox" name="SelectBox-ByType" id="Using Online Career Resources"
+                value="Using Online Career Resources" />
+            <label for="Using Online Career Resources">Using Online Career Resources</label><br />
+
+            <input type="checkbox" name="SelectBox-ByType" id="Networking & Community Building"
+                value="Networking & Community Building" />
+            <label for="Networking & Community Building">Networking & Community Building</label><br />
+
+            <input type="checkbox" name="SelectBox-ByType" id="Internships & Experiential Learning"
+                value="Internships & Experiential Learning" />
+            <label for="Internships & Experiential Learning">Internships & Experiential Learning</label><br />
+
+            <input type="checkbox" name="SelectBox-ByType" id="Evaluating Opportunities & Negotiation"
+                value="Evaluating Opportunities & Negotiation" />
+            <label for="Evaluating Opportunities & Negotiation">Evaluating Opportunities & Negotiation</label><br />
+
+            <input type="checkbox" name="SelectBox-ByType" id="Identity & Inclusion" value="Identity & Inclusion" />
+            <label for="Identity & Inclusion">Identity & Inclusion</label><br />
+
+            <input type="checkbox" name="SelectBox-ByType" id="Alumni/Being a New Professional"
+                value="Alumni/Being a New Professional" />
+            <label for="Alumni/Being a New Professional">Alumni/Being a New Professional</label><br />
+
+        </div>
+
+
+
+    </fieldset>
+</form>
+
+
             <div class="select-input">
                 <select name="SelectBox-ByType" id="SelectBox-ByType">
                     <option value="" selected>Select a Category...</option>
@@ -22,7 +111,4 @@
                     <option value="Visiting/Affiliated">Visiting/Affiliated</option>
                     <option value="Adjunct">Adjunct</option>
                 </select>
-            </div>
-        </div>
-    </fieldset>
-</form>
+            </div> -->
