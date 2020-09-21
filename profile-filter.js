@@ -20,6 +20,8 @@
         $(window).load(function () {
             // Once window loads set a timeout delay
             setTimeout(function () {
+                console.log("timeout function");
+
 
 
 
@@ -79,10 +81,13 @@
                     $('#SelectBox-ByType').change(function () {
                         // Assign Search Key
                         let typeKey = $(this).val();
+                        console.log("typeKey: " + typeKey);
                         // If Search Key is Not Null then Compare to the Type List Items in Each Content Item
                         if (typeKey) {
                             $('.status').filter(function (i, e) {
                                 var typeValue = $(this).text();
+                                console.log("typeValue: " + typeValue);
+
                                 // // Check to see if the Value is null
                                 // if (typeValue != '') {
                                 // Check to see if the Key and Value are a Match
