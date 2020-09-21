@@ -26,6 +26,10 @@ div.col-xs-12.form-group.form-inline#keystroke_field {
     float: right;
 }
 
+div#radioLegend {
+    display: none;
+}
+
 .summaryWrapper {
     color: black;
     display: block;
