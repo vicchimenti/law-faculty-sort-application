@@ -87,18 +87,12 @@
                             $('.status').filter(function (i, e) {
                                 var typeValue = $(this).text();
                                 console.log("typeValue: " + typeValue);
-
-                                // // Check to see if the Value is null
-                                // if (typeValue != '') {
                                 // Check to see if the Key and Value are a Match
                                 if (typeValue.match(typeKey)) {
                                     $(this).parents('.facultyListItemWrapper').removeClass('hideByType');
                                 } else {
                                     $(this).parents('.facultyListItemWrapper').addClass('hideByType');
                                 }
-                                // } else {
-                                //     $(this).parents('.facultyListItemWrapper').addClass('hideByType');
-                                // }
                             });
                             // Else the Search Key is Null so Reset all Content Items to Visible
                         } else {
@@ -108,6 +102,10 @@
                         parseItems.process();
                     });
                 });
+
+
+
+
             }, 10);
         });
     });
@@ -139,3 +137,12 @@
                 //         parseItems.process();
                 //     });
                 // });
+
+
+
+                                                // // Check to see if the Value is null
+                                // if (typeValue != '') {
+
+                                                // } else {
+                                //     $(this).parents('.facultyListItemWrapper').addClass('hideByType');
+                                // }
