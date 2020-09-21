@@ -30,6 +30,10 @@ div#radioLegend {
     display: none;
 }
 
+#keywordLabel {
+    display: none;
+}
+
 .summaryWrapper {
     color: black;
     display: block;
