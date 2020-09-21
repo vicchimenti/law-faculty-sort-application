@@ -13,6 +13,7 @@ input[type="radio"].form-check-input {
 }
 
 .form-check-inline {
+    color: #AA0000;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -22,16 +23,16 @@ div#filterForm {
     padding-top: 1rem;
 }
 
-div.col-xs-12.form-group.form-inline#keystroke_field {
-    float: right;
-}
-
 div#radioLegend {
     display: none;
 }
 
 #keywordLabel {
     display: none;
+}
+
+div#keystroke_field {
+    padding: 0;
 }
 
 .summaryWrapper {
