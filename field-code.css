@@ -21,7 +21,11 @@ input[type="radio"].form-check-input {
     justify-content: space-evenly;
 }
 
-.form-check-inline:hover {
+.form-check-label {
+    font-weight: 500;
+}
+
+.form-check-label:hover {
     text-decoration: underline;
 }
 
