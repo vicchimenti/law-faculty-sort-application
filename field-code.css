@@ -8,6 +8,10 @@
     margin: 15px;
 }
 
+.form-check-input input[type="radio"] {
+    display: none;
+}
+
 .summaryWrapper {
     color: black;
     display: block;
