@@ -78,7 +78,7 @@
                 //   ***   Type Filter   ***   //
                 $(function () {
                     // When the Dropdown Menu Selector Course Types Change - Execute change function
-                    $('#SelectBox-ByType:radio').change(function () {
+                    $('form input:radio').change(function () {
                         // Assign Search Key
                         let typeKey = $(this).val();
                         console.log("typeKey: " + typeKey);
@@ -112,6 +112,8 @@
 </script>
 
 
+
+// #SelectBox - ByType
                 // //   ***   Type Filter   ***   //
                 // $(function () {
                 //     // When the Dropdown Menu Selector Course Types Change - Execute change function
