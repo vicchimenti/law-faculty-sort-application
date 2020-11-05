@@ -81,7 +81,7 @@
                     $('form input:radio').change(function () {
                         // Assign Search Key
                         let typeKey = $(this).val();
-                        let viewAll = "View All";
+                        let viewAll = "All";
                         console.log("typeKey: " + typeKey);
                         // If Search Key is Not Null then Compare to the Type List Items in Each Content Item
                         if (typeKey != viewAll) {
