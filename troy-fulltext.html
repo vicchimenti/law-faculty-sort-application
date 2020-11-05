@@ -82,26 +82,32 @@
                 <div class="facultyProfileMiddle">
                     <div class="standardContent">
 
-
                         <div class="facultyProfileSidebar col-xs-12 col-md-4 col-md-push-8">
 
-                            <t4 type="content" name="Education" output="selective-output" process-format="true"
-                                format="<h3>EDUCATION</h3><p>$value</p>" modifiers="nav_sections" />
+                            <div class="primary-profile-sidebar">
 
-                            <t4 type="content" name="Specialization" output="selective-output"
-                                modifiers="medialibrary,nav_sections" process-format="true"
-                                format="<h3>SPECIALIZATION</h3><p><t4 type=&quot;content&quot; name=&quot;Specialization&quot; output=&quot;normal&quot; modifiers=&quot;medialibrary,nav_sections&quot; /></p>" />
+                                <t4 type="content" name="Areas of Expertise" output="selective-output"
+                                    modifiers="medialibrary,nav_sections" process-format="true"
+                                    format="<h3>AREAS OF EXPERTISE</h3><t4 type=&quot;content&quot; name=&quot;Areas of Expertise&quot; output=&quot;normal&quot; modifiers=&quot;medialibrary,nav_sections&quot; />" />
 
-                            <t4 type="content" name="External Affiliations" output="selective-output"
-                                process-format="true"
-                                format="<h3>EXTERNAL AFFILIATIONS</h3><p><t4 type=&quot;content&quot; name=&quot;External Affiliations&quot; output=&quot;normal&quot; modifiers=&quot;striptags,htmlentities&quot; /></p>"
-                                modifiers="nav_sections" />
+                            </div> <!-- end .primary-profile-sidebar -->
 
-                            <t4 type="content" name="Courses" output="selective-output"
-                                modifiers="medialibrary,nav_sections" process-format="true"
-                                format="<h3>COURSES</h3><p><t4 type=&quot;content&quot; name=&quot;Courses&quot; output=&quot;normal&quot; modifiers=&quot;medialibrary,nav_sections&quot; /></p>" />
+                            <div class="secondary-profile-sidebar">
 
-                        </div>
+                                <t4 type="content" name="Education" output="selective-output" process-format="true"
+                                    format="<h3>EDUCATION</h3>$value" modifiers="nav_sections" />
+
+                                <t4 type="content" name="Affiliations" output="selective-output"
+                                    modifiers="medialibrary,nav_sections" process-format="true"
+                                    format="<h3>AFFILIATIONS</h3><t4 type=&quot;content&quot; name=&quot;Affiliations&quot; output=&quot;normal&quot; modifiers=&quot;medialibrary,nav_sections&quot; />" />
+
+                                <t4 type="content" name="Courses" output="selective-output"
+                                    modifiers="medialibrary,nav_sections" process-format="true"
+                                    format="<h3>COURSES</h3><t4 type=&quot;content&quot; name=&quot;Courses&quot; output=&quot;normal&quot; modifiers=&quot;medialibrary,nav_sections&quot; />" />
+
+                            </div> <!-- end .secondary-profile-sidebar -->
+
+                        </div> <!-- end .facultyProfileSidebar -->
 
 
                         <div class="facultyProfileBiography col-xs-12 col-md-8 col-md-pull-4">
@@ -113,23 +119,23 @@
 
 
                         <div class="clearfix"></div>
-                    </div>
+                    </div> <!-- end .standardcontent -->
                     <div class="clearfix"></div>
                 </div> <!-- facultyProfileMiddle -->
 
 
                 <div class="facultyProfileBottom standardContent col-xs-12 col-md-8">
 
-                    <t4 type="content" name="Scholarly Works" output="selective-output"
+                    <t4 type="content" name="Publications" output="selective-output"
                         modifiers="medialibrary,nav_sections" process-format="true"
-                        format="<h2>Scholarly Works</h2><p><t4 type=&quot;content&quot; name=&quot;Scholarly Works&quot; output=&quot;normal&quot; modifiers=&quot;medialibrary,nav_sections&quot; /></p>" />
+                        format="<h2>Publications</h2><t4 type=&quot;content&quot; name=&quot;Publications&quot; output=&quot;normal&quot; modifiers=&quot;medialibrary,nav_sections&quot; />" />
 
 
                     <div class="facultyProfilePopularMedia">
 
-                        <t4 type="content" name="Popular Media" output="selective-output"
+                        <t4 type="content" name="Activity" output="selective-output"
                             modifiers="medialibrary,nav_sections" process-format="true"
-                            format="<h2>Popular Media</h2><p><t4 type=&quot;content&quot; name=&quot;Popular Media&quot; output=&quot;normal&quot; modifiers=&quot;medialibrary,nav_sections&quot; /></p>" />
+                            format="<h2>Activity</h2><t4 type=&quot;content&quot; name=&quot;Activity&quot; output=&quot;normal&quot; modifiers=&quot;medialibrary,nav_sections&quot; />" />
 
                         <t4 type="navigation" name="School of Law Faculty News" id="681" />
 
