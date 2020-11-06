@@ -44,11 +44,21 @@
                         output="selective-output"
                         format="<br><span class=&quot;status&quot;>$value</span>" />
 
-                    <t4 type="content"
+
+                    <br><span class=&quot;email&quot;>
+                        <a href="mailto:<t4 type='content' name='Email' output='normal' modifiers='striptags' />">
+                            <t4 type="content" name="Email" output="normal" modifiers="striptags" />
+                        </a>
+                    </span>
+                    
+
+                    <!-- <t4 type="content"
                         name="Email"
                         output="selective-output"
                         modifiers="encode_emails"
                         format="<br><span class=&quot;email&quot;>$value</span>" />
+                            <a href="mailto:m.bluth@example.com">Email</a> -->
+
 
                 </p>
 
@@ -57,5 +67,6 @@
             </div>
         </div>
     </a>
+
     <div class="clearfix"></div>
 </div>
