@@ -9,3 +9,7 @@
 .organizerTitle {
     width: 100%;
 }
+
+span.hiddenSearchText {
+    display: none;
+}
