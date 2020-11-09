@@ -50,3 +50,45 @@ div.hiddenSearchText {
 span.hiddenSearchText {
     display: none;
 }
+
+
+
+/* begin troy */
+
+
+.facultyPhoto img {
+    border-radius: 50%;
+}
+
+#facultyFilter .form-check-label {
+    font-size: 2rem;
+    color: #333333;
+    text-transform: uppercase;
+}
+
+form#facultyFilter {
+    padding-top: 3vh;
+}
+
+.form-check-inline {
+    margin-top: 1vh;
+}
+
+@media (min-width: 768px) {
+    /* START - Faculty landing radio labels */
+	#facultyFilter .form-check-inline {
+	     justify-content: center;
+	}
+  
+	#facultyFilter label::after {
+	     content: "|";
+	     padding-left: 20px;
+	     padding-right: 20px;
+	}
+  
+	#facultyFilter label:last-child::after {
+		content: "";
+	}
+	/* END - Faculty landing radio labels */ 
+}
+
