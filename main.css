@@ -74,21 +74,21 @@ form#facultyFilter {
     margin-top: 1vh;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) { */
     /* START - Faculty landing radio labels */
-	#facultyFilter .form-check-inline {
+	/* #facultyFilter .form-check-inline {
 	     justify-content: center;
-	}
+	} */
   
-	#facultyFilter label::after {
+	/* #facultyFilter label::after {
 	     content: "|";
 	     padding-left: 20px;
 	     padding-right: 20px;
-	}
+	} */
   
-	#facultyFilter label:last-child::after {
+	/* #facultyFilter label:last-child::after {
 		content: "";
-	}
+	} */
 	/* END - Faculty landing radio labels */ 
-}
+/* } */
 
