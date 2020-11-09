@@ -13,11 +13,8 @@ input[type="radio"].form-check-input {
 }
 
 .form-check-inline {
-    /* color: #000000; */
     display: flex;
     flex-wrap: wrap;
-    /* font-size: medium; */
-    /* font-weight: 500; */
     justify-content: space-evenly;
     font-size: 2rem;
     color: #333333;
