@@ -7190,23 +7190,23 @@ form#facultyFilter {
     }
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) { */
     /* START - Faculty landing radio labels */
-	#facultyFilter .form-check-inline {
+	/* #facultyFilter .form-check-inline {
 	     justify-content: center;
-	}
+	} */
   
-	#facultyFilter label::after {
+	/* #facultyFilter label::after {
 	     content: "|";
 	     padding-left: 20px;
 	     padding-right: 20px;
-	}
+	} */
   
-	#facultyFilter label:last-child::after {
+	/* #facultyFilter label:last-child::after {
 		content: "";
-	}
+	} */
 	/* END - Faculty landing radio labels */ 
-}
+/* } */
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: @screen-md-min) {
@@ -7219,11 +7219,11 @@ form#facultyFilter {
         text-align: center;
     }
   
-    .facultyProfileInfo {
+    /* .facultyProfileInfo {
         xtext-align: left;
         xjustify-content: left;
       xjustify-content: start;
-    }
+    } */
   
     .facultyProfileWrapper .facultyProfilePicture {
       xpadding: 10px;
