@@ -7,3 +7,4 @@ SeattleU School of Law
 -[] Page Load to Career instead of All
 -[] Masonry grid to two col cayout
 -[] Profile to horizontal card
+-[] Add bio and cv to hidden organizer fields
