@@ -13,13 +13,13 @@ div.facultyListItemWrapper {
    max-width: 467px;
 }
 
-/* div.facultyListItemPhoto {
-    float: left;
+.facultyListItem h3  {
+   /* color: #333333; */
+   font-family: Montserrat;
+   font-size: 2rem;
+   margin: 10px 0 0 0;
+   text-align: center;
 }
-
-div.facultyListItemText {
-    float: right;
-} */
 
 .organizerTitle {
     width: 100%;

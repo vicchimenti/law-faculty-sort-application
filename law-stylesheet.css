@@ -7068,12 +7068,12 @@ div#id977819 .organizer  {
    object-fit: cover;
 }
 
-.facultyListItem h3  {
+/* .facultyListItem h3  {
    color: #333333;
    font-family: Montserrat;
    font-size: 2rem;
    margin: 10px 0 0 0; 
-}
+} */
 
 .facultyListItemText p {
    font-size: 1.4rem;
