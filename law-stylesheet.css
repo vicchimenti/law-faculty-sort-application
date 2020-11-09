@@ -7023,12 +7023,13 @@ a:not([href]) {
    max-width: 233.5px;
 }
   
-
+/* 
 div#id977819 .organizer  {
    display: flex;
    flex-wrap: wrap;
    xjustify-content: center;
-}
+} */
+
 
 .facultyListItemWrapper a {
    display: block;
