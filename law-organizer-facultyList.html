@@ -4,10 +4,7 @@
 
     <t4 type="meta" meta="html_anchor" />
 
-    <a  href="<t4 type='content' name='Name' output='fulltext' use-element='true' filename-element='Name' modifiers='htmlentities' />"
-        class="facultyProfileCard"
-        title="Biography of <t4 type='content' name='First Name' output='normal' modifiers='htmlentities' />
-        <t4 type='content' name='Last Name' output='normal' modifiers='htmlentities' />">
+    <a  href="<t4 type='content' name='Name' output='fulltext' use-element='true' filename-element='Name' modifiers='htmlentities' />" title="Biography of <t4 type='content' name='First Name' output='normal' modifiers='htmlentities' /> <t4 type='content' name='Last Name' output='normal' modifiers='htmlentities' />">
         
         <div class="facultyListItem standardContent">
 
@@ -19,8 +16,7 @@
                     process-format="true"
                     format="<div class=&quot;facultyPhoto&quot;>$value</div>"
                     formatter="image/*"
-                    alt="Photo of   <t4 type='content' name='First Name' output='normal' modifiers='htmlentities' />
-                                    <t4 type='content' name='Last Name' output='normal' modifiers='htmlentities' />" />
+                    alt="Photo of   <t4 type='content' name='First Name' output='normal' modifiers='htmlentities' /> <t4 type='content' name='Last Name' output='normal' modifiers='htmlentities' />" />
             </div>
 
 
@@ -47,71 +43,70 @@
                         format="<br><span class=&quot;email&quot;>$value</span>" />
                 </p>
 
-
-                <!-- Full Text elements that are hidden but added to the document for keyword search functionality -->
-                <div class="hiddenSearchText">
-
-                    <t4 type="content"
-                        name="Biography"
-                        output="selective-output"
-                        modifiers="striptags"
-                        format="<span class=&quot;hiddenSearchText facultyBio&quot;>$value</span>" />
-
-                    <t4 type="content"
-                        name="Publications"
-                        output="selective-output"
-                        modifiers="striptags"
-                        format="<span class=&quot;hiddenSearchText&quot;>$value</span>" />
-
-                    <t4 type="content"
-                        name="SU Affiliations"
-                        output="selective-output"
-                        modifiers="striptags"
-                        format="<span class=&quot;hiddenSearchText&quot;>$value</span>" />
-
-                    <t4 type="content"
-                        name="Education"
-                        output="selective-output"
-                        modifiers="striptags"
-                        format="<span class=&quot;hiddenSearchText&quot;>$value</span>" />
-
-                    <t4 type="content"
-                        name="Areas of Expertise"
-                        output="selective-output"
-                        modifiers="striptags"
-                        format="<span class=&quot;hiddenSearchText&quot;>$value</span>" />
-
-                    <t4 type="content"
-                        name="Affiliations"
-                        output="selective-output"
-                        modifiers="striptags"
-                        format="<span class=&quot;hiddenSearchText&quot;>$value</span>" />
-
-                    <t4 type="content"
-                        name="Courses"
-                        output="selective-output"
-                        modifiers="striptags"
-                        format="<span class=&quot;hiddenSearchText&quot;>$value</span>" />
-
-                    <t4 type="content"
-                        name="Secondary Title"
-                        output="selective-output"
-                        modifiers="striptags"
-                        format="<br><span class=&quot;secondaryTitle hiddenSearchText&quot;>$value</span>" />
-                    
-                    <t4 type="content"
-                        name="Faculty Status"
-                        output="selective-output"
-                        modifiers="striptags"
-                        format="<br><span class=&quot;status hiddenSearchText&quot;>$value</span>" />
-
-                </div>
-
-            </div>
-
-            
-        </div>
+            </div>      
+        </div>        
     </a>
+
+
+    <!-- Full Text elements that are hidden but added to the document for keyword search functionality -->
+    <div class="hiddenSearchText">
+
+        <t4 type="content"
+            name="Biography"
+            output="selective-output"
+            modifiers="striptags"
+            format="<span class=&quot;hiddenSearchText facultyBio&quot;>$value</span>" />
+
+        <t4 type="content"
+            name="Publications"
+            output="selective-output"
+            modifiers="striptags"
+            format="<span class=&quot;hiddenSearchText&quot;>$value</span>" />
+
+        <t4 type="content"
+            name="SU Affiliations"
+            output="selective-output"
+            modifiers="striptags"
+            format="<span class=&quot;hiddenSearchText&quot;>$value</span>" />
+
+        <t4 type="content"
+            name="Education"
+            output="selective-output"
+            modifiers="striptags"
+            format="<span class=&quot;hiddenSearchText&quot;>$value</span>" />
+
+        <t4 type="content"
+            name="Areas of Expertise"
+            output="selective-output"
+            modifiers="striptags"
+            format="<span class=&quot;hiddenSearchText&quot;>$value</span>" />
+
+        <t4 type="content"
+            name="Affiliations"
+            output="selective-output"
+            modifiers="striptags"
+            format="<span class=&quot;hiddenSearchText&quot;>$value</span>" />
+
+        <t4 type="content"
+            name="Courses"
+            output="selective-output"
+            modifiers="striptags"
+            format="<span class=&quot;hiddenSearchText&quot;>$value</span>" />
+
+        <t4 type="content"
+            name="Secondary Title"
+            output="selective-output"
+            modifiers="striptags"
+            format="<br><span class=&quot;secondaryTitle hiddenSearchText&quot;>$value</span>" />
+        
+        <t4 type="content"
+            name="Faculty Status"
+            output="selective-output"
+            modifiers="striptags"
+            format="<br><span class=&quot;status hiddenSearchText&quot;>$value</span>" />
+
+    </div>
+
 
     <div class="clearfix"></div>
 </div>
