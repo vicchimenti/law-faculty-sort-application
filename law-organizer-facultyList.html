@@ -39,16 +39,6 @@
                         name="Primary Title"
                         output="selective-output"
                         format="<span class=&quot;primaryTitle&quot;>$value</span>" />
-
-                    <!-- <t4 type="content"
-                        name="Secondary Title"
-                        output="selective-output"
-                        format="<br><span class=&quot;secondaryTitle&quot;>$value</span>" />
-
-                    <t4 type="content"
-                        name="Faculty Status"
-                        output="selective-output"
-                        format="<br><span class=&quot;status&quot;>$value</span>" /> -->
                     
                     <t4 type="content"
                         name="Email"
@@ -102,6 +92,18 @@
                         output="selective-output"
                         modifiers="striptags"
                         format="<span class=&quot;hiddenSearchText&quot;>$value</span>" />
+
+                    <t4 type="content"
+                        name="Secondary Title"
+                        output="selective-output"
+                        modifiers="striptags"
+                        format="<br><span class=&quot;secondaryTitle hiddenSearchText&quot;>$value</span>" />
+                    
+                    <t4 type="content"
+                        name="Faculty Status"
+                        output="selective-output"
+                        modifiers="striptags"
+                        format="<br><span class=&quot;status hiddenSearchText&quot;>$value</span>" />
 
                 </div>
 
