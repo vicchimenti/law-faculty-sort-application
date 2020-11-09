@@ -13,6 +13,14 @@ div.facultyListItemWrapper {
    max-width: 467px;
 }
 
+div.facultyListItemPhoto {
+    float: left;
+}
+
+div.facultyListItemText {
+    float: right;
+}
+
 .organizerTitle {
     width: 100%;
 }
