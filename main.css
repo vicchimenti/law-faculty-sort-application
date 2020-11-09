@@ -67,7 +67,8 @@ span.hiddenSearchText {
 }
 
 #facultyFilter .form-check-inline {
-        justify-content: space-evenly;
+    justify-content: space-evenly;
+    width: 80%;
 }
 
 form#facultyFilter {
@@ -77,6 +78,8 @@ form#facultyFilter {
 .form-check-inline {
     margin-top: 1vh;
 }
+
+
 
 @media (max-width: 1200px) {
     #facultyFilter .form-check-label {
