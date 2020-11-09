@@ -10,6 +10,10 @@
     width: 100%;
 }
 
+div.hiddenSearchText {
+    display: none;
+}
+
 span.hiddenSearchText {
     display: none;
 }
