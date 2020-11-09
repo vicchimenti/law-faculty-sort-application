@@ -34,7 +34,8 @@ input[type="radio"].form-check-input {
 }
 
 div#filterForm {
-    padding-top: 1rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
 }
 
 div#radioLegend {
