@@ -66,6 +66,10 @@ span.hiddenSearchText {
     text-transform: uppercase;
 }
 
+#facultyFilter .form-check-inline {
+        justify-content: center;
+}
+
 form#facultyFilter {
     padding-top: 3vh;
 }
