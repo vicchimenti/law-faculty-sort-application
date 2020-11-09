@@ -6,6 +6,13 @@
     justify-content: center;
 }
 
+.facultyListItemWrapper {
+   flex: 1 1 calc(100% - 30px);
+   align-self: flex-start;
+   margin: 15px;
+   max-width: 467px;
+}
+
 .organizerTitle {
     width: 100%;
 }
