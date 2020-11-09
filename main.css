@@ -6,7 +6,7 @@
     justify-content: center;
 }
 
-.facultyListItemWrapper {
+div.facultyListItemWrapper {
    flex: 1 1 calc(100% - 30px);
    align-self: flex-start;
    margin: 15px;
