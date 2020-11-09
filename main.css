@@ -78,6 +78,16 @@ form#facultyFilter {
     margin-top: 1vh;
 }
 
+@media (max-width: 1200px) {
+    #facultyFilter .form-check-label {
+        font-size: 1.8rem;
+}
+
+@media (max-width: 992px) {
+    #facultyFilter .form-check-label {
+        font-size: 1.5rem;
+}
+
 
 @media (max-width: 768px) {
     #facultyFilter .form-check-label {
