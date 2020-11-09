@@ -67,7 +67,7 @@ span.hiddenSearchText {
 }
 
 #facultyFilter .form-check-inline {
-        justify-content: center;
+        justify-content: space-evenly;
 }
 
 form#facultyFilter {
