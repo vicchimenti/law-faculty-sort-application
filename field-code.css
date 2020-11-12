@@ -12,20 +12,18 @@ input[type="radio"].form-check-input {
     display: none;
 }
 
-/* .form-check-inline {
-    color: #333333;
+.form-check-inline {
     display: flex;
     flex-wrap: wrap;
-    font-size: 2rem;
-    font-weight: 500;
     justify-content: space-evenly;
+    font-size: 2rem;
+    color: #333333;
     text-transform: uppercase;
 }
 
 .form-check-label {
-    font-size: 2rem;
     font-weight: 500;
-} */
+}
 
 .form-check-label:hover {
     cursor: pointer;
@@ -62,18 +60,12 @@ input#keystroke_filter {
 
 
 #facultyFilter .form-check-label {
-    color: #333333;
-    display: flex;
-    flex-wrap: wrap;
     font-size: 2rem;
-    font-weight: 500;
-    justify-content: space-evenly;
+    color: #333333;
     text-transform: uppercase;
 }
 
 #facultyFilter .form-check-inline {
-    font-size: 2rem;
-    font-weight: 500;
     justify-content: space-evenly;
     margin-left: 3rem;
     margin-right: 3rem;
@@ -88,6 +80,9 @@ form#facultyFilter {
 .form-check-inline {
     margin-top: 1vh;
 }
+
+
+
 
 
 
