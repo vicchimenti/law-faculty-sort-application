@@ -2,12 +2,6 @@
   padding: 0 0 30px 0;
 }
 
-.noResultsToShow {
-    background: #e3e3da;
-    padding: 30px;
-    margin: 15px;
-}
-
 input[type="radio"].form-check-input {
     display: none;
 }
@@ -29,35 +23,6 @@ input[type="radio"].form-check-input {
     cursor: pointer;
     text-decoration: underline;
 }
-
-
-
-div#filterForm {
-    margin-right: 1rem;
-    margin-left: 1rem;
-}
-
-div#radioLegend {
-    display: none;
-}
-
-#keywordLabel {
-    display: none;
-}
-
-div#keystroke_field {
-    padding: 0;
-}
-
-input#keystroke_filter {
-    width: 100%;
-}
-
-/**  filter-search hidden classes  **/
-.hideByText, .hideByType, .hideResultsMessage {
-    display: none;
-}
-
 
 #facultyFilter .form-check-label {
     font-size: 2rem;
@@ -81,9 +46,43 @@ form#facultyFilter {
     margin-top: 1vh;
 }
 
+div#filterForm {
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+div#radioLegend {
+    display: none;
+}
+
+#keywordLabel {
+    display: none;
+}
+
+div#keystroke_field {
+    padding: 0;
+}
+
+input#keystroke_filter {
+    width: 100%;
+}
+
+.noResultsToShow {
+    background: #e3e3da;
+    padding: 30px;
+    margin: 15px;
+}
+
+/**  filter-search hidden classes  **/
+.hideByText, .hideByType, .hideResultsMessage {
+    display: none;
+}
 
 
 
+
+
+/********* Responsive Media Queries *********/
 
 
 @media (max-width: 1200px) {
@@ -191,15 +190,15 @@ form#facultyFilter {
 @media (max-width: 337px) {
 
     #facultyFilter .form-check-label {
-        font-size: 0.7rem;
-        font-weight: 600;
+        font-size: 0.8rem;
+        font-weight: 550;
     }
 
     #facultyFilter .form-check-inline {
-        font-size: 0.7rem;
-        font-weight: 600;
-        margin-left: 0.25rem;
-        margin-right: 0.25rem;
+        font-size: 0.8rem;
+        font-weight: 550;
+        margin-left: 0;
+        margin-right: 0;
         padding-left: 0;
         padding-right: 0;
     }
