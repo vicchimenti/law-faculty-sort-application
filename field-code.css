@@ -6,6 +6,8 @@ input[type="radio"].form-check-input {
     display: none;
 }
 
+input[type="radio"]:checked+label{ color: #088099; } 
+
 .form-check-inline {
     display: flex;
     flex-wrap: wrap;
@@ -24,9 +26,9 @@ input[type="radio"].form-check-input {
     text-decoration: underline;
 }
 
-.form-check-label:active {
+/* .form-check-label:checked {
     color: #088099;
-}
+} */
 
 #facultyFilter .form-check-label {
     font-size: 2rem;
