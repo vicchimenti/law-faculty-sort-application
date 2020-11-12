@@ -24,6 +24,10 @@ input[type="radio"].form-check-input {
     text-decoration: underline;
 }
 
+.form-check-label:active {
+    color: #088099;
+}
+
 #facultyFilter .form-check-label {
     font-size: 2rem;
     color: #333333;
