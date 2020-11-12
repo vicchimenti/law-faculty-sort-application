@@ -30,6 +30,8 @@ input[type="radio"].form-check-input {
     text-decoration: underline;
 }
 
+
+
 div#filterForm {
     margin-right: 1rem;
     margin-left: 1rem;
@@ -54,4 +56,71 @@ input#keystroke_filter {
 /**  filter-search hidden classes  **/
 .hideByText, .hideByType, .hideResultsMessage {
     display: none;
+}
+
+
+#facultyFilter .form-check-label {
+    font-size: 2rem;
+    color: #333333;
+    text-transform: uppercase;
+}
+
+#facultyFilter .form-check-inline {
+    justify-content: space-evenly;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+form#facultyFilter {
+    padding-top: 3vh;
+}
+
+.form-check-inline {
+    margin-top: 1vh;
+}
+
+
+
+@media (max-width: 1200px) {
+
+    #facultyFilter .form-check-label {
+        font-size: 1.8rem;
+    }
+
+    #facultyFilter .form-check-inline {
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+
+    #facultyFilter .form-check-label {
+        font-size: 1.5rem;
+    }
+
+    #facultyFilter .form-check-inline {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #facultyFilter .form-check-label {
+        font-size: 1.2rem;
+    }
+
+    #facultyFilter .form-check-inline {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
 }
