@@ -153,3 +153,20 @@ form#facultyFilter {
         padding-right: 0.5rem;
     }
 }
+
+@media (max-width: 480px) {
+
+    #facultyFilter .form-check-label {
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+
+    #facultyFilter .form-check-inline {
+        font-size: 0.8rem;
+        font-weight: 500;
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}
