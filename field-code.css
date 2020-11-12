@@ -183,8 +183,8 @@ form#facultyFilter {
         font-weight: 550;
         margin-left: 0.25rem;
         margin-right: 0.25rem;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -200,7 +200,7 @@ form#facultyFilter {
         font-weight: 600;
         margin-left: 0.25rem;
         margin-right: 0.25rem;
-        padding-left: 0.25rem;
-        padding-right: 0.25rem;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
