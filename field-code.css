@@ -191,13 +191,13 @@ form#facultyFilter {
 @media (max-width: 337px) {
 
     #facultyFilter .form-check-label {
-        font-size: 0.6rem;
-        font-weight: 550;
+        font-size: 0.7rem;
+        font-weight: 600;
     }
 
     #facultyFilter .form-check-inline {
-        font-size: 0.6rem;
-        font-weight: 550;
+        font-size: 0.7rem;
+        font-weight: 600;
         margin-left: 0.25rem;
         margin-right: 0.25rem;
         padding-left: 0.25rem;
