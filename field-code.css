@@ -6,7 +6,7 @@ input[type="radio"].form-check-input {
     display: none;
 }
 
-input[type="radio"].form-check-label:checked{ color: #088099; } 
+/* input[type="radio"].form-check-label:checked{ color: #088099; }  */
 
 .form-check-inline {
     display: flex;
@@ -207,5 +207,18 @@ input#keystroke_filter {
         margin-right: 0;
         padding-left: 0;
         padding-right: 0;
+    }
+}
+
+@media (max-width: 302px) {
+
+    #facultyFilter .form-check-label {
+        font-size: 0.7rem;
+        font-weight: 550;
+    }
+
+    #facultyFilter .form-check-inline {
+        font-size: 0.7rem;
+        font-weight: 550;
     }
 }
