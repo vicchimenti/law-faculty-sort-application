@@ -22,7 +22,7 @@ input[type="radio"].form-check-input {
 #facultyFilter .form-check-label {
     color: #333333;
     font-family: "Montserrat", sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.45rem;
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -30,7 +30,7 @@ input[type="radio"].form-check-input {
 span.facultyFilterForm {
     color: #333333;
     font-family: "Montserrat", sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.45rem;
     font-weight: 500;
 }
 
@@ -73,23 +73,17 @@ input#keystroke_filter {
 
 
 
-/********* Responsive Media Queries *********/
+
+
+/*********
+*
+*   Responsive Media Queries
+*
+*
+**/
 
 
 
-
-
-/* Large devices (large desktops, 1200px and up) */
-/* @media screen and (min-width: 1200px) {
-
-    #facultyFilter .form-check-label {
-        font-size: 2rem;
-    }
-    
-    span.facultyFilterForm {
-        font-size: 2rem;
-    }
-} */
 
 /* Large devices (desktops, 992px and up) */
 @media screen and (min-width: 992px) {
@@ -104,21 +98,6 @@ input#keystroke_filter {
         font-weight: 400;
     }
 }
-
-
-/* ***  Medium min Defaults   *** */
-/* @media screen and (min-width : 768px) and (max-width: 991.99px) {
-
-    #facultyFilter .form-check-label {
-        font-size: 1.5rem;
-        font-weight: 500;
-    }
-    
-    span.facultyFilterForm {
-        font-size: 1.5rem;
-        font-weight: 500;
-    }
-} */
 
 
 /* ***** Mobile Up ***** */
@@ -143,48 +122,6 @@ input#keystroke_filter {
     }
 }
 
-
-
-
-/* Surface Duo (less than 540px) */
-/* @media only screen and (max-width: 539.99px) {
-
-    #facultyFilter .form-check-label {
-        font-size: 0.75rem;
-    }
-    
-    span.facultyFilterForm {
-        font-size: 0.75rem;
-    }
-
-} */
-
-
-/* xs small screens */
-/* @media only screen and (max-width: 464.99px) {
-
-    #facultyFilter .form-check-label {
-        font-size: 0.6rem;
-        font-weight: 500;
-    }
-    
-    span.facultyFilterForm {
-        font-size: 0.6rem;
-        font-weight: 500;
-    }
-} */
-
-/* iPhone X (less than 376px) */
-/* @media only screen and (max-width: 375.99px) {
-
-    #facultyFilter .form-check-label {
-        font-size: 0.5rem;
-    }
-    
-    span.facultyFilterForm {
-        font-size: 0.5rem;
-    }
-} */
 
 
 
