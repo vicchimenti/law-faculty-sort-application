@@ -138,7 +138,7 @@ input#keystroke_filter {
 
 
 /* Surface Duo (less than 540px) */
-@media only screen and (max-width: 539.99px) {
+/* @media only screen and (max-width: 539.99px) {
 
     #facultyFilter .form-check-label {
         font-size: 0.75rem;
@@ -148,11 +148,11 @@ input#keystroke_filter {
         font-size: 0.75rem;
     }
 
-}
+} */
 
 
 /* xs small screens */
-@media only screen and (max-width: 464.99px) {
+/* @media only screen and (max-width: 464.99px) {
 
     #facultyFilter .form-check-label {
         font-size: 0.6rem;
@@ -163,8 +163,19 @@ input#keystroke_filter {
         font-size: 0.6rem;
         font-weight: 500;
     }
+} */
 
-}
+/* iPhone X (less than 376px) */
+/* @media only screen and (max-width: 375.99px) {
+
+    #facultyFilter .form-check-label {
+        font-size: 0.5rem;
+    }
+    
+    span.facultyFilterForm {
+        font-size: 0.5rem;
+    }
+} */
 
 
 
