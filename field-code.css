@@ -121,10 +121,12 @@ input#keystroke_filter {
 
     #facultyFilter .form-check-label {
         font-size: 2rem;
+        font-weight: 400;
     }
     
     span.facultyFilterForm {
         font-size: 2rem;
+        font-weight: 400;
     }
 }
 
@@ -134,12 +136,10 @@ input#keystroke_filter {
 
     #facultyFilter .form-check-label {
         font-size: 1.5rem;
-        font-weight:400;
     }
     
     span.facultyFilterForm {
         font-size: 1.5rem;
-        font-weight: 400;
     }
 }
 
