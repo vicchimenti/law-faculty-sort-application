@@ -105,7 +105,19 @@ input#keystroke_filter {
 
 
 /* Large devices (large desktops, 1200px and up) */
-@media screen and (min-width: 1200px) {
+/* @media screen and (min-width: 1200px) {
+
+    #facultyFilter .form-check-label {
+        font-size: 2rem;
+    }
+    
+    span.facultyFilterForm {
+        font-size: 2rem;
+    }
+} */
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
 
     #facultyFilter .form-check-label {
         font-size: 2rem;
@@ -118,7 +130,7 @@ input#keystroke_filter {
 
 
 /* ***  Medium min Defaults   *** */
-@media screen and (min-width : 768px) {
+@media screen and (min-width : 768px) and (max-width: 991.99px) {
 
     #facultyFilter .form-check-label {
         font-size: 1.5rem;
@@ -133,7 +145,7 @@ input#keystroke_filter {
 
 
 /* ***** Mobile Up ***** */
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 576px) and (max-width: 767.99px) {
 
     #facultyFilter .form-check-label {
         font-size: 1rem;
