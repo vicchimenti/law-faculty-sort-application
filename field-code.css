@@ -35,6 +35,13 @@ input[type="radio"].form-check-input {
     text-transform: uppercase;
 }
 
+span.facultyFilterForm {
+    color: #333333;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
 /* #facultyFilter .form-check-inline {
     justify-content: space-evenly;
     margin-left: 3rem;
