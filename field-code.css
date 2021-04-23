@@ -151,6 +151,22 @@ input#keystroke_filter {
 }
 
 
+/* xs small screens */
+@media only screen and (max-width: 464.99px) {
+
+    #facultyFilter .form-check-label {
+        font-size: 0.6rem;
+        font-weight: 500;
+    }
+    
+    span.facultyFilterForm {
+        font-size: 0.6rem;
+        font-weight: 500;
+    }
+
+}
+
+
 
 
 
