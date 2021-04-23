@@ -1,4 +1,4 @@
-<div    class="facultyListItemWrapper card border-0"
+<div    class="facultyListItemWrapper card d-flex flex-sm-row border-0"
         id="id<t4 type='meta' meta='content_id' />"
         aria-labelledby="label<t4 type='meta' meta='content_id' />">
 
@@ -13,7 +13,7 @@
                 name="Profile Pic"
                 output="selective-output"
                 process-format="true"
-                format="<div class=&quot;facultyPhoto card-img&quot;>$value</div>"
+                format="<div class=&quot;facultyPhoto&quot;>$value</div>"
                 formatter="image/*"
                 alt="Photo of   <t4 type='content' name='First Name' output='normal' modifiers='htmlentities' /> <t4 type='content' name='Last Name' output='normal' modifiers='htmlentities' />" />
         </div>
@@ -22,14 +22,14 @@
 
         <div class="facultyListItemText col-xs-8 card-body">
 
-            <a  href="<t4 type='content' name='Name' output='fulltext' use-element='true' filename-element='Name' modifiers='htmlentities' />" class="card-link" title="Biography of <t4 type='content' name='First Name' output='normal' modifiers='htmlentities' /> <t4 type='content' name='Last Name' output='normal' modifiers='htmlentities' />">
-                <h3 class="card-title">
-                    <span id="label<t4 type='meta' meta='content_id' />">
+            <h3 class="card-title">
+                <span id="label<t4 type='meta' meta='content_id' />">
+                    <a  href="<t4 type='content' name='Name' output='fulltext' use-element='true' filename-element='Name' modifiers='htmlentities' />" class="card-link" title="Biography of <t4 type='content' name='First Name' output='normal' modifiers='htmlentities' /> <t4 type='content' name='Last Name' output='normal' modifiers='htmlentities' />">
                         <t4 type='content' name='First Name' output='normal' modifiers='htmlentities' />
                         <t4 type='content' name='Last Name' output='normal' modifiers='htmlentities' />
-                    </span>
-                </h3>
-            </a>
+                    </a>
+                </span>
+            </h3>
 
             <p>
                 <t4 type="content"
