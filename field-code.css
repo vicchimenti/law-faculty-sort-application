@@ -137,6 +137,22 @@ input#keystroke_filter {
 
 
 
+/* Surface Duo (less than 540px) */
+@media only screen and (max-width: 539.99px) {
+
+    #facultyFilter .form-check-label {
+        font-size: 0.75rem;
+    }
+    
+    span.facultyFilterForm {
+        font-size: 0.75rem;
+    }
+
+}
+
+
+
+
 
 
 /*********************
