@@ -13,9 +13,9 @@ input[type="radio"].form-check-input {
 }
 
 .form-check-inline {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-evenly; */
     font-size: 2rem;
     color: #333333;
     text-transform: uppercase;
