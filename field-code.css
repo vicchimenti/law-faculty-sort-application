@@ -22,16 +22,16 @@ input[type="radio"].form-check-input {
 #facultyFilter .form-check-label {
     color: #333333;
     font-family: "Montserrat", sans-serif;
-    font-size: 0.9rem;
-    font-weight: 600;
+    font-size: 1.5rem;
+    font-weight: 500;
     text-transform: uppercase;
 }
 
 span.facultyFilterForm {
     color: #333333;
     font-family: "Montserrat", sans-serif;
-    font-size: 0.9rem;
-    font-weight: 600;
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 
 form#facultyFilter {
@@ -107,7 +107,7 @@ input#keystroke_filter {
 
 
 /* ***  Medium min Defaults   *** */
-@media screen and (min-width : 768px) and (max-width: 991.99px) {
+/* @media screen and (min-width : 768px) and (max-width: 991.99px) {
 
     #facultyFilter .form-check-label {
         font-size: 1.5rem;
@@ -118,7 +118,7 @@ input#keystroke_filter {
         font-size: 1.5rem;
         font-weight: 500;
     }
-}
+} */
 
 
 /* ***** Mobile Up ***** */
