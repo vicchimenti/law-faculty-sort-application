@@ -12,16 +12,7 @@ input[type="radio"].form-check-input {
     padding-left: 0;
 }
 
-.form-check-inline {
-    /* font-family: "Montserrat", sans-serif; */
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly; */
-    /* font-size: 2rem;
-    font-weight:400;
-    color: #333333;
-    text-transform: uppercase;
-} */
+
 
 .form-check-label {
     font-weight: 500;
