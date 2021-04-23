@@ -52,8 +52,8 @@ form#facultyFilter {
     padding-top: 3vh;
 }
 
-.form-check-inline {
-    margin-top: 1vh;
+form#facultyFilter .form-check-inline {
+    margin: 1rem;
 }
 
 /* div#filterForm {
