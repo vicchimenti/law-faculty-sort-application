@@ -5,46 +5,46 @@
     <t4 type="meta" meta="html_anchor" />
 
         
-    <div class="row facultyListItem standardContent">
+    <div class="container facultyListItem standardContent">
+        <div class="row d-flex flex-row flex-nowrap">
 
-        <!-- Media Library Image -->
-        <div class="facultyListItemPhoto col-xs-4">
+            <!-- Media Library Image -->
+            
             <t4 type="content"
                 name="Profile Pic"
                 output="selective-output"
                 process-format="true"
-                format="<div class=&quot;facultyPhoto&quot;>$value</div>"
+                format="<div class=&quot;col-xs-4 facultyPhoto flex-shrink-1&quot;>$value</div>"
                 formatter="image/*"
                 alt="Photo of   <t4 type='content' name='First Name' output='normal' modifiers='htmlentities' /> <t4 type='content' name='Last Name' output='normal' modifiers='htmlentities' />" />
-        </div>
+            
 
+            <div class="col-xs-8 facultyListItemText card-body w-100">
 
+                <h3 class="card-title">
+                    <span id="label<t4 type='meta' meta='content_id' />">
+                        <a  href="<t4 type='content' name='Name' output='fulltext' use-element='true' filename-element='Name' modifiers='htmlentities' />" class="card-link" title="Biography of <t4 type='content' name='First Name' output='normal' modifiers='htmlentities' /> <t4 type='content' name='Last Name' output='normal' modifiers='htmlentities' />">
+                            <t4 type='content' name='First Name' output='normal' modifiers='htmlentities' />
+                            <t4 type='content' name='Last Name' output='normal' modifiers='htmlentities' />
+                        </a>
+                    </span>
+                </h3>
 
-        <div class="facultyListItemText col-xs-8 card-body">
+                <p>
+                    <t4 type="content"
+                        name="Primary Title"
+                        output="selective-output"
+                        format="<span class=&quot;primaryTitle card-text&quot;>$value</span>" />
+                    
+                    <t4 type="content"
+                        name="Email"
+                        output="selective-output"
+                        modifiers="encode_emails"
+                        format="<br><span class=&quot;email card-text&quot;>$value</span>" />
+                </p>
 
-            <h3 class="card-title">
-                <span id="label<t4 type='meta' meta='content_id' />">
-                    <a  href="<t4 type='content' name='Name' output='fulltext' use-element='true' filename-element='Name' modifiers='htmlentities' />" class="card-link" title="Biography of <t4 type='content' name='First Name' output='normal' modifiers='htmlentities' /> <t4 type='content' name='Last Name' output='normal' modifiers='htmlentities' />">
-                        <t4 type='content' name='First Name' output='normal' modifiers='htmlentities' />
-                        <t4 type='content' name='Last Name' output='normal' modifiers='htmlentities' />
-                    </a>
-                </span>
-            </h3>
-
-            <p>
-                <t4 type="content"
-                    name="Primary Title"
-                    output="selective-output"
-                    format="<span class=&quot;primaryTitle card-text&quot;>$value</span>" />
-                
-                <t4 type="content"
-                    name="Email"
-                    output="selective-output"
-                    modifiers="encode_emails"
-                    format="<br><span class=&quot;email card-text&quot;>$value</span>" />
-            </p>
-
-        </div>      
+            </div>
+        </div>    
     </div>
 
 
