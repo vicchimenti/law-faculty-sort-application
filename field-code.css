@@ -40,13 +40,13 @@ input[type="radio"].form-check-input {
     text-transform: uppercase;
 }
 
-#facultyFilter .form-check-inline {
+/* #facultyFilter .form-check-inline {
     justify-content: space-evenly;
     margin-left: 3rem;
     margin-right: 3rem;
     padding-left: 2rem;
     padding-right: 2rem;
-}
+} */
 
 form#facultyFilter {
     padding-top: 3vh;
@@ -102,14 +102,14 @@ input#keystroke_filter {
         font-weight: 500;
     }
 
-    #facultyFilter .form-check-inline {
+    /* #facultyFilter .form-check-inline {
         font-size: 1.8rem;
         font-weight: 500;
         margin-left: 2.5rem;
         margin-right: 2.5rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
-    }
+    } */
 }
 
 @media (max-width: 992px) {
@@ -119,14 +119,14 @@ input#keystroke_filter {
         font-weight: 500;
     }
 
-    #facultyFilter .form-check-inline {
+    /* #facultyFilter .form-check-inline {
         font-size: 1.5rem;
         font-weight: 500;
         margin-left: 2rem;
         margin-right: 2rem;
         padding-left: 1rem;
         padding-right: 1rem;
-    }
+    } */
 }
 
 @media (max-width: 768px) {
@@ -136,14 +136,14 @@ input#keystroke_filter {
         font-weight: 500;
     }
 
-    #facultyFilter .form-check-inline {
+    /* #facultyFilter .form-check-inline {
         font-size: 1.2rem;
         font-weight: 500;
         margin-left: 1rem;
         margin-right: 1rem;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
-    }
+    } */
 }
 
 @media (max-width: 576px) {
@@ -153,14 +153,14 @@ input#keystroke_filter {
         font-weight: 500;
     }
 
-    #facultyFilter .form-check-inline {
+    /* #facultyFilter .form-check-inline {
         font-size: 1rem;
         font-weight: 500;
         margin-left: 0.5rem;
         margin-right: 0.5rem;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
-    }
+    } */
 }
 
 @media (max-width: 480px) {
@@ -170,14 +170,14 @@ input#keystroke_filter {
         font-weight: 500;
     }
 
-    #facultyFilter .form-check-inline {
+    /* #facultyFilter .form-check-inline {
         font-size: 0.8rem;
         font-weight: 500;
         margin-left: 0.25rem;
         margin-right: 0.25rem;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
-    }
+    } */
 }
 
 @media (max-width: 480px) {
@@ -187,14 +187,14 @@ input#keystroke_filter {
         font-weight: 550;
     }
 
-    #facultyFilter .form-check-inline {
+    /* #facultyFilter .form-check-inline {
         font-size: 0.8rem;
         font-weight: 550;
         margin-left: 0.25rem;
         margin-right: 0.25rem;
         padding-left: 0;
         padding-right: 0;
-    }
+    } */
 }
 
 @media (max-width: 337px) {
@@ -204,14 +204,14 @@ input#keystroke_filter {
         font-weight: 550;
     }
 
-    #facultyFilter .form-check-inline {
+    /* #facultyFilter .form-check-inline {
         font-size: 0.8rem;
         font-weight: 550;
         margin-left: 0;
         margin-right: 0;
         padding-left: 0;
         padding-right: 0;
-    }
+    } */
 }
 
 @media (max-width: 302px) {
@@ -221,8 +221,8 @@ input#keystroke_filter {
         font-weight: 550;
     }
 
-    #facultyFilter .form-check-inline {
+    /* #facultyFilter .form-check-inline {
         font-size: 0.7rem;
         font-weight: 550;
-    }
+    } */
 }
