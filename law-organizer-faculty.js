@@ -9,7 +9,7 @@
  *      @version 2.0
  */
 
-
+<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />
 
 
  try {
