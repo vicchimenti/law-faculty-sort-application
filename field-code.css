@@ -34,7 +34,7 @@ input[type="radio"].form-check-input {
     color: #333333;
     font-family: "Montserrat", sans-serif;
     font-size: 0.9rem;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
 }
 
@@ -42,7 +42,7 @@ span.facultyFilterForm {
     color: #333333;
     font-family: "Montserrat", sans-serif;
     font-size: 0.9rem;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 
@@ -136,10 +136,12 @@ input#keystroke_filter {
 
     #facultyFilter .form-check-label {
         font-size: 1.5rem;
+        font-weight: 500;
     }
     
     span.facultyFilterForm {
         font-size: 1.5rem;
+        font-weight: 500;
     }
 }
 
