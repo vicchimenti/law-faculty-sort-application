@@ -52,10 +52,10 @@ form#facultyFilter {
     margin-top: 1vh;
 }
 
-div#filterForm {
+/* div#filterForm {
     margin-right: 1rem;
     margin-left: 1rem;
-}
+} */
 
 div#radioLegend {
     display: none;
