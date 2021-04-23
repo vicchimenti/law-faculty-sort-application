@@ -8,6 +8,10 @@ input[type="radio"].form-check-input {
 
 /* input[type="radio"].form-check-label:checked{ color: #088099; }  */
 
+#facultyFilter .form-check {
+    padding-left: 0;
+}
+
 .form-check-inline {
     display: flex;
     flex-wrap: wrap;
