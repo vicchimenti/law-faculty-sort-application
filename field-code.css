@@ -27,20 +27,24 @@ input[type="radio"].form-check-input {
     color: #088099;
 } */
 
+
+
+
 #facultyFilter .form-check-label {
     color: #333333;
     font-family: "Montserrat", sans-serif;
-    font-size: 2rem;
-    font-weight:400;
+    font-size: 1rem;
+    font-weight: 500;
     text-transform: uppercase;
 }
 
 span.facultyFilterForm {
     color: #333333;
     font-family: "Montserrat", sans-serif;
-    font-size: 2rem;
-    font-weight: 400;
+    font-size: 1rem;
+    font-weight: 500;
 }
+
 
 /* #facultyFilter .form-check-inline {
     justify-content: space-evenly;
@@ -97,134 +101,95 @@ input#keystroke_filter {
 /********* Responsive Media Queries *********/
 
 
-@media (max-width: 1200px) {
+
+
+
+/* Large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
 
     #facultyFilter .form-check-label {
-        font-size: 1.8rem;
-        font-weight: 500;
+        font-size: 2rem;
     }
-
-    /* #facultyFilter .form-check-inline {
-        font-size: 1.8rem;
-        font-weight: 500;
-        margin-left: 2.5rem;
-        margin-right: 2.5rem;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    } */
+    
+    span.facultyFilterForm {
+        font-size: 2rem;
+    }
 }
 
-@media (max-width: 992px) {
+
+/* ***  Medium min Defaults   *** */
+@media screen and (min-width : 768px) {
 
     #facultyFilter .form-check-label {
         font-size: 1.5rem;
-        font-weight: 500;
+        font-weight:400;
     }
-
-    /* #facultyFilter .form-check-inline {
+    
+    span.facultyFilterForm {
         font-size: 1.5rem;
-        font-weight: 500;
-        margin-left: 2rem;
-        margin-right: 2rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
-    } */
-}
-
-@media (max-width: 768px) {
-
-    #facultyFilter .form-check-label {
-        font-size: 1.2rem;
-        font-weight: 500;
+        font-weight: 400;
     }
-
-    /* #facultyFilter .form-check-inline {
-        font-size: 1.2rem;
-        font-weight: 500;
-        margin-left: 1rem;
-        margin-right: 1rem;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-    } */
 }
 
-@media (max-width: 576px) {
 
-    #facultyFilter .form-check-label {
-        font-size: 1rem;
-        font-weight: 500;
-    }
 
-    /* #facultyFilter .form-check-inline {
-        font-size: 1rem;
-        font-weight: 500;
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-    } */
-}
 
-@media (max-width: 480px) {
 
-    #facultyFilter .form-check-label {
-        font-size: 0.8rem;
-        font-weight: 500;
-    }
 
-    /* #facultyFilter .form-check-inline {
-        font-size: 0.8rem;
-        font-weight: 500;
-        margin-left: 0.25rem;
-        margin-right: 0.25rem;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-    } */
-}
+/*********************
+*
+*   Reference Breakpoints
+*
+**/
 
-@media (max-width: 480px) {
 
-    #facultyFilter .form-check-label {
-        font-size: 0.8rem;
-        font-weight: 550;
-    }
+/* Galaxy Fold (less than 280px) */
+@media only screen and (max-width: 279.99px) {}
 
-    /* #facultyFilter .form-check-inline {
-        font-size: 0.8rem;
-        font-weight: 550;
-        margin-left: 0.25rem;
-        margin-right: 0.25rem;
-        padding-left: 0;
-        padding-right: 0;
-    } */
-}
+/* iPhone X (less than 376px) */
+@media only screen and (max-width: 375.99px) {}
 
-@media (max-width: 337px) {
+/* Surface Duo (less than 540px) */
+@media only screen and (max-width: 539.99px) {}
 
-    #facultyFilter .form-check-label {
-        font-size: 0.8rem;
-        font-weight: 550;
-    }
+/* Extra small devices (portrait phones, less than 576px) */
+@media only screen and (max-width: 575.98px) {}
 
-    /* #facultyFilter .form-check-inline {
-        font-size: 0.8rem;
-        font-weight: 550;
-        margin-left: 0;
-        margin-right: 0;
-        padding-left: 0;
-        padding-right: 0;
-    } */
-}
+/* ***** Desktop down ***** */
+@media screen and (max-width: 1199.99px) {}
 
-@media (max-width: 302px) {
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (min-width: 576px) and (max-width: 767.99px) {}
 
-    #facultyFilter .form-check-label {
-        font-size: 0.7rem;
-        font-weight: 550;
-    }
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) and (max-width: 991.99px) {}
 
-    /* #facultyFilter .form-check-inline {
-        font-size: 0.7rem;
-        font-weight: 550;
-    } */
-}
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) and (max-width: 1199.99px) {}
+
+/* iPad Pro (iPad Pro, 1024px to 1200) */
+@media screen and (min-width: 1024px) and (max-width: 1199.99px) {}
+
+/* Responsice range from 1200 to 1366 */
+@media screen and (min-width: 1200px) and (max-width: 1365.99px) {}
+
+/* ***** Mobile Up ***** */
+@media screen and (min-width: 576px) {}
+
+/* ***  Medium min Defaults   *** */
+@media screen and (min-width : 768px) {}
+
+/* ***  Large min Defaults   *** */
+@media screen and (min-width : 992px) {}
+
+/* Large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {}
+
+/* X Large devices (large desktops, 1366px and up) */
+@media screen and (min-width: 1366px) {}
+
+/* XX Large devices (large desktops, 1920px and up) */
+@media screen and (min-width: 1920px) {}
+
+/* XXX Large devices (large desktops, 2560px and up) */
+@media screen and (min-width: 2560px) {}
