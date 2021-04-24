@@ -13,7 +13,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 3.3
+ *      @version 3.4
  */
 
 
@@ -55,7 +55,7 @@
      *  Declare/Assign local variables with base formatting
      * 
      * */
-    var primaryImageString = '<img src="' + primaryImage + '" alt="' + firstName + ' ' + lastName + ', ' + primaryTitle + '">';
+    var primaryImageString = '<img src="' + primaryImage + '" class="card-img rounded-circle" alt="' + firstName + ' ' + lastName + ', ' + primaryTitle + '">';
     var cardTitle = '<h3 class="card-title">' + firstName + ' ' + lastName + '</h3>';
     var primaryTitleString = '<p class="card-text">' + primaryTitle + '</p>';
     var emailAddressString = '<p class="card-text"><a href="mailto:' + emailAddress + '?subject = From Your Faculty Profile&body = Message">' + emailAddress + '</a></p>';
