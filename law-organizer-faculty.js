@@ -67,7 +67,9 @@
     var degreeOne = "";
     var contactPhone = "";
     var contactEmail = "";
-    var anchorWrap = '<div class="hidden">' + anchorTag + '</div>';
+    var openRow = '<div class="row g-0">';
+    var closeRow = '</div>';
+    var anchorWrap = '<div class="visually-hidden">' + anchorTag + '</div>';
     var beginningHTML = '<div class="card" title="' + firstName + ' ' + lastName + '" id="id' + contentID + '" data-position-default="Main" data-position-selected="Main">';
     var endingHTML = '</div>';
 
