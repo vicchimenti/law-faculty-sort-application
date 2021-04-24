@@ -57,23 +57,21 @@
      *  Declare/Assign local variables with base formatting
      * 
      * */
-    var cardText = "<span class='card-text summary'><p>" + profileSummary + "</p></span>";
-    var titleLink = "";
-    var listItems = "";
-    var listOfDegrees = "";
-    var listOfTitles = "";
-    var titleOne = "";
-    var degreeOne = "";
-    var contactPhone = "";
-    var contactEmail = "";
+    // var cardText = "<span class='card-text summary'><p>" + profileSummary + "</p></span>";
+    // var titleLink = "";
+    // var listItems = "";
+    // var listOfDegrees = "";
+    // var listOfTitles = "";
+    // var titleOne = "";
+    // var degreeOne = "";
+    // var contactPhone = "";
+    // var contactEmail = "";
 
 
     var primaryImageString = '<img src="' + primaryImage + '" alt="' + firstName + ' ' + lastName + ', ' + primaryTitle + '">';
     var cardTitle = '<h3 class="card-title">' + firstName + ' ' + lastName + '</h3>';
     var primaryTitleString = '<p class="card-text">' + primaryTitle + '</p>';
-    var emailAddressString = '<p class="card-text">' + emailAddress + '</p>';
-
-
+    var emailAddressString = '<p class="card-text"><a href="mailto:' + emailAddress + '?subject = From Your Faculty Profile&body = Message">' + emailAddress + '</a></p>';
     var closeCardTitle = '</h3>';
     var openCardBody = '<div class="card-body">';
     var closeCardBody = '</div>';
@@ -94,15 +92,15 @@
      *  parse the list of degrees, add <li> tags
      * 
      * */
-    if (degrees != "") {
-        var arrayOfDegrees = degrees.split('\n');
-        listItems = "";
-        for (let i = 0; i < arrayOfDegrees.length; i++) {
-            listItems += '<li class="tag">' + arrayOfDegrees[i] + '</li>';
-        }
-        listOfDegrees = '<div class="tags"><ul class="profileDegrees">' + listItems + '</ul></div>';
-        degreeOne = arrayOfDegrees[0];
-    }
+    // if (degrees != "") {
+    //     var arrayOfDegrees = degrees.split('\n');
+    //     listItems = "";
+    //     for (let i = 0; i < arrayOfDegrees.length; i++) {
+    //         listItems += '<li class="tag">' + arrayOfDegrees[i] + '</li>';
+    //     }
+    //     listOfDegrees = '<div class="tags"><ul class="profileDegrees">' + listItems + '</ul></div>';
+    //     degreeOne = arrayOfDegrees[0];
+    // }
 
 
 
