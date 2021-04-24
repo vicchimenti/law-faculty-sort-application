@@ -78,88 +78,12 @@
 
 
     /***
-     *  parse the list of degrees, add <li> tags
-     * 
-     * */
-    // if (degrees != "") {
-    //     var arrayOfDegrees = degrees.split('\n');
-    //     listItems = "";
-    //     for (let i = 0; i < arrayOfDegrees.length; i++) {
-    //         listItems += '<li class="tag">' + arrayOfDegrees[i] + '</li>';
-    //     }
-    //     listOfDegrees = '<div class="tags"><ul class="profileDegrees">' + listItems + '</ul></div>';
-    //     degreeOne = arrayOfDegrees[0];
-    // }
-
-
-
-
-    /***
-     *  parse the list of titles, add <li> tags
-     * 
-     * */
-    // if (titles != "") {
-    //     var arrayOfTitles = titles.split('\n');
-    //     listItems = "";
-    //     for (let i = 0; i < arrayOfTitles.length; i++) {
-    //         listItems += '<li class="tag">' + arrayOfTitles[i] + '</li>';
-    //     }
-    //     listOfTitles = '<div class="tags"><ul class="profileTitles">' + listItems + '</ul></div>';
-    //     titleOne = arrayOfTitles[0];
-    // }
-
-
-
-
-    /***
      *  determine if the article contains full text content
      * 
      * */
     if (biography != "") {
         cardTitle = '<h3 class="card-title"><a href="' + fullTextLink + ' title="' + firstName + ' ' + lastName + ', ' + primaryTitle + '">' + firstName + ' ' + lastName + '</a></h3>';
     }
-
-
-
-
-    /***
-     *  verify Main image and photo credits
-     * 
-     * */
-    // if (frontPageImage == "") {
-    //     thumbNailString = '<span class="hidden">No Image Provided</span>';
-
-    // } else {
-    //     thumbNailString = '<span class="cardImageWrapper"><img src="' + frontPageImage + '" class="card-img-top" alt="' + profileTitle + '" /></span>';
-    // }
-
-
-
-
-    /***
-     *  verify Phone
-     * 
-     * */
-    // if (phone == "") {
-    //     contactPhone = '<span class="hidden">No Phone Provided</span>';
-
-    // } else {
-    //     contactPhone = '<p class="contactInfo phone">Phone: ' + phone + '</p>';
-    // }
-
-
-
-
-    /***
-     *  verify email
-     * 
-     * */
-    // if (emailAddress == "") {
-    //     contactEmail = '<span class="hidden">No Phone Provided</span>';
-
-    // } else {
-    //     contactEmail = '<p class="contactInfo">Email: ' + emailAddress + '</p>';
-    // }
 
 
 
