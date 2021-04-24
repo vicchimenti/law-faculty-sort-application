@@ -82,7 +82,7 @@
     var openRow = '<div class="row g-0">';
     var closeRow = '</div>';
     var anchorWrap = '<div class="visually-hidden">' + anchorTag + '</div>';
-    var beginningHTML = '<div class="card" title="' + firstName + ' ' + lastName + '" id="id' + contentID + '" data-position-default="Main" data-position-selected="Main">';
+    var beginningHTML = '<div class="card" aria-label="' + firstName + ' ' + lastName + '" id="id' + contentID + '" data-position-default="Main" data-position-selected="Main">';
     var endingHTML = '</div>';
 
 
@@ -109,15 +109,15 @@
      *  parse the list of titles, add <li> tags
      * 
      * */
-    if (titles != "") {
-        var arrayOfTitles = titles.split('\n');
-        listItems = "";
-        for (let i = 0; i < arrayOfTitles.length; i++) {
-            listItems += '<li class="tag">' + arrayOfTitles[i] + '</li>';
-        }
-        listOfTitles = '<div class="tags"><ul class="profileTitles">' + listItems + '</ul></div>';
-        titleOne = arrayOfTitles[0];
-    }
+    // if (titles != "") {
+    //     var arrayOfTitles = titles.split('\n');
+    //     listItems = "";
+    //     for (let i = 0; i < arrayOfTitles.length; i++) {
+    //         listItems += '<li class="tag">' + arrayOfTitles[i] + '</li>';
+    //     }
+    //     listOfTitles = '<div class="tags"><ul class="profileTitles">' + listItems + '</ul></div>';
+    //     titleOne = arrayOfTitles[0];
+    // }
 
 
 
@@ -126,10 +126,8 @@
      *  determine if the article contains full text content
      * 
      * */
-    if (profileFullBody == "") {
-        titleLink = '<h3 class="card-title">' + profileTitle + '</h3>';
-    } else {
-        titleLink = '<h3 class="card-title"><a href="' + fullTextLink + '">' + profileTitle + '</a></h3>';
+    if (biography != "") {
+        cardTitle = '<h3 class="card-title"><a href="' + fullTextLink + ' title="' + firstName + ' ' + lastName + ', ' + primaryTitle + '">' + firstName + ' ' + lastName + '</a></h3>';
     }
 
 
@@ -139,12 +137,12 @@
      *  verify Main image and photo credits
      * 
      * */
-    if (frontPageImage == "") {
-        thumbNailString = '<span class="hidden">No Image Provided</span>';
+    // if (frontPageImage == "") {
+    //     thumbNailString = '<span class="hidden">No Image Provided</span>';
 
-    } else {
-        thumbNailString = '<span class="cardImageWrapper"><img src="' + frontPageImage + '" class="card-img-top" alt="' + profileTitle + '" /></span>';
-    }
+    // } else {
+    //     thumbNailString = '<span class="cardImageWrapper"><img src="' + frontPageImage + '" class="card-img-top" alt="' + profileTitle + '" /></span>';
+    // }
 
 
 
@@ -153,12 +151,12 @@
      *  verify Phone
      * 
      * */
-    if (phone == "") {
-        contactPhone = '<span class="hidden">No Phone Provided</span>';
+    // if (phone == "") {
+    //     contactPhone = '<span class="hidden">No Phone Provided</span>';
 
-    } else {
-        contactPhone = '<p class="contactInfo phone">Phone: ' + phone + '</p>';
-    }
+    // } else {
+    //     contactPhone = '<p class="contactInfo phone">Phone: ' + phone + '</p>';
+    // }
 
 
 
@@ -167,12 +165,12 @@
      *  verify email
      * 
      * */
-    if (emailAddress == "") {
-        contactEmail = '<span class="hidden">No Phone Provided</span>';
+    // if (emailAddress == "") {
+    //     contactEmail = '<span class="hidden">No Phone Provided</span>';
 
-    } else {
-        contactEmail = '<p class="contactInfo">Email: ' + emailAddress + '</p>';
-    }
+    // } else {
+    //     contactEmail = '<p class="contactInfo">Email: ' + emailAddress + '</p>';
+    // }
 
 
 
@@ -182,9 +180,34 @@
      * 
      * */
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
-    document.write('<div class="card-body">');
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorWrap));
+    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, openRow));
+    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, openImageWrapper));
+    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, primaryImageString));
+    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, closeImageWrapper));
+    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, openBodyWrapper));
+    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, openCardBody));
+    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, cardTitle));
+    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, emailAddressString));
+    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, closeCardBody));
+    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, closeBodyWrapper));
+
+
+
+
+    
+
+    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, closeRow));
+
+
+    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, openCardBody));
+    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, openCardBody));
+
+
+
+
+
+    document.write('<div class="card-body">');
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
     document.write('<div class="card-subtitle mb-2 text-muted">' + titleOne + '</div>');
     document.write('<div class="card-text">' + degreeOne + '</div>');
