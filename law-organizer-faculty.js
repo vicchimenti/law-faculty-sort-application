@@ -57,17 +57,6 @@
      *  Declare/Assign local variables with base formatting
      * 
      * */
-    // var cardText = "<span class='card-text summary'><p>" + profileSummary + "</p></span>";
-    // var titleLink = "";
-    // var listItems = "";
-    // var listOfDegrees = "";
-    // var listOfTitles = "";
-    // var titleOne = "";
-    // var degreeOne = "";
-    // var contactPhone = "";
-    // var contactEmail = "";
-
-
     var primaryImageString = '<img src="' + primaryImage + '" alt="' + firstName + ' ' + lastName + ', ' + primaryTitle + '">';
     var cardTitle = '<h3 class="card-title">' + firstName + ' ' + lastName + '</h3>';
     var primaryTitleString = '<p class="card-text">' + primaryTitle + '</p>';
