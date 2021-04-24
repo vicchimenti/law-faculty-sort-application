@@ -68,7 +68,7 @@
     var contactPhone = "";
     var contactEmail = "";
     var anchorWrap = '<div class="hidden">' + anchorTag + '</div>';
-    var beginningHTML = '<div class="card" title="' + firstName + ' ' + lastName + '" id="id' + contentID + '" data-position-default="ZoneA" data-position-selected="ZoneA">';
+    var beginningHTML = '<div class="card" title="' + firstName + ' ' + lastName + '" id="id' + contentID + '" data-position-default="Main" data-position-selected="Main">';
     var endingHTML = '</div>';
 
 
