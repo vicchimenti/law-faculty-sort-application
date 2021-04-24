@@ -62,11 +62,25 @@
     var listItems = "";
     var listOfDegrees = "";
     var listOfTitles = "";
-    var thumbNailString = "";
     var titleOne = "";
     var degreeOne = "";
     var contactPhone = "";
     var contactEmail = "";
+
+
+    var primaryImageString = '<img src="' + primaryImage + '" alt="' + firstName + ' ' + lastName + ', ' + primaryTitle + '">';
+    var cardTitle = '<h3 class="card-title">' + firstName + ' ' + lastName + '</h3>';
+    var primaryTitleString = '<p class="card-text">' + primaryTitle + '</p>';
+    var emailAddressString = '<p class="card-text">' + emailAddress + '</p>';
+
+
+    var closeCardTitle = '</h3>';
+    var openCardBody = '<div class="card-body">';
+    var closeCardBody = '</div>';
+    var openBodyWrapper = '<div class="col-md-8">';
+    var closeBodyWrapper = '</div>';
+    var openImageWrapper = '<div class="col-md-4">';
+    var closeImageWrapper = '</div>';
     var openRow = '<div class="row g-0">';
     var closeRow = '</div>';
     var anchorWrap = '<div class="visually-hidden">' + anchorTag + '</div>';
