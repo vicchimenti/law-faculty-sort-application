@@ -13,7 +13,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 3.23
+ *      @version 3.24
  */
 
 
@@ -127,7 +127,7 @@
     }
     if (facultyStatus != "") {
         var facultyStatusyHidden = '<span class="visually-hidden facultyStatus">' + facultyStatus + '</span>';
-        hiddenFields += facultyStatus;
+        hiddenFields += facultyStatusyHidden;
     }
 
     
