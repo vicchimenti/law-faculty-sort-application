@@ -109,6 +109,10 @@
         var affiliationsHidden = '<span class="visually-hidden affiliations">' + affiliations + '</span>';
         hiddenFields += affiliationsHidden;
     }
+    if (courses != "") {
+        var coursesHidden = '<span class="visually-hidden affiliations">' + courses + '</span>';
+        hiddenFields += coursesHidden;
+    }
     
 
 
