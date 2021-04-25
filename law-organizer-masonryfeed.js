@@ -13,7 +13,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 4.3
+ *      @version 4.4
  */
 
 
@@ -157,8 +157,8 @@
     document.write(openHiddenFields);
     document.write(hiddenFields);
     document.write(closeHiddenFields);
-    document.write(closeCard);
     document.write(horizontalRule);
+    document.write(closeCard);
     document.write(endingHTML);
 
 
