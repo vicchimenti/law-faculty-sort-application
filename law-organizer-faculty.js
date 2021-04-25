@@ -13,7 +13,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 3.7
+ *      @version 3.9
  */
 
 
@@ -56,9 +56,9 @@
      * 
      * */
     var primaryImageString = '<img src="' + primaryImage + '" class="card-img rounded-circle" alt="' + firstName + ' ' + lastName + ', ' + primaryTitle + '">';
-    var cardTitle = '<h3 class="card-title">' + firstName + ' ' + lastName + '</h3>';
-    var primaryTitleString = '<p class="card-text mb-0">' + primaryTitle + '</p>';
-    var emailAddressString = '<p class="card-text"><a href="mailto:' + emailAddress + '?subject = From Your Faculty Profile&body = Message">' + emailAddress + '</a></p>';
+    var cardTitle = '<h3 class="card-title d-flex justify-content-center justify-content-md-start">' + firstName + ' ' + lastName + '</h3>';
+    var primaryTitleString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start">' + primaryTitle + '</p>';
+    var emailAddressString = '<p class="card-text d-flex justify-content-center justify-content-md-start"><a href="mailto:' + emailAddress + '?subject = From Your Faculty Profile&body = Message">' + emailAddress + '</a></p>';
     var closeCardTitle = '</h3>';
     var openCardBody = '<div class="card-body">';
     var closeCardBody = '</div>';
