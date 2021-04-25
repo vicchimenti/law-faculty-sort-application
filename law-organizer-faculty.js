@@ -110,12 +110,16 @@
         hiddenFields += affiliationsHidden;
     }
     if (courses != "") {
-        var coursesHidden = '<span class="visually-hidden affiliations">' + courses + '</span>';
+        var coursesHidden = '<span class="visually-hidden courses">' + courses + '</span>';
         hiddenFields += coursesHidden;
     }
     if (biography != "") {
-        var biographyHidden = '<span class="visually-hidden affiliations">' + biography + '</span>';
+        var biographyHidden = '<span class="visually-hidden biography">' + biography + '</span>';
         hiddenFields += biographyHidden;
+    }
+    if (publications != "") {
+        var publicationsHidden = '<span class="visually-hidden publications">' + publications + '</span>';
+        hiddenFields += publicationsHidden;
     }
     
 
