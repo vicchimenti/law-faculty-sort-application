@@ -85,7 +85,7 @@
                         console.log("typeKey: " + typeKey);
                         // If Search Key is Not Null then Compare to the Type List Items in Each Content Item
                         if (typeKey != viewAll) {
-                            $('.status').filter(function (i, e) {
+                            $('.facultyStatus').filter(function (i, e) {
                                 var typeValue = $(this).text();
                                 console.log("typeValue: " + typeValue);
                                 // Check to see if the Key and Value are a Match
