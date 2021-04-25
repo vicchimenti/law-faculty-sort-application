@@ -13,7 +13,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 4.6
+ *      @version 4.7
  */
 
 
@@ -71,7 +71,7 @@
     var openRow = '<div class="row g-0">';
     var closeRow = '</div>';
     var anchorWrap = '<div class="visually-hidden">' + anchorTag + '</div>';
-    var openCard = '<div class="card h-100 border-start-0 border-top-0 border-bottom border-end-0">'
+    var openCard = '<div class="card h-100 w-100 border-start-0 border-top-0 border-bottom border-end-0">'
     var closeCard = '</div>';
     var beginningHTML = '<div class="lawFacultyWrapper contentItem col" aria-label="' + firstName + ' ' + lastName + '" id="id' + contentID + '" data-position-default="Main" data-position-selected="Main">';
     var endingHTML = '</div>';
