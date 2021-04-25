@@ -113,6 +113,10 @@
         var coursesHidden = '<span class="visually-hidden affiliations">' + courses + '</span>';
         hiddenFields += coursesHidden;
     }
+    if (biography != "") {
+        var biographyHidden = '<span class="visually-hidden affiliations">' + biography + '</span>';
+        hiddenFields += biographyHidden;
+    }
     
 
 
