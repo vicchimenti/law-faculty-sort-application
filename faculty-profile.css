@@ -1,0 +1,7 @@
+/* Below md breakpoint max-width: 767.99px and down) */
+@media screen and (max-width: 767.99px) {
+
+    div.lawFacultyWrapper.w-50 {
+        width: 100%!important;
+    }
+}

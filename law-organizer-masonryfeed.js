@@ -13,7 +13,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 4.15
+ *      @version 4.16
  */
 
 
@@ -58,9 +58,9 @@
     var openHiddenFields = '<div class="hiddenSearchText visually-hidden">';
     var closeHiddenFields = '</div>';
     var primaryImageString = '<img src="' + primaryImage + '" class="card-img rounded-circle" alt="' + firstName + ' ' + lastName + ', ' + primaryTitle + '">';
-    var cardTitle = '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0">' + firstName + ' ' + lastName + '</h3>';
-    var primaryTitleString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start">' + primaryTitle + '</p>';
-    var emailAddressString = '<p class="card-text d-flex justify-content-center justify-content-md-start text-center text-md-start"><a href="mailto:' + emailAddress + '?subject=Sent From Your Faculty Profile&body=Thank you">' + emailAddress + '</a></p>';
+    var cardTitle = '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0 text-wrap">' + firstName + ' ' + lastName + '</h3>';
+    var primaryTitleString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start text-wrap">' + primaryTitle + '</p>';
+    var emailAddressString = '<p class="card-text d-flex justify-content-center justify-content-md-start text-center text-md-start text-wrap"><a href="mailto:' + emailAddress + '?subject=Sent From Your Faculty Profile&body=Thank you">' + emailAddress + '</a></p>';
     var closeCardTitle = '</h3>';
     var openCardBody = '<div class="card-body">';
     var closeCardBody = '</div>';
