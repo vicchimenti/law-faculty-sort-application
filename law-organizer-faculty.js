@@ -13,7 +13,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 3.21
+ *      @version 3.22
  */
 
 
@@ -54,7 +54,7 @@
      *  Declare/Assign local variables with base formatting
      * 
      * */
-    var hiddenFields = '<span class="visually-hidden">No Fields Entered</span>';
+    var hiddenFields = '';
     var openHiddenFields = '<div class="hiddenSearchText visually-hidden">';
     var closeHiddenFields = '</div>';
     var primaryImageString = '<img src="' + primaryImage + '" class="card-img rounded-circle" alt="' + firstName + ' ' + lastName + ', ' + primaryTitle + '">';
@@ -85,6 +85,31 @@
     if (biography != "") {
         cardTitle = '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start"><a href="' + fullTextLink + '" title="' + firstName + ' ' + lastName + ', ' + primaryTitle + '">' + firstName + ' ' + lastName + '</a></h3>';
     }
+
+
+
+
+    /***
+     *  write hidden search fields
+     * 
+     * */
+    if (secondaryTitle != "") {
+        var secondaryTitleHidden = '<span class="visually-hidden secondaryTitle">' + secondaryTitle + '</span>';
+        hiddenFields += secondaryTitleHidden;
+    }
+    if (education != "") {
+        var educationHidden = '<span class="visually-hidden education">' + education + '</span>';
+        hiddenFields += educationHidden;
+    }
+    if (expertise != "") {
+        var expertiseHidden = '<span class="visually-hidden expertise">' + expertise + '</span>';
+        hiddenFields += expertiseHidden;
+    }
+    if (expertise != "") {
+        var expertiseHidden = '<span class="visually-hidden expertise">' + expertise + '</span>';
+        hiddenFields += expertiseHidden;
+    }
+    
 
 
 
