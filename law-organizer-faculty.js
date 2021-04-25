@@ -62,7 +62,7 @@
     var closeCardTitle = '</h3>';
     var openCardBody = '<div class="card-body">';
     var closeCardBody = '</div>';
-    var openBodyWrapper = '<div class="col-md-8">';
+    var openBodyWrapper = '<div class="col-md-8 d-flex align-items-center">';
     var closeBodyWrapper = '</div>';
     var openImageWrapper = '<div class="col-md-4">';
     var closeImageWrapper = '</div>';
