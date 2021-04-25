@@ -71,7 +71,9 @@
     var openRow = '<div class="row g-0">';
     var closeRow = '</div>';
     var anchorWrap = '<div class="visually-hidden">' + anchorTag + '</div>';
-    var beginningHTML = '<div class="lawFacultyWrapper contentItem card w-100 border-0" aria-label="' + firstName + ' ' + lastName + '" id="id' + contentID + '" data-position-default="Main" data-position-selected="Main">';
+    var openCard = '<div class="card w-100 border-0">'
+    var closeCard = '</div>';
+    var beginningHTML = '<div class="lawFacultyWrapper contentItem col" aria-label="' + firstName + ' ' + lastName + '" id="id' + contentID + '" data-position-default="Main" data-position-selected="Main">';
     var endingHTML = '</div>';
     var horizontalRule = '<hr class="lawProfileBorderRule" />'
 
@@ -139,6 +141,7 @@
      * */
     document.write(beginningHTML);
     document.write(anchorWrap);
+    document.write(openCard);
     document.write(openRow);
     document.write(openImageWrapper);
     document.write(primaryImageString);
@@ -154,6 +157,7 @@
     document.write(openHiddenFields);
     document.write(hiddenFields);
     document.write(closeHiddenFields);
+    document.write(closeCard);
     document.write(horizontalRule);
     document.write(endingHTML);
 
