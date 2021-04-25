@@ -10,3 +10,4 @@ SeattleU School of Law
 - [x] Add bio and cv to hidden organizer fields
 - [] Address fields on organizer layout ie email
 - [x] Update content typew to bootstrap 5
+- [] Masonry mobile
