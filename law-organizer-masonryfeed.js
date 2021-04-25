@@ -13,7 +13,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 4.10
+ *      @version 4.11
  */
 
 
@@ -64,14 +64,14 @@
     var closeCardTitle = '</h3>';
     var openCardBody = '<div class="card-body">';
     var closeCardBody = '</div>';
-    var openBodyWrapper = '<div class="col-md-8 d-flex align-items-center">';
+    var openBodyWrapper = '<div class="col-md-8 d-flex align-items-center flex-fill">';
     var closeBodyWrapper = '</div>';
-    var openImageWrapper = '<div class="col-md-4 d-flex align-items-center">';
+    var openImageWrapper = '<div class="col-md-4 d-flex align-items-center flex-fill">';
     var closeImageWrapper = '</div>';
     var openRow = '<div class="row g-0">';
     var closeRow = '</div>';
     var anchorWrap = '<div class="visually-hidden">' + anchorTag + '</div>';
-    var openCard = '<div class="card flex-fill h-100 w-100 border-0">'
+    var openCard = '<div class="card h-100 w-100 border-0">'
     var closeCard = '</div>';
     var beginningHTML = '<div class="lawFacultyWrapper contentItem col" aria-label="' + firstName + ' ' + lastName + '" id="id' + contentID + '" data-position-default="Main" data-position-selected="Main">';
     var endingHTML = '</div>';
