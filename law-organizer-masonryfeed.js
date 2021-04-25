@@ -13,7 +13,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 4.8
+ *      @version 4.9
  */
 
 
@@ -66,7 +66,7 @@
     var closeCardBody = '</div>';
     var openBodyWrapper = '<div class="col-md-8 d-flex align-items-center">';
     var closeBodyWrapper = '</div>';
-    var openImageWrapper = '<div class="col-md-4">';
+    var openImageWrapper = '<div class="col-md-4 d-flex align-items-center">';
     var closeImageWrapper = '</div>';
     var openRow = '<div class="row g-0">';
     var closeRow = '</div>';
