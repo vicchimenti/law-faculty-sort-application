@@ -121,6 +121,11 @@
         var publicationsHidden = '<span class="visually-hidden publications">' + publications + '</span>';
         hiddenFields += publicationsHidden;
     }
+    if (activity != "") {
+        var activityHidden = '<span class="visually-hidden activity">' + activity + '</span>';
+        hiddenFields += activityHidden;
+    }
+
     
 
 
