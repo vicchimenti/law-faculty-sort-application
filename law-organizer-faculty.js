@@ -125,6 +125,10 @@
         var activityHidden = '<span class="visually-hidden activity">' + activity + '</span>';
         hiddenFields += activityHidden;
     }
+    if (facultyStatus != "") {
+        var facultyStatusyHidden = '<span class="visually-hidden facultyStatus">' + facultyStatus + '</span>';
+        hiddenFields += facultyStatus;
+    }
 
     
 
