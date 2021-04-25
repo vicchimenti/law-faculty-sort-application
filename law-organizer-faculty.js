@@ -126,8 +126,6 @@
         hiddenFields += facultyStatusyHidden;
     }
 
-    
-
 
 
     
