@@ -105,9 +105,9 @@
         var expertiseHidden = '<span class="visually-hidden expertise">' + expertise + '</span>';
         hiddenFields += expertiseHidden;
     }
-    if (expertise != "") {
-        var expertiseHidden = '<span class="visually-hidden expertise">' + expertise + '</span>';
-        hiddenFields += expertiseHidden;
+    if (affiliations != "") {
+        var affiliationsHidden = '<span class="visually-hidden affiliations">' + affiliations + '</span>';
+        hiddenFields += affiliationsHidden;
     }
     
 
