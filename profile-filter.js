@@ -37,7 +37,7 @@
                 $(function () {
                     let parseItemsToDisplay = function () {
                         // assign array of currently visible content items
-                        visibleItems = $('.facultyListItemWrapper').not('.hideByText, .hideByType');
+                        visibleItems = $('.lawFacultyWrapper').not('.hideByText, .hideByType');
                         // check to see if array is empty
                         if (visibleItems.length == 0) {
                             // when array is empty show the results message
@@ -61,7 +61,7 @@
                         let keyword = $(this).val().toLowerCase();
                         // filter the education abroad items for the input key
                         $(function () {
-                            $('.facultyListItemWrapper').filter(function () {
+                            $('.lawFacultyWrapper').filter(function () {
                                 // when the search key is not present in the item then hide the item
                                 $(this).toggleClass('hideByText', !($(this).text().toLowerCase().indexOf(keyword) > -1));
                             });
@@ -90,14 +90,14 @@
                                 console.log("typeValue: " + typeValue);
                                 // Check to see if the Key and Value are a Match
                                 if (typeValue.match(typeKey)) {
-                                    $(this).parents('.facultyListItemWrapper').removeClass('hideByType');
+                                    $(this).parents('.lawFacultyWrapper').removeClass('hideByType');
                                 } else {
-                                    $(this).parents('.facultyListItemWrapper').addClass('hideByType');
+                                    $(this).parents('.lawFacultyWrapper').addClass('hideByType');
                                 }
                             });
                             // Else the Search Key is Null so Reset all Content Items to Visible
                         } else {
-                            $('.facultyListItemWrapper').removeClass('hideByType');
+                            $('.lawFacultyWrapper').removeClass('hideByType');
                         }
                         // parse out unselected content items and limit display to user selected items
                         parseItems.process();
