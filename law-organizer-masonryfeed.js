@@ -13,7 +13,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 3.18
+ *      @version 3.24
  */
 
 
@@ -54,6 +54,9 @@
      *  Declare/Assign local variables with base formatting
      * 
      * */
+    var hiddenFields = '';
+    var openHiddenFields = '<div class="hiddenSearchText visually-hidden">';
+    var closeHiddenFields = '</div>';
     var primaryImageString = '<img src="' + primaryImage + '" class="card-img rounded-circle" alt="' + firstName + ' ' + lastName + ', ' + primaryTitle + '">';
     var cardTitle = '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start">' + firstName + ' ' + lastName + '</h3>';
     var primaryTitleString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start">' + primaryTitle + '</p>';
@@ -68,7 +71,7 @@
     var openRow = '<div class="row g-0">';
     var closeRow = '</div>';
     var anchorWrap = '<div class="visually-hidden">' + anchorTag + '</div>';
-    var beginningHTML = '<div class="card w-100 border-0" aria-label="' + firstName + ' ' + lastName + '" id="id' + contentID + '" data-position-default="Main" data-position-selected="Main">';
+    var beginningHTML = '<div class="lawFacultyWrapper contentItem card w-100 border-0" aria-label="' + firstName + ' ' + lastName + '" id="id' + contentID + '" data-position-default="Main" data-position-selected="Main">';
     var endingHTML = '</div>';
     var horizontalRule = '<hr class="lawProfileBorderRule" />'
 
@@ -85,26 +88,75 @@
 
 
 
+
+    /***
+     *  write hidden search fields
+     * 
+     * */
+    if (secondaryTitle != "") {
+        var secondaryTitleHidden = '<span class="visually-hidden secondaryTitle">' + secondaryTitle + '</span>';
+        hiddenFields += secondaryTitleHidden;
+    }
+    if (education != "") {
+        var educationHidden = '<span class="visually-hidden education">' + education + '</span>';
+        hiddenFields += educationHidden;
+    }
+    if (expertise != "") {
+        var expertiseHidden = '<span class="visually-hidden expertise">' + expertise + '</span>';
+        hiddenFields += expertiseHidden;
+    }
+    if (affiliations != "") {
+        var affiliationsHidden = '<span class="visually-hidden affiliations">' + affiliations + '</span>';
+        hiddenFields += affiliationsHidden;
+    }
+    if (courses != "") {
+        var coursesHidden = '<span class="visually-hidden courses">' + courses + '</span>';
+        hiddenFields += coursesHidden;
+    }
+    if (biography != "") {
+        var biographyHidden = '<span class="visually-hidden biography">' + biography + '</span>';
+        hiddenFields += biographyHidden;
+    }
+    if (publications != "") {
+        var publicationsHidden = '<span class="visually-hidden publications">' + publications + '</span>';
+        hiddenFields += publicationsHidden;
+    }
+    if (activity != "") {
+        var activityHidden = '<span class="visually-hidden activity">' + activity + '</span>';
+        hiddenFields += activityHidden;
+    }
+    if (facultyStatus != "") {
+        var facultyStatusyHidden = '<span class="visually-hidden facultyStatus">' + facultyStatus + '</span>';
+        hiddenFields += facultyStatusyHidden;
+    }
+
+    
+
+
+
     
     /***
      *  Write the document once
      * 
      * */
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorWrap));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, openRow));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, openImageWrapper));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, primaryImageString));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, closeImageWrapper));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, openBodyWrapper));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, openCardBody));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, cardTitle));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, primaryTitleString));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, emailAddressString));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, closeCardBody));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, closeBodyWrapper));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, closeRow));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, horizontalRule));
+    document.write(beginningHTML);
+    document.write(anchorWrap);
+    document.write(openRow);
+    document.write(openImageWrapper);
+    document.write(primaryImageString);
+    document.write(closeImageWrapper);
+    document.write(openBodyWrapper);
+    document.write(openCardBody);
+    document.write(cardTitle);
+    document.write(primaryTitleString);
+    document.write(emailAddressString);
+    document.write(closeCardBody);
+    document.write(closeBodyWrapper);
+    document.write(closeRow);
+    document.write(openHiddenFields);
+    document.write(hiddenFields);
+    document.write(closeHiddenFields);
+    document.write(horizontalRule);
     document.write(endingHTML);
 
 
