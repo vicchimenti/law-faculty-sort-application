@@ -157,7 +157,7 @@
     document.write(openHiddenFields);
     document.write(hiddenFields);
     document.write(closeHiddenFields);
-    document.write(horizontalRule);
+    // document.write(horizontalRule);
     document.write(closeCard);
     document.write(endingHTML);
 
