@@ -1,8 +1,8 @@
 /***
  *      @author Victor Chimenti, MSCS-SE '20
- *      @file organizer.faculty.js
+ *      @file law-organizer-masonryfeed.js
  *      @see Seattle University School of Law Faculty Profile Type
- *      law/organizer/facultyList/
+ *      law/organizer/masonryfeed/
  *
  *      This new content type layout is a smart layout for news items that must obey
  *      a masonry grid layout. In this iteration this layout will be dedicated
@@ -13,7 +13,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 3.24
+ *      @version 4.1
  */
 
 
