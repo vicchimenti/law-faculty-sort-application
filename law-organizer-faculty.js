@@ -54,6 +54,9 @@
      *  Declare/Assign local variables with base formatting
      * 
      * */
+    var hiddenFields = '<span class="visually-hidden">No Fields Entered</span>';
+    var openHiddenFields = '<div class="hiddenSearchText visually-hidden">';
+    var closeHiddenFields = '</div>';
     var primaryImageString = '<img src="' + primaryImage + '" class="card-img rounded-circle" alt="' + firstName + ' ' + lastName + ', ' + primaryTitle + '">';
     var cardTitle = '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start">' + firstName + ' ' + lastName + '</h3>';
     var primaryTitleString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start">' + primaryTitle + '</p>';
@@ -104,6 +107,9 @@
     document.write(closeCardBody);
     document.write(closeBodyWrapper);
     document.write(closeRow);
+    document.write(openHiddenFields);
+    document.write(hiddenFields);
+    document.write(closeHiddenFields);
     document.write(horizontalRule);
     document.write(endingHTML);
 
