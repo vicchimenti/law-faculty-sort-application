@@ -8,6 +8,7 @@ SeattleU School of Law
 - [x] Masonry grid to two col cayout
 - [x] Profile to horizontal card
 - [x] Add bio and cv to hidden organizer fields
-- [] Address fields on organizer layout ie email
+- [x] Address fields on organizer layout ie email
 - [x] Update content typew to bootstrap 5
-- [] Masonry mobile
+- [x] Masonry mobile
+- [] Convert hidden fields logic to dictionary
