@@ -2,7 +2,7 @@
  *      @author Victor Chimenti, MSCS-SE '20
  *      @file output-career.js
  *      @see Seattle University School of Law Faculty Profile Type
- *      output-career
+ *      output/career
  *
  *      This content layout will be the masonry organizer layout and will link to the
  *      full text layout to reveal the full article.
