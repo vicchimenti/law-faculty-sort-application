@@ -9,8 +9,8 @@
  * 
  */
  var fieldToBeEvaluated = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Faculty Status" output="normal" display_field="value" />');
- var optionToTestFor = "Career"; //edit this to change the option
- var contentTypeLayout = 'law/organizer/masonryfeed/'; //edit this to change the Content Layout to use for output
+ var optionToTestFor = 'Career'; //edit this to change the option
+ var contentTypeLayout = 'output/career'; //edit this to change the Content Layout to use for output
  var n = fieldToBeEvaluated.indexOf(optionToTestFor); /* determines starting character of string */
  
  
