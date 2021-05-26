@@ -90,7 +90,7 @@ try {
         const openRow = '<div class="row g-0">'
         const closeRow = '</div>'
         const anchorWrap = '<div class="visually-hidden">' + dict.anchorTag.content + '</div>'
-        const beginningHTML = '<div class="lawFacultyWrapper contentItem card w-100 border-0" aria-label="' + dict.firstName.content + ' ' + dict.lastName.content + '" id="id' + contentID + '" data-position-default="Main" data-position-selected="Main">'
+        const beginningHTML = '<div class="lawFacultyWrapper contentItem card w-100 border-0" aria-label="' + dict.firstName.content + ' ' + dict.lastName.content + '" id="id' + dict.contentID.content + '" data-position-default="Main" data-position-selected="Main">'
         const endingHTML = '</div>'
         const horizontalRule = '<hr class="lawProfileBorderRule" />'
     ​
