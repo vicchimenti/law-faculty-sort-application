@@ -1,104 +1,117 @@
 <div class="facultyProfileWrapper" id="id<t4 type='meta' meta='content_id' />-fulltext">
-    <t4 type="meta" meta="html_anchor" />
-    <div class="facultyProfileTop">
-        <div class="standardContent">
-        
-            <div class="facultyProfilePicture col-md-4">
-                <!-- Media Library Image -->
-                <t4 type="content" name="Profile Pic" output="selective-output" process-format="true"
-                    format="<div class=&quot;facultyPhoto&quot;>$value</div>" formatter="image/*"
-                    alt="Photo of<t4 type='content' name='First Name' output='normal' modifiers='htmlentities' /><t4 type='content' name='Last Name' output='normal' modifiers='htmlentities' />" />            
+  <t4 type="meta" meta="html_anchor" />
+  
+  <div class="facultyProfileTop">
+    <div class="standardContent row">
 
-                <div class="clearfix"></div>
-            </div>
+      <div class="facultyProfilePicture col-lg-4">
+        <!-- Media Library Image -->
+        <t4 type="content" name="Profile Pic" output="selective-output" process-format="true"
+          format="<div class=&quot;facultyPhoto&quot;>$value</div>" formatter="image/*"
+          alt="Photo of<t4 type='content' name='First Name' output='normal' modifiers='htmlentities' /><t4 type='content' name='Last Name' output='normal' modifiers='htmlentities' />" />
 
-            <!-- Profile header text -->
-            <div class="facultyProfileInfo col-md-8">
-                <h1>
-                    <t4 type="content" name="First Name" output="normal" />
-                    <t4 type="content" name="Last Name" output="normal" modifiers="striptags,htmlentities" />
-                </h1>
+        <div class="clearfix"></div>
+      </div>
 
-                <div class="facultyProfileTitles">
-                    <p>
-                        <t4 type="content" name="Primary Title" output="selective-output" format="$value<br>" />
-                        <t4 type="content" name="Secondary Title" output="selective-output" format="$value<br>" />
-                    </p>
-                </div>
+      <!-- START profile header text -->
+      <div class="facultyProfileInfo col-lg-8 flex-grow-1">
+        <h1>
+          <t4 type="content" name="First Name" output="normal" />
+          <t4 type="content" name="Last Name" output="normal" modifiers="striptags,htmlentities" />
+        </h1>
 
-                <div class="facultyProfileContactInfo">
-                    <t4 type="content" name="Room" output="selective-output" process-format="true"
-                        format='<p class="facultyProfileRoom col-md-4 col-lg-3"><span class="fas fa-map-marker"></span>&nbsp;$value </p>' />
+        <div class="facultyProfileTitles">
+          <p>
+            <t4 type="content" name="Primary Title" output="selective-output" format="$value<br>" />
+            <t4 type="content" name="Secondary Title" output="selective-output" format="$value<br>" />
+          </p>
+        </div>
 
-                    <t4 type="content" name="Phone" output="selective-output" process-format="true"
-                        format='<p class="facultyProfilePhone col-md-3 col-lg-3"><span class="fas fa-phone-alt"></span>&nbsp;$value </p>' />
+        <div class="facultyProfileContactInfo">
+          <div class="d-flex flex-column flex-xxl-row">
+            <t4 type="content" name="Room" output="selective-output" process-format="true"
+              format='<p class="facultyProfileRoom me-xxl-5"><span class="fas fa-map-marker"></span>&nbsp;$value </p>' />
 
-                    <p class="facultyProfileEmail col-md-5 col-lg-6">
-                        <span class="fas fa-envelope"></span>&nbsp;
-                        <a href="mailto:<t4 type='content' name='Email' output='normal' modifiers='striptags' />">
-                            <t4 type="content" name="Email" output="normal" modifiers="striptags" />
-                        </a>
-                    </p>
-                </div>
-                <div class="clearfix"></div>
+            <t4 type="content" name="Contact Phone" output="selective-output" process-format="true"
+              format='<p class="facultyProfilePhone me-xxl-5"><span class="fas fa-phone-alt"></span>&nbsp;$value </p>' />
 
-                <t4 type="content" name="Show link to CV" output="selective-output" process-format="true" format="<div class=&quot;facultyProfileCV col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-0&quot;>
-                                <span class=&quot;boxlinkItem&quot;>
-                                    <a href=&quot;<t4 type='content' name='CV' output='file' />&quot; title=&quot;Download <t4 type='content' name='First Name' output='normal' modifiers='striptags,htmlentities' /> <t4 type='content' name='Last Name' output='normal' modifiers='striptags,htmlentities' /> Curriculum Vitae&quot;>
-                                    <span class=&quot;fas fa-download&quot;></span> Curriculum Vitae</a>
-                                </span>
-                            </div>" modifiers="medialibrary,nav_sections" />
+            <t4 type="content" name="Email" output="selective-output" process-format="true"
+              format='<p class="facultyProfileEmail flex-grow-1"><span class="fas fa-envelope"></span>&nbsp;$value </p>' />
+          </div> <!-- end .d-flex -->
+        </div>
+        <div class="clearfix"></div>
+        <div class="d-flex flex-column flex-lg-row">
+          <t4 type="content" name="Show link to CV" output="selective-output" process-format="true" format="<div class=&quot;facultyProfileCV flex-grow-1 flex-lg-grow-0 cv-twitter&quot;>
+                  <span class=&quot;boxlinkItem&quot;>
+                      <a href=&quot;<t4 type='content' name='CV' output='file' />&quot; title=&quot;Download <t4 type='content' name='First Name' output='normal' modifiers='striptags,htmlentities' /> <t4 type='content' name='Last Name' output='normal' modifiers='striptags,htmlentities' /> Curriculum Vitae&quot;>
+                      <span class=&quot;fas fa-download&quot;></span> Curriculum Vitae</a>
+                  </span>
+                  </div>" modifiers="medialibrary,nav_sections" />
 
-                <t4 type="content" name="Social Media" output="selective-output" process-format="true"
-                    format="<div class=&quot;facultyProfileTwitter col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-0&quot;><span class=&quot;boxlinkItem &quot;><a href=&quot;https://twitter.com/$value&quot;><span class=&quot;fab fa-twitter&quot;></span> $value</a></span></div>" />
-            </div> <!-- facultyProfileInfo --> 
-            <div class="clearfix"></div>
+          <t4 type="content" name="Twitter Handle" output="selective-output" process-format="true"
+            format="<div class=&quot;facultyProfileTwitter flex-grow-1 flex-lg-grow-0 cv-twitter&quot;><span class=&quot;boxlinkItem &quot;><a href=&quot;https://twitter.com/$value&quot;><span class=&quot;fab fa-twitter&quot;></span> $value</a></span></div>" />
+        </div> <!-- end .d-flex cv-twitter -->
+      </div> <!-- facultyProfileInfo -->
+      <div class="clearfix"></div>
+      <!-- END profile header text -->
 
-        </div> <!-- end .standardContent -->
-    </div>  <!-- end .facultyProfileTop -->
+    </div> <!-- end .standardContent -->
+  </div> <!-- end .facultyProfileTop -->
 
+  <!-- start Law - Breadcrumbs -->
+  <div class="standardContent row"> 
+    <div id="breadcrumbsWrapper" class="container">
+      <nav id="breadcrumbs" class="facultyProfileBreadcrumbs" aria-label="Breadcrumb">
+        <t4 type="navigation" name="Law - Breadcrumbs on Faculty Profile page" id="739" />
+      </nav>
+    </div>
+  </div> 
+  <!-- end Law - Breadcrumbs -->
 
+  <div class="facultyProfileMiddle standardContent row">
 
-    <div class="facultyProfileMiddle standardContent">
-
-        <div class="facultyProfileSidebar col-md-4 col-md-push-8">
-            <!-- start .primary-profile-sidebar (entire div is selective-output) / Areas of Expertise -->
-            <t4 type="content" name="Areas of Expertise" output="selective-output" modifiers="medialibrary,nav_sections" process-format="true" 
-                format="<div class=&quot;primary-profile-sidebar&quot;>
+    <div class="facultyProfileSidebar col-lg-4 order-1 order-lg-2">
+      <!-- start .primary-profile-sidebar (entire div is selective-output) / Areas of Expertise -->
+      <t4 type="content" name="Areas of Expertise" output="selective-output" modifiers="medialibrary,nav_sections"
+        process-format="true" format="<div class=&quot;primary-profile-sidebar&quot;>
                 <h3>AREAS OF EXPERTISE</h3>
                 <t4 type=&quot;content&quot; name=&quot;Areas of Expertise&quot; output=&quot;normal&quot; modifiers=&quot;medialibrary,nav_sections&quot; process-format=&quot;true&quot; 
                 format=&quot;<t4 type=&quot;content&quot; name=&quot;Areas of Expertise&quot; output=&quot;normal&quot; modifiers=&quot;medialibrary,nav_sections&quot; />&quot;  />
                 </div> <!-- end .primary-profile-sidebar -->" />
-            <!-- end .primary-profile-sidebar (selective-output) / Areas of Expertise -->
-            
-            <div class="secondary-profile-sidebar">
-                <t4 type="content" name="Education" output="selective-output" process-format="true"
-                    format="<h3>EDUCATION</h3>$value" modifiers="nav_sections" />
-                
-                <t4 type="content" name="Affiliations" output="selective-output" modifiers="medialibrary,nav_sections" process-format="true" 
-                    format="<h3>AFFILIATIONS</h3><t4 type=&quot;content&quot; name=&quot;Affiliations&quot; output=&quot;normal&quot; modifiers=&quot;medialibrary,nav_sections&quot; />" />
-                
-                <t4 type="content" name="Courses" output="selective-output" modifiers="medialibrary,nav_sections" process-format="true" 
-                    format="<h3>COURSES</h3><t4 type=&quot;content&quot; name=&quot;Courses&quot; output=&quot;normal&quot; modifiers=&quot;medialibrary,nav_sections&quot; />" />
-            </div> <!-- end .secondary-profile-sidebar -->
-        
-        </div> <!-- end .facultyProfileSidebar -->
+      <!-- end .primary-profile-sidebar (selective-output) / Areas of Expertise -->
 
-        <div class="primaryProfileContent col-md-8 col-md-pull-4">
-            <div class="facultyProfileBiography">
-                <h2>Biography</h2>
-                <t4 type="content" name="Biography" output="normal" />
-            </div> <!-- end .facultyProfileBiography -->
+      <div class="secondary-profile-sidebar">
+        <t4 type="content" name="Education" output="selective-output" process-format="true"
+          format="<h3>EDUCATION</h3>$value" modifiers="nav_sections" />
 
-            <div class="facultyProfilePublications">
-                <t4 type="content" name="Publications" output="selective-output" modifiers="medialibrary,nav_sections" process-format="true" 
-                format="<h2>Publications</h2><t4 type=&quot;content&quot; name=&quot;Publications&quot; output=&quot;normal&quot; modifiers=&quot;medialibrary,nav_sections&quot; />" />
-            </div> <!-- end .facultyProfilePublications -->
+        <t4 type="content" name="Affiliations" output="selective-output" modifiers="medialibrary,nav_sections"
+          process-format="true"
+          format="<h3>AFFILIATIONS</h3><t4 type=&quot;content&quot; name=&quot;Affiliations&quot; output=&quot;normal&quot; modifiers=&quot;medialibrary,nav_sections&quot; />" />
 
-            <div class="facultyProfileActivity">
-                <t4 type="content" name="Activity" output="selective-output" modifiers="medialibrary,nav_sections" process-format="true" 
-                format="<h2>Activity</h2><t4 type=&quot;content&quot; name=&quot;Activity&quot; output=&quot;normal&quot; modifiers=&quot;medialibrary,nav_sections&quot; />" />
-            </div> <!-- end .facultyProfileActivity -->
-        </div> <!-- end .primaryProfileContent -->
-    </div> <!-- end .facultyProfileMiddle -->
+        <t4 type="content" name="Courses" output="selective-output" modifiers="medialibrary,nav_sections"
+          process-format="true"
+          format="<h3>COURSES</h3><t4 type=&quot;content&quot; name=&quot;Courses&quot; output=&quot;normal&quot; modifiers=&quot;medialibrary,nav_sections&quot; />" />
+      </div> <!-- end .secondary-profile-sidebar -->
+
+    </div> <!-- end .facultyProfileSidebar -->
+
+    <div class="primaryProfileContent col-lg-8 order-2 order-lg-1 pe-lg-5">
+      <div class="facultyProfileBiography">
+        <h2>Biography</h2>
+        <t4 type="content" name="Biography" output="normal" />
+      </div> <!-- end .facultyProfileBiography -->
+
+      <div class="facultyProfilePublications">
+        <t4 type="content" name="Publications" output="selective-output" modifiers="medialibrary,nav_sections"
+          process-format="true"
+          format="<h2>Publications</h2><t4 type=&quot;content&quot; name=&quot;Publications&quot; output=&quot;normal&quot; />" />
+      </div> <!-- end .facultyProfilePublications -->
+
+      <div class="facultyProfileActivity">
+        <t4 type="content" name="Activity" output="selective-output" modifiers="medialibrary,nav_sections"
+          process-format="true"
+          format="<h2>Activity</h2><t4 type=&quot;content&quot; name=&quot;Activity&quot; output=&quot;normal&quot; />" />
+      </div> <!-- end .facultyProfileActivity -->
+    </div> <!-- end .primaryProfileContent -->
+  </div> <!-- end .facultyProfileMiddle -->
 </div><!-- end .facultyProfileWrapper -->
