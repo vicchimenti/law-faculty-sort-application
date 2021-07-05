@@ -77,7 +77,7 @@ try {
     var primaryTitleString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start">' + dict.primaryTitle.content + '</p>'
     var emailAddressString = '<p class="card-text d-flex justify-content-center justify-content-md-start text-center text-md-start"><a href="mailto:' + dict.emailAddress.content + '?subject=From your Faculty Profile" title="Email ' + dict.firstName.content + ' ' + dict.lastName.content + '">Contact ' + dict.firstName.content + '</a></p>'
     // closeCardTitle doesn't exist within this page, leaving as var since it's probably here for a reason.
-    var closeCardTitle = '</h3>'
+    // var closeCardTitle = '</h3>'
     var openCardBody = '<div class="card-body">'
     var closeCardBody = '</div>'
     var openBodyWrapper = '<div class="col-md-8 d-flex align-items-center">'
