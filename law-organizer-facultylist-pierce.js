@@ -9,7 +9,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 4.0
+ *      @version 4.1
  */
 
 // Outside of try catch as both will not cause errors. Following StandardJS style guide.
@@ -52,7 +52,7 @@ try {
     publications: getValueFromTag("<t4 type='content' name='Publications' output='normal' modifiers='medialibrary,nav_sections' />"),
     activity: getValueFromTag("<t4 type='content' name='Activity' output='normal' modifiers='medialibrary,nav_sections' />"),
     fullTextLink: getValueFromTag("<t4 type='content' name='Name' output='fulltext' modifiers='striptags,htmlentities' />"),
-    anchorTag: getValueFromTag("<t4 type='meta' meta='html_anchor' />"),
+    // anchorTag: getValueFromTag("<t4 type='meta' meta='html_anchor' />"),
     contentID: getValueFromTag("<t4 type='meta' meta='content_id' />")
   }
 
@@ -87,7 +87,7 @@ try {
     var closeImageWrapper = '</div>'
     var openRow = '<div class="row g-0">'
     var closeRow = '</div>'
-    var anchorWrap = '<div class="visually-hidden">' + dict.anchorTag.content + '</div>'
+    // var anchorWrap = '<div class="visually-hidden">' + dict.anchorTag.content + '</div>'
     var beginningHTML = '<div class="lawFacultyWrapper contentItem card w-100 border-0" aria-label="' + dict.firstName.content + ' ' + dict.lastName.content + '" id="id' + dict.contentID.content + '" data-position-default="Main" data-position-selected="Main">'
     var endingHTML = '</div>'
     var horizontalRule = '<hr class="lawProfileBorderRule" />'
@@ -109,7 +109,7 @@ try {
 
     // Write all HTML tags using document.write
     document.write(beginningHTML)
-    document.write(anchorWrap)
+    // document.write(anchorWrap)
     document.write(openRow)
     document.write(openImageWrapper)
     document.write(primaryImageString)
