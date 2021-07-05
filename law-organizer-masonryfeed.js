@@ -140,7 +140,6 @@
      * 
      * */
     document.write(beginningHTML);
-    // document.write(anchorTag);
     document.write(openCard);
     document.write(openRow);
     document.write(openImageWrapper);
