@@ -301,12 +301,13 @@
             openImageWrapper,
             openFig,
 
-            imageString,
+            primaryImageString,
 
             closeFig,
             closeImageWrapper,
             openCardBody,
             cardTitle,
+
             primaryTitleString,
             emailAddressString,
 
@@ -314,7 +315,7 @@
 
             
             openHidden,
-            
+
             listOfCats,
             pinnedItem,
 
