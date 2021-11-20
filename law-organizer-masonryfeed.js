@@ -168,14 +168,17 @@
      *  Declare/Assign local variables with base formatting
      * 
      * */
-    var hiddenFields = '';
-    var openHiddenFields = '<div class="hiddenSearchText visually-hidden">';
-    var closeHiddenFields = '</div>';
-    var primaryImageString = '<img src="' + primaryImage + '" class="card-img rounded-circle" alt="' + firstName + ' ' + lastName + ', ' + primaryTitle + '">';
-    var cardTitle = '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0">' + firstName + ' ' + lastName + '</h3>';
-    var primaryTitleString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start">' + primaryTitle + '</p>';
-    var emailAddressString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start"><a href="mailto:' + emailAddress + '?subject=From your Faculty Profile" title="Email ' + firstName + ' ' + lastName + '">Contact ' + firstName + '</a></p>';
-    var closeCardTitle = '</h3>';
+    // var hiddenFields = '';
+
+
+    let openHiddenFields = '<div class="hiddenSearchText visually-hidden">';
+    let closeHiddenFields = '</div>';
+    
+    let primaryImageString = '<img src="' + primaryImage + '" class="card-img rounded-circle" alt="' + firstName + ' ' + lastName + ', ' + primaryTitle + '">';
+    let cardTitle = '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0">' + firstName + ' ' + lastName + '</h3>';
+    let primaryTitleString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start">' + primaryTitle + '</p>';
+    let emailAddressString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start"><a href="mailto:' + emailAddress + '?subject=From your Faculty Profile" title="Email ' + firstName + ' ' + lastName + '">Contact ' + firstName + '</a></p>';
+    let closeCardTitle = '</h3>';
 
 
     let openCardBody = '<div class="card-body">';
@@ -186,8 +189,6 @@
     let closeImageWrapper = '</div>';
     let openFig = '<figure class"figure">';
     let closeFig = '</figure>'
-
-
     let openRow = '<div class="row g-0">';
     let closeRow = '</div>';
     let openCard = '<div class="card h-100 w-100 border-0">'
@@ -303,6 +304,7 @@
 
             closeImageWrapper,
             openCardBody,
+
             titleLink,
             publishedLink,
             summaryString,
@@ -310,9 +312,9 @@
             openHidden,
             listOfCats,
             pinnedItem,
+
             closeHidden,
             closeCardBody,
-
             endingHTML
         ]
     );
