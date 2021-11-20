@@ -111,7 +111,16 @@
 
 
 
+/***
+ *      Main
+ */
  try {
+
+
+    /***
+     *      Dictionary of content
+     * */
+    let masonDict = {}
 
     /***
      *  Assign local variables from the content type's fields
