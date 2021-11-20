@@ -188,7 +188,8 @@
     let closeRow = '</div>';
     let openCard = '<div class="card h-100 w-100 border-0">'
     let closeCard = '</div>';
-    let beginningHTML = '<article class="lawFacultyWrapper col flex-fill w-50" id="masonbio' + contentId + '" aria-label="' + firstName + ' ' + lastName + '">';
+    let primaryTitleString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start">' + masonDict.primaryTitle.content + '</p>';
+    let beginningHTML = '<article class="lawFacultyWrapper col flex-fill w-50" id="masonbio' + masonDict.contentId.content + '" aria-label="' + masonDict.firstName.content + ' ' + masonDict.lastName.content + '">';
     let endingHTML = '<hr class="lawProfileBorderRule" /></article>';
 
 
@@ -199,16 +200,19 @@
      * 
      * */
 
-     let cardTitle = '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0">' + firstName + ' ' + lastName + '</h3>';
+     let cardTitle =    (masonDict.biography.content)
+                        ? '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0">\
+                            <a class="card-link" href="' + masonDict.fullTextLink.content + '" title="' + masonDict.firstName.content + ' ' + masonDict.lastName.content + ', ' + masonDict.primaryTitle.content + '">\
+                            ' + masonDict.firstName.content + ' ' + masonDict.lastName.content + '</a></h3>'
+                        : '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0">' + masonDict.firstName.content + ' ' + masonDict.lastName.content + '</h3>';
 
-    if (biography != "") {
-        cardTitle = '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0"><a href="' + fullTextLink + '" title="' + firstName + ' ' + lastName + ', ' + primaryTitle + '">' + firstName + ' ' + lastName + '</a></h3>';
-    }
+    // if (masonDict.biography.content) {
+    //     cardTitle = '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0"><a href="' + fullTextLink + '" title="' + firstName + ' ' + lastName + ', ' + primaryTitle + '">' + firstName + ' ' + lastName + '</a></h3>';
+    // }
 
 
     let primaryImageString = '<img src="' + primaryImage + '" class="card-img rounded-circle" alt="' + firstName + ' ' + lastName + ', ' + primaryTitle + '">';
 
-    let primaryTitleString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start">' + primaryTitle + '</p>';
 
     let emailAddressString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start"><a href="mailto:' + emailAddress + '?subject=From your Faculty Profile" title="Email ' + firstName + ' ' + lastName + '">Contact ' + firstName + '</a></p>';
 
