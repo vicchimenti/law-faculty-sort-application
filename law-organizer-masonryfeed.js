@@ -8,7 +8,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 5.1
+ *      @version 5.2
  */
 
 
@@ -337,18 +337,17 @@
             openRow,
             openImageWrapper,
             openFig,
-
             primaryImageString,
-
             closeFig,
             closeImageWrapper,
+            openBodyWrapper,
             openCardBody,
             cardTitle,
             primaryTitleString,
             emailAddressString,    
-            openHidden,
+            openHiddenFields,
             facultyStatusString,
-            closeHidden,
+            closeHiddenFields,
             closeCardBody,
             closeBodyWrapper,
             closeRow,
