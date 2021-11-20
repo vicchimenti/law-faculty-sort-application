@@ -192,7 +192,7 @@
     let closeRow = '</div>';
     let openCard = '<div class="card h-100 w-100 border-0">'
     let closeCard = '</div>';
-    let beginningHTML = '<article class="lawFacultyWrapper contentItem col flex-fill w-50" aria-label="' + firstName + ' ' + lastName + '" id="id' + contentId + '" data-position-default="Main" data-position-selected="Main">';
+    let beginningHTML = '<article class="lawFacultyWrapper col flex-fill w-50" id="profile' + contentId + '" aria-label="' + firstName + ' ' + lastName + '">';
     let endingHTML = '<hr class="lawProfileBorderRule" /></article>';
     // let horizontalRule = '<hr class="lawProfileBorderRule" />'
 
