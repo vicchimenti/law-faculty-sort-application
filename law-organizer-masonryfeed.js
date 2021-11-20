@@ -8,7 +8,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 5.2
+ *      @version 5.3
  */
 
 
@@ -182,11 +182,11 @@
     let closeBodyWrapper = '</div>';
     let openImageWrapper = '<div class="col-md-4 d-flex align-items-center">';
     let closeImageWrapper = '</div>';
-    let openFig = '<figure class"figure visually-hidden">';
+    let openFig = '<figure class="figure visually-hidden">';
     let closeFig = '</figure>'
     let openRow = '<div class="row g-0">';
     let closeRow = '</div>';
-    let openCard = '<div class="card h-100 w-100 border-0">'
+    let openCard = '<div class="card h-100 w-100 border-0">';
     let closeCard = '</div>';
     let primaryImageString = '<span class="primaryImageString hidden visually-hidden">No Image Provided</span>';
     let emailAddressString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start"><a href="mailto:' + masonDict.emailAddress.content + '?subject=From your Faculty Profile" title="Email ' + masonDict.firstName.content + ' ' + masonDict.lastName.content + '">Contact ' + masonDict.firstName.content + '</a></p>';
