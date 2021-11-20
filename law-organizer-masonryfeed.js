@@ -302,26 +302,26 @@
      *  Write the document once
      * 
      * */
-    document.write(beginningHTML);
-    document.write(openCard);
-    document.write(openRow);
-    document.write(openImageWrapper);
-    document.write(primaryImageString);
-    document.write(closeImageWrapper);
-    document.write(openBodyWrapper);
-    document.write(openCardBody);
-    document.write(cardTitle);
-    document.write(primaryTitleString);
-    document.write(emailAddressString);
-    document.write(closeCardBody);
-    document.write(closeBodyWrapper);
-    document.write(closeRow);
-    document.write(openHiddenFields);
-    document.write(hiddenFields);
-    document.write(closeHiddenFields);
-    document.write(closeCard);
-    document.write(horizontalRule);
-    document.write(endingHTML);
+    // document.write(beginningHTML);
+    // document.write(openCard);
+    // document.write(openRow);
+    // document.write(openImageWrapper);
+    // document.write(primaryImageString);
+    // document.write(closeImageWrapper);
+    // document.write(openBodyWrapper);
+    // document.write(openCardBody);
+    // document.write(cardTitle);
+    // document.write(primaryTitleString);
+    // document.write(emailAddressString);
+    // document.write(closeCardBody);
+    // document.write(closeBodyWrapper);
+    // document.write(closeRow);
+    // document.write(openHiddenFields);
+    // document.write(hiddenFields);
+    // document.write(closeHiddenFields);
+    // document.write(closeCard);
+    // document.write(horizontalRule);
+    // document.write(endingHTML);
 
 
 
