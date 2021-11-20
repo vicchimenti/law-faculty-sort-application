@@ -127,7 +127,8 @@
         lastName:       getContentValues('<t4 type="content" name="Last Name" output="normal" modifiers="striptags,htmlentities" />'),
         firstName:      getContentValues('<t4 type="content" name="First Name" output="normal" modifiers="striptags,htmlentities" />'),
         facultyStatus:  getContentValues('<t4 type="content" name="Faculty Status" output="normal" display_field="value" />'),
-        primaryTitle:   getContentValues('<t4 type="content" name="Primary Title" output="normal" modifiers="striptags,htmlentities" />'),  
+        primaryTitle:   getContentValues('<t4 type="content" name="Primary Title" output="normal" modifiers="striptags,htmlentities" />'),
+        emailAddress:   getContentValues('<t4 type="content" name="Email" output="normal" modifiers="striptags,htmlentities,encode_emails" />'),  
 
 
 
