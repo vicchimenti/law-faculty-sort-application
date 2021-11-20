@@ -182,12 +182,13 @@
     let closeBodyWrapper = '</div>';
     let openImageWrapper = '<div class="col-md-4 d-flex align-items-center">';
     let closeImageWrapper = '</div>';
-    let openFig = '<figure class"figure">';
+    let openFig = '<figure class"figure visually-hidden">';
     let closeFig = '</figure>'
     let openRow = '<div class="row g-0">';
     let closeRow = '</div>';
     let openCard = '<div class="card h-100 w-100 border-0">'
     let closeCard = '</div>';
+    let primaryImageString = '<span class="primaryImageString hidden visually-hidden">No Image Provided</span>';
     let emailAddressString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start"><a href="mailto:' + masonDict.emailAddress.content + '?subject=From your Faculty Profile" title="Email ' + masonDict.firstName.content + ' ' + masonDict.lastName.content + '">Contact ' + masonDict.firstName.content + '</a></p>';
     let primaryTitleString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start">' + masonDict.primaryTitle.content + '</p>';
     let beginningHTML = '<article class="lawFacultyWrapper col flex-fill w-50" id="masonbio' + masonDict.contentId.content + '" aria-label="' + masonDict.firstName.content + ' ' + masonDict.lastName.content + '">';
@@ -212,8 +213,28 @@
     // }
 
 
-    let primaryImageString = '<img src="' + primaryImage + '" class="card-img rounded-circle" alt="' + firstName + ' ' + lastName + ', ' + primaryTitle + '">';
 
+
+    /***
+     *  Parse for image
+     * 
+     * */
+    if (masonDict.primaryImage.content) {
+
+        let imageID = content.get('Profile Pic').getID();
+        let mediaInfo = getMediaInfo(imageID);
+        let media = readMedia(imageID);
+        let info = new ImageInfo;
+        info.setInput(media);
+
+        let imageDefaultAlt = masonDict.fullName.content || masonDict.contentName.content;
+
+        primaryImageString = (info.check()) ?
+            '<img src="' + majorDict.frontPageImage.content + '" class="articleImage figure-img card-img-top" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />' :
+            '<img src="' + majorDict.frontPageImage.content + '" class="articleImage figure-img card-img-top" alt="' + imageDefaultAlt + '" loading="auto" />';
+
+        openImageWrapper = '<figure class="figure">';
+    }
 
 
 
