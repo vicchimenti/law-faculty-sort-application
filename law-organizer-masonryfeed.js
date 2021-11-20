@@ -120,6 +120,7 @@
     
  
 
+
     /***
      *  Declare/Assign local variables with base formatting
      * 
@@ -157,10 +158,6 @@
                             <a class="card-link" href="' + masonDict.fullTextLink.content + '" title="' + masonDict.firstName.content + ' ' + masonDict.lastName.content + ', ' + masonDict.primaryTitle.content + '">\
                             ' + masonDict.firstName.content + ' ' + masonDict.lastName.content + '</a></h3>'
                         : '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0">' + masonDict.firstName.content + ' ' + masonDict.lastName.content + '</h3>';
-
-    // if (masonDict.biography.content) {
-    //     cardTitle = '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0"><a href="' + fullTextLink + '" title="' + firstName + ' ' + lastName + ', ' + primaryTitle + '">' + firstName + ' ' + lastName + '</a></h3>';
-    // }
 
 
 
@@ -205,45 +202,7 @@
 
 
 
-    // if (secondaryTitle != "") {
-    //     var secondaryTitleHidden = '<span class="visually-hidden secondaryTitle">' + secondaryTitle + '</span>';
-    //     hiddenFields += secondaryTitleHidden;
-    // }
-    // if (education != "") {
-    //     var educationHidden = '<span class="visually-hidden education">' + education + '</span>';
-    //     hiddenFields += educationHidden;
-    // }
-    // if (expertise != "") {
-    //     var expertiseHidden = '<span class="visually-hidden expertise">' + expertise + '</span>';
-    //     hiddenFields += expertiseHidden;
-    // }
-    // if (affiliations != "") {
-    //     var affiliationsHidden = '<span class="visually-hidden affiliations">' + affiliations + '</span>';
-    //     hiddenFields += affiliationsHidden;
-    // }
-    // if (courses != "") {
-    //     var coursesHidden = '<span class="visually-hidden courses">' + courses + '</span>';
-    //     hiddenFields += coursesHidden;
-    // }
-    // if (biography != "") {
-    //     var biographyHidden = '<span class="visually-hidden biography">' + biography + '</span>';
-    //     hiddenFields += biographyHidden;
-    // }
-    // if (publications != "") {
-    //     var publicationsHidden = '<span class="visually-hidden publications">' + publications + '</span>';
-    //     hiddenFields += publicationsHidden;
-    // }
-    // if (activity != "") {
-    //     var activityHidden = '<span class="visually-hidden activity">' + activity + '</span>';
-    //     hiddenFields += activityHidden;
-    // }
 
-
-
-    // if (facultyStatus != "") {
-    //     var facultyStatusyHidden = '<span class="visually-hidden facultyStatus">' + facultyStatus + '</span>';
-    //     hiddenFields += facultyStatusyHidden;
-    // }
 
     
 
