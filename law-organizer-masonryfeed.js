@@ -216,6 +216,17 @@
 
 
     /***
+     *  parse hidden search fields
+     * 
+     * */
+    let facultyStatusString =   (masonDict.facultyStatus.content)
+                                ? '<span class="visually-hidden facultyStatus">' + masonDict.facultyStatus.content + '</span>'
+                                : '<span class="visually-hidden facultyStatus">No Status Entered</span>';
+
+
+
+
+    /***
      *  Parse for image
      * 
      * */
@@ -229,9 +240,9 @@
 
         let imageDefaultAlt = masonDict.fullName.content || masonDict.contentName.content;
 
-        primaryImageString = (info.check()) ?
-            '<img src="' + majorDict.frontPageImage.content + '" class="articleImage figure-img card-img-top" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />' :
-            '<img src="' + majorDict.frontPageImage.content + '" class="articleImage figure-img card-img-top" alt="' + imageDefaultAlt + '" loading="auto" />';
+        primaryImageString = (info.check())
+            ? '<img src="' + masonDict.primaryImage.content + '" class="articleImage figure-img card-img rounded-circle" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'
+            : '<img src="' + masonDict.primaryImage.content + '" class="articleImage figure-img card-img rounded-circle" alt="' + imageDefaultAlt + '" loading="auto" />';
 
         openImageWrapper = '<figure class="figure">';
     }
@@ -239,13 +250,7 @@
 
 
 
-    /***
-     *  parse hidden search fields
-     * 
-     * */
-    let facultyStatusString = (masonDict.facultyStatus.content)
-                                ? '<span class="visually-hidden facultyStatus">' + masonDict.facultyStatus.content + '</span>'
-                                : '<span class="visually-hidden facultyStatus">No Status Entered</span>';
+
 
 
 
