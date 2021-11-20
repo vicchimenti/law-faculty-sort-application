@@ -219,9 +219,16 @@
 
 
     /***
-     *  write hidden search fields
+     *  parse hidden search fields
      * 
      * */
+    let facultyStatusString = (masonDict.facultyStatus.content)
+                                ? '<span class="visually-hidden facultyStatus">' + masonDict.facultyStatus.content + '</span>'
+                                : '<span class="visually-hidden facultyStatus">No Status Entered</span>';
+
+
+
+
     // if (secondaryTitle != "") {
     //     var secondaryTitleHidden = '<span class="visually-hidden secondaryTitle">' + secondaryTitle + '</span>';
     //     hiddenFields += secondaryTitleHidden;
@@ -314,10 +321,7 @@
             primaryTitleString,
             emailAddressString,    
             openHidden,
-
-            listOfCats,
-            pinnedItem,
-
+            facultyStatusString,
             closeHidden,
             closeCardBody,
             closeBodyWrapper,
