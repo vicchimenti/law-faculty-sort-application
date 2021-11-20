@@ -120,7 +120,20 @@
     /***
      *      Dictionary of content
      * */
-    let masonDict = {}
+    let masonDict = {
+
+        contentName:    getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
+        fullName:       getContentValues('<t4 type="content" name="Full Name" output="normal" modifiers="striptags,htmlentities" />'),
+        lastName:       getContentValues('<t4 type="content" name="Last Name" output="normal" modifiers="striptags,htmlentities" />'),
+        firstName:      getContentValues('<t4 type="content" name="First Name" output="normal" modifiers="striptags,htmlentities" />'),
+        facultyStatus:  getContentValues('<t4 type="content" name="Faculty Status" output="normal" display_field="value" />'),
+        primaryTitle:   getContentValues('<t4 type="content" name="Primary Title" output="normal" modifiers="striptags,htmlentities" />'),  
+
+
+
+        contentId:  getContentValues('<t4 type="meta" meta="content_id" />')
+
+    }
 
     /***
      *  Assign local variables from the content type's fields
@@ -145,7 +158,7 @@
     var publications = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Publications' output='normal' modifiers='medialibrary,nav_sections' />");
     var activity = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Activity' output='normal' modifiers='medialibrary,nav_sections' />");
     var fullTextLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Name' output='fulltext' use-element='true' modifiers='striptags,htmlentities' />");
-    var contentID = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='meta' meta='content_id' />");
+    var contentId = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='meta' meta='content_id' />");
 
     
  
@@ -172,7 +185,7 @@
     var closeRow = '</div>';
     var openCard = '<div class="card h-100 w-100 border-0">'
     var closeCard = '</div>';
-    var beginningHTML = '<article class="lawFacultyWrapper contentItem col flex-fill w-50" aria-label="' + firstName + ' ' + lastName + '" id="id' + contentID + '" data-position-default="Main" data-position-selected="Main">';
+    var beginningHTML = '<article class="lawFacultyWrapper contentItem col flex-fill w-50" aria-label="' + firstName + ' ' + lastName + '" id="id' + contentId + '" data-position-default="Main" data-position-selected="Main">';
     var endingHTML = '</article>';
     var horizontalRule = '<hr class="lawProfileBorderRule" />'
 
