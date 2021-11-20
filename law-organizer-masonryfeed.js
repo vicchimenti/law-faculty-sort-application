@@ -184,6 +184,8 @@
     let closeBodyWrapper = '</div>';
     let openImageWrapper = '<div class="col-md-4 d-flex align-items-center">';
     let closeImageWrapper = '</div>';
+    let openFig = '<figure class"figure">';
+    let closeFig = '</figure>'
 
 
     let openRow = '<div class="row g-0">';
@@ -191,8 +193,8 @@
     let openCard = '<div class="card h-100 w-100 border-0">'
     let closeCard = '</div>';
     let beginningHTML = '<article class="lawFacultyWrapper contentItem col flex-fill w-50" aria-label="' + firstName + ' ' + lastName + '" id="id' + contentId + '" data-position-default="Main" data-position-selected="Main">';
-    let endingHTML = '</article>';
-    let horizontalRule = '<hr class="lawProfileBorderRule" />'
+    let endingHTML = '<hr class="lawProfileBorderRule" /></article>';
+    // let horizontalRule = '<hr class="lawProfileBorderRule" />'
 
 
 
@@ -287,8 +289,15 @@
     writeDocument(
         [
             beginningHTML,
+
             openImageWrapper,
+
+            openFig,
+
             imageString,
+
+            closeFig,
+
             closeImageWrapper,
             openCardBody,
             titleLink,
@@ -300,6 +309,7 @@
             pinnedItem,
             closeHidden,
             closeCardBody,
+
             endingHTML
         ]
     );
