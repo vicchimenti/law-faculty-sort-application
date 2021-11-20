@@ -188,6 +188,7 @@
     let closeRow = '</div>';
     let openCard = '<div class="card h-100 w-100 border-0">'
     let closeCard = '</div>';
+    let emailAddressString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start"><a href="mailto:' + masonDict.emailAddress.content + '?subject=From your Faculty Profile" title="Email ' + masonDict.firstName.content + ' ' + masonDict.lastName.content + '">Contact ' + masonDict.firstName.content + '</a></p>';
     let primaryTitleString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start">' + masonDict.primaryTitle.content + '</p>';
     let beginningHTML = '<article class="lawFacultyWrapper col flex-fill w-50" id="masonbio' + masonDict.contentId.content + '" aria-label="' + masonDict.firstName.content + ' ' + masonDict.lastName.content + '">';
     let endingHTML = '<hr class="lawProfileBorderRule" /></article>';
@@ -214,7 +215,6 @@
     let primaryImageString = '<img src="' + primaryImage + '" class="card-img rounded-circle" alt="' + firstName + ' ' + lastName + ', ' + primaryTitle + '">';
 
 
-    let emailAddressString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start"><a href="mailto:' + emailAddress + '?subject=From your Faculty Profile" title="Email ' + firstName + ' ' + lastName + '">Contact ' + firstName + '</a></p>';
 
 
 
@@ -311,13 +311,8 @@
             closeImageWrapper,
             openCardBody,
             cardTitle,
-
             primaryTitleString,
-            emailAddressString,
-
-
-
-            
+            emailAddressString,    
             openHidden,
 
             listOfCats,
