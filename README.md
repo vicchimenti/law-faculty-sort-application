@@ -14,3 +14,4 @@
 - [] Mobile images
 - [] Image fill
 - [] Trim whitespaces
+- [] Handle orphaned items
