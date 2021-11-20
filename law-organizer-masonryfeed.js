@@ -1,15 +1,14 @@
 /***
- *      @author Victor Chimenti, MSCS-SE '20
- *      @file law-organizer-masonryfeed.js
- *      @see Seattle University School of Law Faculty Profile Type
- *      law/organizer/masonryfeed/
- *
- *      This content layout will be the organizer layout and will link to the
- *      full text layout to reveal the full article.
+ *    @author Victor Chimenti, MSCS
+ *    @see Seattle University School of Law Faculty Profile Masonry View
+ *    @file law-organizer-masonryfeed.js
+ *          Law - Faculty Profile
+ *          ID: 5143
+ *          law/organizer/masonryfeed/
  *
  *      Document will write once when the page loads
  *
- *      @version 4.26
+ *      @version 5.0
  */
 
 
