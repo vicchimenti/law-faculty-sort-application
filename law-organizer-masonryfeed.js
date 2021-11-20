@@ -8,7 +8,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 5.3
+ *      @version 5.4
  */
 
 
@@ -244,7 +244,7 @@
             ? '<img src="' + masonDict.primaryImage.content + '" class="articleImage figure-img card-img rounded-circle" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'
             : '<img src="' + masonDict.primaryImage.content + '" class="articleImage figure-img card-img rounded-circle" alt="' + imageDefaultAlt + '" loading="auto" />';
 
-        openImageWrapper = '<figure class="figure">';
+        openFig = '<figure class="figure">';
     }
 
 
