@@ -172,8 +172,8 @@
     var closeRow = '</div>';
     var openCard = '<div class="card h-100 w-100 border-0">'
     var closeCard = '</div>';
-    var beginningHTML = '<div class="lawFacultyWrapper contentItem col flex-fill w-50" aria-label="' + firstName + ' ' + lastName + '" id="id' + contentID + '" data-position-default="Main" data-position-selected="Main">';
-    var endingHTML = '</div>';
+    var beginningHTML = '<article class="lawFacultyWrapper contentItem col flex-fill w-50" aria-label="' + firstName + ' ' + lastName + '" id="id' + contentID + '" data-position-default="Main" data-position-selected="Main">';
+    var endingHTML = '</article>';
     var horizontalRule = '<hr class="lawProfileBorderRule" />'
 
 
