@@ -176,19 +176,23 @@
     var primaryTitleString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start">' + primaryTitle + '</p>';
     var emailAddressString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start"><a href="mailto:' + emailAddress + '?subject=From your Faculty Profile" title="Email ' + firstName + ' ' + lastName + '">Contact ' + firstName + '</a></p>';
     var closeCardTitle = '</h3>';
-    var openCardBody = '<div class="card-body">';
-    var closeCardBody = '</div>';
-    var openBodyWrapper = '<div class="col-md-8 d-flex align-items-center">';
-    var closeBodyWrapper = '</div>';
-    var openImageWrapper = '<div class="col-md-4 d-flex align-items-center">';
-    var closeImageWrapper = '</div>';
-    var openRow = '<div class="row g-0">';
-    var closeRow = '</div>';
-    var openCard = '<div class="card h-100 w-100 border-0">'
-    var closeCard = '</div>';
-    var beginningHTML = '<article class="lawFacultyWrapper contentItem col flex-fill w-50" aria-label="' + firstName + ' ' + lastName + '" id="id' + contentId + '" data-position-default="Main" data-position-selected="Main">';
-    var endingHTML = '</article>';
-    var horizontalRule = '<hr class="lawProfileBorderRule" />'
+
+
+    let openCardBody = '<div class="card-body">';
+    let closeCardBody = '</div>';
+    let openBodyWrapper = '<div class="col-md-8 d-flex align-items-center">';
+    let closeBodyWrapper = '</div>';
+    let openImageWrapper = '<div class="col-md-4 d-flex align-items-center">';
+    let closeImageWrapper = '</div>';
+
+
+    let openRow = '<div class="row g-0">';
+    let closeRow = '</div>';
+    let openCard = '<div class="card h-100 w-100 border-0">'
+    let closeCard = '</div>';
+    let beginningHTML = '<article class="lawFacultyWrapper contentItem col flex-fill w-50" aria-label="' + firstName + ' ' + lastName + '" id="id' + contentId + '" data-position-default="Main" data-position-selected="Main">';
+    let endingHTML = '</article>';
+    let horizontalRule = '<hr class="lawProfileBorderRule" />'
 
 
 
