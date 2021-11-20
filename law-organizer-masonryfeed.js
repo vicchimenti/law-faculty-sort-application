@@ -124,12 +124,6 @@
      *  Declare/Assign local variables with base formatting
      * 
      * */
-    // var hiddenFields = '';
-    // let closeCardTitle = '</h3>';
-    // let horizontalRule = '<hr class="lawProfileBorderRule" />'
-
-
-
     let openHiddenFields = '<div class="hiddenSearchText visually-hidden">';
     let closeHiddenFields = '</div>';
     let openCardBody = '<div class="card-body">';
