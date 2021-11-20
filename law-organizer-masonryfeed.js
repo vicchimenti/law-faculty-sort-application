@@ -290,10 +290,10 @@
 
 
 
-    if (facultyStatus != "") {
-        var facultyStatusyHidden = '<span class="visually-hidden facultyStatus">' + facultyStatus + '</span>';
-        hiddenFields += facultyStatusyHidden;
-    }
+    // if (facultyStatus != "") {
+    //     var facultyStatusyHidden = '<span class="visually-hidden facultyStatus">' + facultyStatus + '</span>';
+    //     hiddenFields += facultyStatusyHidden;
+    // }
 
     
 
