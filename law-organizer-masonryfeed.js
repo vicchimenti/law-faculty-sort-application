@@ -169,18 +169,13 @@
      * 
      * */
     // var hiddenFields = '';
+    // let closeCardTitle = '</h3>';
+    // let horizontalRule = '<hr class="lawProfileBorderRule" />'
+
 
 
     let openHiddenFields = '<div class="hiddenSearchText visually-hidden">';
     let closeHiddenFields = '</div>';
-    
-    let primaryImageString = '<img src="' + primaryImage + '" class="card-img rounded-circle" alt="' + firstName + ' ' + lastName + ', ' + primaryTitle + '">';
-    let cardTitle = '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0">' + firstName + ' ' + lastName + '</h3>';
-    let primaryTitleString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start">' + primaryTitle + '</p>';
-    let emailAddressString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start"><a href="mailto:' + emailAddress + '?subject=From your Faculty Profile" title="Email ' + firstName + ' ' + lastName + '">Contact ' + firstName + '</a></p>';
-    let closeCardTitle = '</h3>';
-
-
     let openCardBody = '<div class="card-body">';
     let closeCardBody = '</div>';
     let openBodyWrapper = '<div class="col-md-8 d-flex align-items-center">';
@@ -195,7 +190,6 @@
     let closeCard = '</div>';
     let beginningHTML = '<article class="lawFacultyWrapper col flex-fill w-50" id="masonbio' + contentId + '" aria-label="' + firstName + ' ' + lastName + '">';
     let endingHTML = '<hr class="lawProfileBorderRule" /></article>';
-    // let horizontalRule = '<hr class="lawProfileBorderRule" />'
 
 
 
@@ -204,10 +198,19 @@
      *  determine if the article contains full text content
      * 
      * */
+
+     let cardTitle = '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0">' + firstName + ' ' + lastName + '</h3>';
+
     if (biography != "") {
         cardTitle = '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0"><a href="' + fullTextLink + '" title="' + firstName + ' ' + lastName + ', ' + primaryTitle + '">' + firstName + ' ' + lastName + '</a></h3>';
     }
 
+
+    let primaryImageString = '<img src="' + primaryImage + '" class="card-img rounded-circle" alt="' + firstName + ' ' + lastName + ', ' + primaryTitle + '">';
+
+    let primaryTitleString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start">' + primaryTitle + '</p>';
+
+    let emailAddressString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start"><a href="mailto:' + emailAddress + '?subject=From your Faculty Profile" title="Email ' + firstName + ' ' + lastName + '">Contact ' + firstName + '</a></p>';
 
 
 
@@ -293,28 +296,33 @@
     writeDocument(
         [
             beginningHTML,
-
+            openCard,
+            openRow,
             openImageWrapper,
-
             openFig,
 
             imageString,
 
             closeFig,
-
             closeImageWrapper,
             openCardBody,
+            cardTitle,
+            primaryTitleString,
+            emailAddressString,
 
-            titleLink,
-            publishedLink,
-            summaryString,
-            dateline,
+
+
+            
             openHidden,
+            
             listOfCats,
             pinnedItem,
 
             closeHidden,
             closeCardBody,
+            closeBodyWrapper,
+            closeRow,
+            closeCard,
             endingHTML
         ]
     );
