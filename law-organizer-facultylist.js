@@ -102,7 +102,7 @@
     /***
      *      Dictionary of content
      * */
-    let masonDict = {
+    let listDict = {
 
         contentName:    getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
         fullName:       getContentValues('<t4 type="content" name="Full Name" output="normal" modifiers="striptags,htmlentities" />'),
@@ -140,9 +140,9 @@
     let openCard = '<div class="card h-100 w-100 border-0">';
     let closeCard = '</div>';
     let primaryImageString = '<span class="primaryImageString hidden visually-hidden">No Image Provided</span>';
-    let emailAddressString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start"><a class="emailAddress card-link" href="mailto:' + masonDict.emailAddress.content + '?subject=From your Faculty Profile" title="Email ' + masonDict.firstName.content + ' ' + masonDict.lastName.content + '">Contact ' + masonDict.firstName.content + '</a></p>';
-    let primaryTitleString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start">' + masonDict.primaryTitle.content + '</p>';
-    let beginningHTML = '<article class="lawFacultyWrapper col flex-fill w-50" id="masonbio' + masonDict.contentId.content + '" aria-label="' + masonDict.firstName.content + ' ' + masonDict.lastName.content + '">';
+    let emailAddressString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start"><a class="emailAddress card-link" href="mailto:' + listDict.emailAddress.content + '?subject=From your Faculty Profile" title="Email ' + listDict.firstName.content + ' ' + listDict.lastName.content + '">Contact ' + listDict.firstName.content + '</a></p>';
+    let primaryTitleString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start">' + listDict.primaryTitle.content + '</p>';
+    let beginningHTML = '<article class="lawFacultyWrapper col flex-fill" id="listbio' + listDict.contentId.content + '" aria-label="' + listDict.firstName.content + ' ' + listDict.lastName.content + '">';
     let endingHTML = '</article>';
 
 
@@ -153,11 +153,11 @@
      * 
      * */
 
-     let cardTitle =    (masonDict.biography.content)
+     let cardTitle =    (listDict.biography.content)
                         ? '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0">\
-                            <a class="card-link" href="' + masonDict.fullTextLink.content + '" title="' + masonDict.firstName.content + ' ' + masonDict.lastName.content + ', ' + masonDict.primaryTitle.content + '">\
-                            ' + masonDict.firstName.content + ' ' + masonDict.lastName.content + '</a></h3>'
-                        : '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0">' + masonDict.firstName.content + ' ' + masonDict.lastName.content + '</h3>';
+                            <a class="card-link" href="' + listDict.fullTextLink.content + '" title="' + listDict.firstName.content + ' ' + listDict.lastName.content + ', ' + listDict.primaryTitle.content + '">\
+                            ' + listDict.firstName.content + ' ' + listDict.lastName.content + '</a></h3>'
+                        : '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0">' + listDict.firstName.content + ' ' + listDict.lastName.content + '</h3>';
 
 
 
@@ -166,8 +166,8 @@
      *  parse hidden search fields
      * 
      * */
-    let facultyStatusString =   (masonDict.facultyStatus.content)
-                                ? '<span class="visually-hidden facultyStatus">' + masonDict.facultyStatus.content + '</span>'
+    let facultyStatusString =   (listDict.facultyStatus.content)
+                                ? '<span class="visually-hidden facultyStatus">' + listDict.facultyStatus.content + '</span>'
                                 : '<span class="visually-hidden facultyStatus">No Status Entered</span>';
 
 
@@ -177,7 +177,7 @@
      *  Parse for image
      * 
      * */
-    if (masonDict.primaryImage.content) {
+    if (listDict.primaryImage.content) {
 
         let imageID = content.get('Profile Pic').getID();
         let mediaInfo = getMediaInfo(imageID);
@@ -185,11 +185,11 @@
         let info = new ImageInfo;
         info.setInput(media);
 
-        let imageDefaultAlt = masonDict.fullName.content || masonDict.contentName.content;
+        let imageDefaultAlt = listDict.fullName.content || listDict.contentName.content;
 
         primaryImageString = (info.check())
-            ? '<img src="' + masonDict.primaryImage.content + '" class="articleImage figure-img card-img rounded-circle" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'
-            : '<img src="' + masonDict.primaryImage.content + '" class="articleImage figure-img card-img rounded-circle" alt="' + imageDefaultAlt + '" loading="auto" />';
+            ? '<img src="' + listDict.primaryImage.content + '" class="articleImage figure-img card-img rounded-circle" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'
+            : '<img src="' + listDict.primaryImage.content + '" class="articleImage figure-img card-img rounded-circle" alt="' + imageDefaultAlt + '" loading="auto" />';
 
         openFig = '<figure class="figure">';
     }
