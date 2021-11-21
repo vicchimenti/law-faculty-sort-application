@@ -8,7 +8,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 6.0
+ *      @version 6.1
  */
 
 
@@ -188,8 +188,8 @@
         let imageDefaultAlt = listDict.fullName.content || listDict.contentName.content;
 
         primaryImageString = (info.check())
-            ? '<img src="' + listDict.primaryImage.content + '" class="articleImage figure-img card-img rounded-circle" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'
-            : '<img src="' + listDict.primaryImage.content + '" class="articleImage figure-img card-img rounded-circle" alt="' + imageDefaultAlt + '" loading="auto" />';
+            ? '<img src="' + listDict.primaryImage.content + '" class="articleImage figure-img card-img" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'
+            : '<img src="' + listDict.primaryImage.content + '" class="articleImage figure-img card-img" alt="' + imageDefaultAlt + '" loading="auto" />';
 
         openFig = '<figure class="figure">';
     }
