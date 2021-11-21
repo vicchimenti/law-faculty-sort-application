@@ -8,7 +8,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 6.3
+ *      @version 6.4
  */
 
 
@@ -137,12 +137,12 @@
     let closeFig = '</figure>'
     let openRow = '<div class="row g-0">';
     let closeRow = '</div>';
-    let openCard = '<div class="card h-100 w-100 border-0">';
+    let openCard = '<div class="card h-100 w-100 border-0 shadow">';
     let closeCard = '</div>';
     let primaryImageString = '<span class="primaryImageString hidden visually-hidden">No Image Provided</span>';
     let emailAddressString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start"><a class="emailAddress card-link" href="mailto:' + listDict.emailAddress.content + '?subject=From your Faculty Profile" title="Email ' + listDict.firstName.content + ' ' + listDict.lastName.content + '">Contact ' + listDict.firstName.content + '</a></p>';
     let primaryTitleString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start">' + listDict.primaryTitle.content + '</p>';
-    let beginningHTML = '<article class="lawFacultyWrapper listwrapper col flex-fill shadow mb-2" id="listbio' + listDict.contentId.content + '" aria-label="' + listDict.firstName.content + ' ' + listDict.lastName.content + '">';
+    let beginningHTML = '<article class="lawFacultyWrapper listwrapper col flex-fill my-2" id="listbio' + listDict.contentId.content + '" aria-label="' + listDict.firstName.content + ' ' + listDict.lastName.content + '">';
     let endingHTML = '</article>';
 
 
