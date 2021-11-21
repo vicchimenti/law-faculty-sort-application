@@ -8,7 +8,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 6.1
+ *      @version 6.2
  */
 
 
@@ -142,7 +142,7 @@
     let primaryImageString = '<span class="primaryImageString hidden visually-hidden">No Image Provided</span>';
     let emailAddressString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start"><a class="emailAddress card-link" href="mailto:' + listDict.emailAddress.content + '?subject=From your Faculty Profile" title="Email ' + listDict.firstName.content + ' ' + listDict.lastName.content + '">Contact ' + listDict.firstName.content + '</a></p>';
     let primaryTitleString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start">' + listDict.primaryTitle.content + '</p>';
-    let beginningHTML = '<article class="lawFacultyWrapper col flex-fill" id="listbio' + listDict.contentId.content + '" aria-label="' + listDict.firstName.content + ' ' + listDict.lastName.content + '">';
+    let beginningHTML = '<article class="lawFacultyWrapper col flex-fill shadow mb-1" id="listbio' + listDict.contentId.content + '" aria-label="' + listDict.firstName.content + ' ' + listDict.lastName.content + '">';
     let endingHTML = '</article>';
 
 
@@ -188,8 +188,8 @@
         let imageDefaultAlt = listDict.fullName.content || listDict.contentName.content;
 
         primaryImageString = (info.check())
-            ? '<img src="' + listDict.primaryImage.content + '" class="articleImage figure-img card-img" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'
-            : '<img src="' + listDict.primaryImage.content + '" class="articleImage figure-img card-img" alt="' + imageDefaultAlt + '" loading="auto" />';
+            ? '<img src="' + listDict.primaryImage.content + '" class="articleImage figure-img card-img p-0 m-0" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'
+            : '<img src="' + listDict.primaryImage.content + '" class="articleImage figure-img card-img p-0 m-0" alt="' + imageDefaultAlt + '" loading="auto" />';
 
         openFig = '<figure class="figure">';
     }
