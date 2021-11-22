@@ -1,14 +1,14 @@
 /***
  *    @author Victor Chimenti, MSCS
  *    @see Seattle University School of Law Faculty Profile Masonry View
- *    @file law-organizer-facultylist.js
+ *    @file law-organizer-facultylist-feature.js
  *          Law - Faculty Profile
  *          ID: 5143
- *          law/organizer/facultylist/
+ *          law/organizer/facultylist/feature
  *
  *      Document will write once when the page loads
  *
- *      @version 6.6
+ *      @version 7.0
  */
 
 
@@ -188,8 +188,12 @@
         let imageDefaultAlt = listDict.fullName.content || listDict.contentName.content;
 
         primaryImageString = (info.check())
-            ? '<img src="' + listDict.primaryImage.content + '" class="articleImage figure-img card-img p-0 m-0" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'
+            ? '<img src="' + listDict.primaryImage.content + '" class="articleImage figure-img card-img p-0 m-0" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'            
             : '<img src="' + listDict.primaryImage.content + '" class="articleImage figure-img card-img p-0 m-0" alt="' + imageDefaultAlt + '" loading="auto" />';
+
+        beginningHTML = (mediaInfo.getName().includes("no-profile-photo"))
+            ? '<article class="lawFacultyWrapper listwrapper col flex-fill my-3 visually-hidden" id="listbio' + listDict.contentId.content + '" aria-label="' + listDict.firstName.content + ' ' + listDict.lastName.content + '">'
+            : '<article class="lawFacultyWrapper listwrapper col flex-fill my-3" id="listbio' + listDict.contentId.content + '" aria-label="' + listDict.firstName.content + ' ' + listDict.lastName.content + '">';
 
         openFig = '<figure class="figure">';
     }
