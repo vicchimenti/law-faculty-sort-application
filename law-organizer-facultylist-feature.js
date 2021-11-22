@@ -8,7 +8,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 7.0
+ *      @version 7.1
  */
 
 
@@ -191,7 +191,7 @@
             ? '<img src="' + listDict.primaryImage.content + '" class="articleImage figure-img card-img p-0 m-0" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'            
             : '<img src="' + listDict.primaryImage.content + '" class="articleImage figure-img card-img p-0 m-0" alt="' + imageDefaultAlt + '" loading="auto" />';
 
-        beginningHTML = (mediaInfo.getName().includes("no-profile-photo"))
+        beginningHTML = (mediaInfo.getName().includes("no-profile-photo") || mediaInfo.getName().includes("No Photo Available"))
             ? '<article class="lawFacultyWrapper listwrapper col flex-fill my-3 visually-hidden" id="listbio' + listDict.contentId.content + '" aria-label="' + listDict.firstName.content + ' ' + listDict.lastName.content + '">'
             : '<article class="lawFacultyWrapper listwrapper col flex-fill my-3" id="listbio' + listDict.contentId.content + '" aria-label="' + listDict.firstName.content + ' ' + listDict.lastName.content + '">';
 
