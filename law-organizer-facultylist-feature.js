@@ -8,7 +8,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 7.2
+ *      @version 7.3
  */
 
 
@@ -142,7 +142,7 @@
     let primaryImageString = '<span class="primaryImageString hidden visually-hidden">No Image Provided</span>';
     let emailAddressString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start"><a class="emailAddress card-link" href="mailto:' + listDict.emailAddress.content + '?subject=From your Faculty Profile" title="Email ' + listDict.firstName.content + ' ' + listDict.lastName.content + '">Contact ' + listDict.firstName.content + '</a></p>';
     let primaryTitleString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start">' + listDict.primaryTitle.content + '</p>';
-    let beginningHTML = '<article class="lawFacultyWrapper listwrapper col flex-fill my-3 visually-hidden" id="listbio' + listDict.contentId.content + '" aria-label="' + listDict.firstName.content + ' ' + listDict.lastName.content + '">';
+    let beginningHTML = '<article class="lawFacultyWrapper listwrapper col flex-fill my-3 visually-hidden" id="featurebio' + listDict.contentId.content + '" aria-label="' + listDict.firstName.content + ' ' + listDict.lastName.content + '">';
     let endingHTML = '</article>';
 
 
@@ -154,9 +154,7 @@
      * */
 
      let cardTitle =    (listDict.biography.content)
-                        ? '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0">\
-                            <a class="card-link" href="' + listDict.fullTextLink.content + '" title="' + listDict.firstName.content + ' ' + listDict.lastName.content + ', ' + listDict.primaryTitle.content + '">\
-                            ' + listDict.firstName.content + ' ' + listDict.lastName.content + '</a></h3>'
+                        ? '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0"><a class="card-link" href="' + listDict.fullTextLink.content + '" title="' + listDict.firstName.content + ' ' + listDict.lastName.content + ', ' + listDict.primaryTitle.content + '">' + listDict.firstName.content + ' ' + listDict.lastName.content + '</a></h3>'
                         : '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0">' + listDict.firstName.content + ' ' + listDict.lastName.content + '</h3>';
 
 
@@ -192,8 +190,8 @@
             : '<img src="' + listDict.primaryImage.content + '" class="articleImage figure-img card-img p-0 m-0" alt="' + imageDefaultAlt + '" loading="auto" />';
 
         beginningHTML = (mediaInfo.getName().includes("no-profile-photo") || mediaInfo.getName().includes("No Photo Available"))
-            ? '<article class="lawFacultyWrapper listwrapper col flex-fill my-3 visually-hidden" id="listbio' + listDict.contentId.content + '" aria-label="' + listDict.firstName.content + ' ' + listDict.lastName.content + '">'
-            : '<article class="lawFacultyWrapper listwrapper col flex-fill my-3" id="listbio' + listDict.contentId.content + '" aria-label="' + listDict.firstName.content + ' ' + listDict.lastName.content + '">';
+            ? '<article class="lawFacultyWrapper listwrapper col flex-fill my-3 visually-hidden" id="featurebio' + listDict.contentId.content + '" aria-label="' + listDict.firstName.content + ' ' + listDict.lastName.content + '">'
+            : '<article class="lawFacultyWrapper listwrapper col flex-fill my-3" id="featurebio' + listDict.contentId.content + '" aria-label="' + listDict.firstName.content + ' ' + listDict.lastName.content + '">';
 
         openFig = '<figure class="figure">';
     }
