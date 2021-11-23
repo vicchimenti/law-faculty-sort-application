@@ -1,5 +1,5 @@
 /***
- *  law/organizer/career
+ *  law/organizer/staff
  * 
  */
 
