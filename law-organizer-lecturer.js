@@ -1,5 +1,5 @@
 /***
- *  law/organizer/staff
+ *  law/organizer/lecturer
  * 
  */
 
@@ -9,7 +9,7 @@
  * 
  */
 var fieldToBeEvaluated = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="content" name="Faculty Status" output="normal" display_field="value" />');
-var optionToTestFor = 'Staff'; //edit this to change the option
+var optionToTestFor = 'Lecturer'; //edit this to change the option
 var contentTypeLayout = 'output/profile'; //edit this to change the Content Layout to use for output
 var n = fieldToBeEvaluated.indexOf(optionToTestFor); /* determines starting character of string */
 
