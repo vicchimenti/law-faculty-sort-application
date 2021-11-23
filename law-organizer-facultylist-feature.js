@@ -8,7 +8,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 7.4
+ *      @version 7.5
  */
 
 
@@ -21,74 +21,74 @@
 /***
  *      Import T4 Utilities
  */
- importClass(com.terminalfour.media.IMediaManager);
- importClass(com.terminalfour.spring.ApplicationContextProvider);
- importClass(com.terminalfour.publish.utils.BrokerUtils);
- importClass(com.terminalfour.media.utils.ImageInfo);
- 
- 
- 
- 
- /***
-  *      Extract values from T4 element tags
-  *      and confirm valid existing content item field
-  */
- function getContentValues(tag) {
-     try {
-         let _tag = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, tag)
-         return {
-             isError: false,
-             content: _tag == '' ? null : _tag
-         }
-     } catch (error) {
-         return {
-             isError: true,
-             message: error.message
-         }
-     }
- }
- 
- 
- 
- 
- /***
-  *      Returns a media object
-  */
- function getMediaInfo(mediaID) {
- 
-     let mediaManager = ApplicationContextProvider.getBean(IMediaManager);
-     let media = mediaManager.get(mediaID, language);
- 
-     return media;
- }
- 
- 
- 
- 
- /***
-  *      Returns a media stream object
-  */
- function readMedia(mediaID) {
- 
-     let mediaObj = getMediaInfo(mediaID);
-     let oMediaStream = mediaObj.getMedia();
- 
-     return oMediaStream;
- }
- 
- 
- 
- 
- /***
-  *      Write the document
-  */
- function writeDocument(array) {
- 
-     for (let i = 0; i < array.length; i++) {
- 
-         document.write(array[i]);
-     }
- }
+importClass(com.terminalfour.media.IMediaManager);
+importClass(com.terminalfour.spring.ApplicationContextProvider);
+importClass(com.terminalfour.publish.utils.BrokerUtils);
+importClass(com.terminalfour.media.utils.ImageInfo);
+
+
+
+
+/***
+ *      Extract values from T4 element tags
+ *      and confirm valid existing content item field
+ */
+function getContentValues(tag) {
+    try {
+        let _tag = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, tag)
+        return {
+            isError: false,
+            content: _tag == '' ? null : _tag
+        }
+    } catch (error) {
+        return {
+            isError: true,
+            message: error.message
+        }
+    }
+}
+
+
+
+
+/***
+ *      Returns a media object
+ */
+function getMediaInfo(mediaID) {
+
+    let mediaManager = ApplicationContextProvider.getBean(IMediaManager);
+    let media = mediaManager.get(mediaID, language);
+
+    return media;
+}
+
+
+
+
+/***
+ *      Returns a media stream object
+ */
+function readMedia(mediaID) {
+
+    let mediaObj = getMediaInfo(mediaID);
+    let oMediaStream = mediaObj.getMedia();
+
+    return oMediaStream;
+}
+
+
+
+
+/***
+ *      Write the document
+ */
+function writeDocument(array) {
+
+    for (let i = 0; i < array.length; i++) {
+
+        document.write(array[i]);
+    }
+}
 
 
 
@@ -96,7 +96,7 @@
 /***
  *      Main
  */
- try {
+try {
 
 
     /***
@@ -104,21 +104,21 @@
      * */
     let listDict = {
 
-        contentName:    getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
-        fullName:       getContentValues('<t4 type="content" name="Full Name" output="normal" modifiers="striptags,htmlentities" />'),
-        lastName:       getContentValues('<t4 type="content" name="Last Name" output="normal" modifiers="striptags,htmlentities" />'),
-        firstName:      getContentValues('<t4 type="content" name="First Name" output="normal" modifiers="striptags,htmlentities" />'),
-        facultyStatus:  getContentValues('<t4 type="content" name="Faculty Status" output="normal" display_field="value" />'),
-        primaryTitle:   getContentValues('<t4 type="content" name="Primary Title" output="normal" modifiers="striptags,htmlentities" />'),
-        emailAddress:   getContentValues('<t4 type="content" name="Email" output="normal" modifiers="striptags,htmlentities,encode_emails" />'),
-        primaryImage:   getContentValues('<t4 type="content" name="Profile Pic" output="normal" formatter="path/*" />'),
-        biography:      getContentValues('<t4 type="content" name="Biography" output="normal" modifiers="medialibrary,nav_sections" />'),
-        fullTextLink:   getContentValues('<t4 type="content" name="Name" output="fulltext" use-element="true" filename-element="Name" modifiers="striptags,htmlentities" />'),
-        contentId:      getContentValues('<t4 type="meta" meta="content_id" />')
+        contentName: getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
+        fullName: getContentValues('<t4 type="content" name="Full Name" output="normal" modifiers="striptags,htmlentities" />'),
+        lastName: getContentValues('<t4 type="content" name="Last Name" output="normal" modifiers="striptags,htmlentities" />'),
+        firstName: getContentValues('<t4 type="content" name="First Name" output="normal" modifiers="striptags,htmlentities" />'),
+        facultyStatus: getContentValues('<t4 type="content" name="Faculty Status" output="normal" display_field="value" />'),
+        primaryTitle: getContentValues('<t4 type="content" name="Primary Title" output="normal" modifiers="striptags,htmlentities" />'),
+        emailAddress: getContentValues('<t4 type="content" name="Email" output="normal" modifiers="striptags,htmlentities,encode_emails" />'),
+        primaryImage: getContentValues('<t4 type="content" name="Profile Pic" output="normal" formatter="path/*" />'),
+        biography: getContentValues('<t4 type="content" name="Biography" output="normal" modifiers="medialibrary,nav_sections" />'),
+        fullTextLink: getContentValues('<t4 type="content" name="Name" output="fulltext" use-element="true" filename-element="Name" modifiers="striptags,htmlentities" />'),
+        contentId: getContentValues('<t4 type="meta" meta="content_id" />')
 
     }
-    
- 
+
+
 
 
     /***
@@ -153,9 +153,9 @@
      * 
      * */
 
-     let cardTitle =    (listDict.biography.content)
-                        ? '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0"><a class="card-link" href="' + listDict.fullTextLink.content + '" title="' + listDict.firstName.content + ' ' + listDict.lastName.content + ', ' + listDict.primaryTitle.content + '">' + listDict.firstName.content + ' ' + listDict.lastName.content + '</a></h3>'
-                        : '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0">' + listDict.firstName.content + ' ' + listDict.lastName.content + '</h3>';
+    let cardTitle = (listDict.biography.content) ?
+        '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0"><a class="card-link" target="_blank" href="' + listDict.fullTextLink.content + '" title="' + listDict.firstName.content + ' ' + listDict.lastName.content + ', ' + listDict.primaryTitle.content + '">' + listDict.firstName.content + ' ' + listDict.lastName.content + '</a></h3>' :
+        '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0">' + listDict.firstName.content + ' ' + listDict.lastName.content + '</h3>';
 
 
 
@@ -164,9 +164,9 @@
      *  parse hidden search fields
      * 
      * */
-    let facultyStatusString =   (listDict.facultyStatus.content)
-                                ? '<span class="visually-hidden facultyStatus">' + listDict.facultyStatus.content + '</span>'
-                                : '<span class="visually-hidden facultyStatus">No Status Entered</span>';
+    let facultyStatusString = (listDict.facultyStatus.content) ?
+        '<span class="visually-hidden facultyStatus">' + listDict.facultyStatus.content + '</span>' :
+        '<span class="visually-hidden facultyStatus">No Status Entered</span>';
 
 
 
@@ -185,13 +185,13 @@
 
         let imageDefaultAlt = listDict.fullName.content || listDict.contentName.content;
 
-        primaryImageString = (info.check())
-            ? '<img src="' + listDict.primaryImage.content + '" class="articleImage figure-img card-img p-0 m-0" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />'            
-            : '<img src="' + listDict.primaryImage.content + '" class="articleImage figure-img card-img p-0 m-0" alt="' + imageDefaultAlt + '" loading="auto" />';
+        primaryImageString = (info.check()) ?
+            '<img src="' + listDict.primaryImage.content + '" class="articleImage figure-img card-img p-0 m-0" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />' :
+            '<img src="' + listDict.primaryImage.content + '" class="articleImage figure-img card-img p-0 m-0" alt="' + imageDefaultAlt + '" loading="auto" />';
 
-        beginningHTML = (mediaInfo.getName().includes("no-profile-photo") || mediaInfo.getName().includes("No Photo Available"))
-            ? '<article class="lawFacultyWrapper listwrapper col flex-fill my-3 visually-hidden" id="featurebio' + listDict.contentId.content + '" aria-label="' + listDict.firstName.content + ' ' + listDict.lastName.content + '">'
-            : '<article class="lawFacultyWrapper listwrapper col flex-fill my-3" id="featurebio' + listDict.contentId.content + '" aria-label="' + listDict.firstName.content + ' ' + listDict.lastName.content + '">';
+        beginningHTML = (mediaInfo.getName().includes("no-profile-photo") || mediaInfo.getName().includes("No Photo Available")) ?
+            '<article class="lawFacultyWrapper listwrapper col flex-fill my-3 visually-hidden" id="featurebio' + listDict.contentId.content + '" aria-label="' + listDict.firstName.content + ' ' + listDict.lastName.content + '">' :
+            '<article class="lawFacultyWrapper listwrapper col flex-fill my-3" id="featurebio' + listDict.contentId.content + '" aria-label="' + listDict.firstName.content + ' ' + listDict.lastName.content + '">';
 
         openFig = '<figure class="figure">';
     }
@@ -217,7 +217,7 @@
             openCardBody,
             cardTitle,
             primaryTitleString,
-            emailAddressString,    
+            emailAddressString,
             openHiddenFields,
             facultyStatusString,
             closeHiddenFields,
