@@ -8,7 +8,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 7.7
+ *      @version 7.8
  */
 
 
@@ -80,6 +80,22 @@ function readMedia(mediaID) {
 
 
 /***
+ *      Trim any string values
+ */
+function writeDocument(array) {
+
+    for (let i = 0; i < array.length; i++) {
+
+        if (array[i]) {
+            array[i] = array[i].trim();
+        }
+    }
+}
+
+
+
+
+/***
  *      Write the document
  */
 function writeDocument(array) {
@@ -104,19 +120,23 @@ try {
      * */
     let listDict = {
 
-        contentName: getContentValues(('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />').trim()),
-        fullName: getContentValues(('<t4 type="content" name="Full Name" output="normal" modifiers="striptags,htmlentities" />').trim()),
-        lastName: getContentValues(('<t4 type="content" name="Last Name" output="normal" modifiers="striptags,htmlentities" />').trim()),
-        firstName: getContentValues(('<t4 type="content" name="First Name" output="normal" modifiers="striptags,htmlentities" />').trim()),
-        primaryTitle: getContentValues(('<t4 type="content" name="Primary Title" output="normal" modifiers="striptags,htmlentities" />').trim()),
-        emailAddress: getContentValues(('<t4 type="content" name="Email" output="normal" modifiers="striptags,htmlentities,encode_emails" />').trim()),
-        fullTextLink: getContentValues(('<t4 type="content" name="Name" output="fulltext" use-element="true" filename-element="Name" modifiers="striptags,htmlentities" />').trim()),
+        contentName: getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
+        fullName: getContentValues('<t4 type="content" name="Full Name" output="normal" modifiers="striptags,htmlentities" />'),
+        lastName: getContentValues('<t4 type="content" name="Last Name" output="normal" modifiers="striptags,htmlentities" />'),
+        firstName: getContentValues('<t4 type="content" name="First Name" output="normal" modifiers="striptags,htmlentities" />'),
+        primaryTitle: getContentValues('<t4 type="content" name="Primary Title" output="normal" modifiers="striptags,htmlentities" />'),
+        emailAddress: getContentValues('<t4 type="content" name="Email" output="normal" modifiers="striptags,htmlentities,encode_emails" />'),
+        fullTextLink: getContentValues('<t4 type="content" name="Name" output="fulltext" use-element="true" filename-element="Name" modifiers="striptags,htmlentities" />'),
         facultyStatus: getContentValues('<t4 type="content" name="Faculty Status" output="normal" display_field="value" />'),
         primaryImage: getContentValues('<t4 type="content" name="Profile Pic" output="normal" formatter="path/*" />'),
         biography: getContentValues('<t4 type="content" name="Biography" output="normal" modifiers="medialibrary,nav_sections" />'),
         contentId: getContentValues('<t4 type="meta" meta="content_id" />')
 
     }
+
+
+
+    listDict.keys(listDict).map(k => listDict[k] = typeof listDict[k] == 'string' ? listDict[k].trim() : listDict[k]);
 
 
 
