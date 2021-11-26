@@ -8,7 +8,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 7.9
+ *      @version 7.10
  */
 
 
@@ -140,7 +140,7 @@ try {
 
     // var trimmedList = trimmedList.ToDictionary( x => x.Value.Trim());
 
-    var trimmedList = listDict.ToDictionary(x => x.Key.Trim(), x => x.Value.Trim());
+    let trimmedList = listDict.ToDictionary(x => x.Key.Trim(), x => typeof x.Value == 'string' ? x.Value.Trim() : x.Value);
 
 
 
