@@ -8,7 +8,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 7.8
+ *      @version 7.9
  */
 
 
@@ -136,7 +136,12 @@ try {
 
 
 
-    listDict.keys(listDict).map(k => listDict[k] = typeof listDict[k] == 'string' ? listDict[k].trim() : listDict[k]);
+    // trimmedList.keys(trimmedList).map(k => trimmedList[k] = typeof trimmedList[k] == 'string' ? trimmedList[k].trim() : trimmedList[k]);
+
+    // var trimmedList = trimmedList.ToDictionary( x => x.Value.Trim());
+
+    var trimmedList = listDict.ToDictionary(x => x.Key.Trim(), x => x.Value.Trim());
+
 
 
 
@@ -160,9 +165,9 @@ try {
     let openCard = '<div class="feature-card card h-100 w-100 border-0 shadow-lg">';
     let closeCard = '</div>';
     let primaryImageString = '<span class="primaryImageString hidden visually-hidden">No Image Provided</span>';
-    let emailAddressString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start"><a class="emailAddress card-link" href="mailto:' + listDict.emailAddress.content + '?subject=From your Faculty Profile" title="Email ' + listDict.firstName.content + ' ' + listDict.lastName.content + '">Contact ' + listDict.firstName.content + '</a></p>';
-    let primaryTitleString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start">' + listDict.primaryTitle.content + '</p>';
-    let beginningHTML = '<article class="lawFacultyWrapper listwrapper col flex-fill my-3 visually-hidden" id="featurebio' + listDict.contentId.content + '" aria-label="' + listDict.firstName.content + ' ' + listDict.lastName.content + '">';
+    let emailAddressString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start"><a class="emailAddress card-link" href="mailto:' + trimmedList.emailAddress.content + '?subject=From your Faculty Profile" title="Email ' + trimmedList.firstName.content + ' ' + trimmedList.lastName.content + '">Contact ' + trimmedList.firstName.content + '</a></p>';
+    let primaryTitleString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start">' + trimmedList.primaryTitle.content + '</p>';
+    let beginningHTML = '<article class="lawFacultyWrapper listwrapper col flex-fill my-3 visually-hidden" id="featurebio' + trimmedList.contentId.content + '" aria-label="' + trimmedList.firstName.content + ' ' + trimmedList.lastName.content + '">';
     let endingHTML = '</article>';
 
 
@@ -173,9 +178,9 @@ try {
      * 
      * */
 
-    let cardTitle = (listDict.biography.content) ?
-        '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0"><a class="card-link" target="_blank" href="' + listDict.fullTextLink.content + '" title="' + listDict.firstName.content + ' ' + listDict.lastName.content + ', ' + listDict.primaryTitle.content + '">' + listDict.firstName.content + ' ' + listDict.lastName.content + '</a></h3>' :
-        '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0">' + listDict.firstName.content + ' ' + listDict.lastName.content + '</h3>';
+    let cardTitle = (trimmedList.biography.content) ?
+        '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0"><a class="card-link" target="_blank" href="' + trimmedList.fullTextLink.content + '" title="' + trimmedList.firstName.content + ' ' + trimmedList.lastName.content + ', ' + trimmedList.primaryTitle.content + '">' + trimmedList.firstName.content + ' ' + trimmedList.lastName.content + '</a></h3>' :
+        '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0">' + trimmedList.firstName.content + ' ' + trimmedList.lastName.content + '</h3>';
 
 
 
@@ -184,8 +189,8 @@ try {
      *  parse hidden search fields
      * 
      * */
-    let facultyStatusString = (listDict.facultyStatus.content) ?
-        '<span class="visually-hidden facultyStatus">' + listDict.facultyStatus.content + '</span>' :
+    let facultyStatusString = (trimmedList.facultyStatus.content) ?
+        '<span class="visually-hidden facultyStatus">' + trimmedList.facultyStatus.content + '</span>' :
         '<span class="visually-hidden facultyStatus">No Status Entered</span>';
 
 
@@ -195,7 +200,7 @@ try {
      *  Parse for image
      * 
      * */
-    if (listDict.primaryImage.content) {
+    if (trimmedList.primaryImage.content) {
 
         let imageID = content.get('Profile Pic').getID();
         let mediaInfo = getMediaInfo(imageID);
@@ -203,15 +208,15 @@ try {
         let info = new ImageInfo;
         info.setInput(media);
 
-        let imageDefaultAlt = listDict.fullName.content || listDict.contentName.content;
+        let imageDefaultAlt = trimmedList.fullName.content || trimmedList.contentName.content;
 
         primaryImageString = (info.check()) ?
-            '<img src="' + listDict.primaryImage.content + '" class="articleImage figure-img card-img p-0 m-0" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />' :
-            '<img src="' + listDict.primaryImage.content + '" class="articleImage figure-img card-img p-0 m-0" alt="' + imageDefaultAlt + '" loading="auto" />';
+            '<img src="' + trimmedList.primaryImage.content + '" class="articleImage figure-img card-img p-0 m-0" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />' :
+            '<img src="' + trimmedList.primaryImage.content + '" class="articleImage figure-img card-img p-0 m-0" alt="' + imageDefaultAlt + '" loading="auto" />';
 
         beginningHTML = (mediaInfo.getName().includes("no-profile-photo") || mediaInfo.getName().includes("No Photo Available")) ?
-            '<article class="lawFacultyWrapper listwrapper col flex-fill my-3 visually-hidden" id="featurebio' + listDict.contentId.content + '" aria-label="' + listDict.firstName.content + ' ' + listDict.lastName.content + '">' :
-            '<article class="lawFacultyWrapper listwrapper col flex-fill my-3" id="featurebio' + listDict.contentId.content + '" aria-label="' + listDict.firstName.content + ' ' + listDict.lastName.content + '">';
+            '<article class="lawFacultyWrapper listwrapper col flex-fill my-3 visually-hidden" id="featurebio' + trimmedList.contentId.content + '" aria-label="' + trimmedList.firstName.content + ' ' + trimmedList.lastName.content + '">' :
+            '<article class="lawFacultyWrapper listwrapper col flex-fill my-3" id="featurebio' + trimmedList.contentId.content + '" aria-label="' + trimmedList.firstName.content + ' ' + trimmedList.lastName.content + '">';
 
         openFig = '<figure class="figure">';
     }
