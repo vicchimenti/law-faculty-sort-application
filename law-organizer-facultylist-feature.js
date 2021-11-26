@@ -8,7 +8,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 7.15
+ *      @version 7.16
  */
 
 
@@ -32,26 +32,21 @@ importClass(com.terminalfour.media.utils.ImageInfo);
 /***
  *      Extract values from T4 element tags
  *      and confirm valid existing content item field
+ *      and trim all strings
  */
 function getContentValues(tag) {
 
-    // listDict.keys(listDict).map(k => listDict[k] = typeof listDict[k] == 'string' ? listDict[k].trim() : listDict[k]);
-
     try {
+
         let _tag = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, tag).trim();
 
-        // let _val = Object.values(_tag);
-
-        // let trimmedTag = (typeof _val == 'string') ? _val.trim() : _val;
-
-        // typeof _tag === 'string'
-
-        // let trimmedTag = (typeof _tag == 'string') ? _tag.trim() : _tag;
         return {
             isError: false,
             content: _tag == '' ? null : _tag
         }
+
     } catch (error) {
+
         return {
             isError: true,
             message: error.message
@@ -87,21 +82,6 @@ function readMedia(mediaID) {
     return oMediaStream;
 }
 
-
-
-
-/***
- *      Trim any string values
- */
-function trimArray(array) {
-
-    for (let i = 0; i < array.length; i++) {
-
-        if (array[i]) {
-            array[i] = array[i].trim();
-        }
-    }
-}
 
 
 
@@ -144,32 +124,6 @@ try {
         contentId: getContentValues('<t4 type="meta" meta="content_id" />')
 
     }
-
-
-
-    // listDict.keys(listDict).map(k => listDict[k] = typeof listDict[k] == 'string' ? listDict[k].trim() : listDict[k]);
-
-    // var listDict = listDict.ToDictionary( x => x.Value.Trim());
-
-    // let listDict = listDict.ToDictionary(x => x.Key.Trim(), x => typeof x.Value == 'string' ? x.Value.Trim() : x.Value);
-
-
-    /***
-     *  trim only the string value
-     * 
-     * */
-    // trimArray(
-    //     [
-    //         listDict.contentName.content,
-    //         listDict.fullName.content,
-    //         listDict.lastName.content,
-    //         listDict.firstName.content,
-    //         listDict.primaryTitle.content,
-    //         listDict.emailAddress.content,
-    //         listDict.fullTextLink.content
-    //     ]
-    // );
-
 
 
 
