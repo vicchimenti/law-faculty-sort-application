@@ -8,7 +8,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 7.11
+ *      @version 7.12
  */
 
 
@@ -38,12 +38,12 @@ function getContentValues(tag) {
     // listDict.keys(listDict).map(k => listDict[k] = typeof listDict[k] == 'string' ? listDict[k].trim() : listDict[k]);
 
     try {
-        let _tag = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, tag);
+        let _tag = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, tag).trim();
 
         let trimmedTag = (typeof _tag == 'string') ? _tag.trim() : _tag;
         return {
             isError: false,
-            content: trimmedTag == '' ? null : trimmedTag
+            content: _tag == '' ? null : _tag
         }
     } catch (error) {
         return {
