@@ -8,7 +8,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 7.13
+ *      @version 7.14
  */
 
 
@@ -40,12 +40,16 @@ function getContentValues(tag) {
     try {
         let _tag = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, tag);
 
+        let _val = Object.values(_tag);
+
+        let trimmedTag = (typeof _val == 'string') ? _val.trim() : _val;
+
         // typeof _tag === 'string'
 
         // let trimmedTag = (typeof _tag == 'string') ? _tag.trim() : _tag;
         return {
             isError: false,
-            content: _tag == '' ? null : _tag
+            content: trimmedTag == '' ? null : trimmedTag
         }
     } catch (error) {
         return {
@@ -154,17 +158,17 @@ try {
      *  trim only the string value
      * 
      * */
-    trimArray(
-        [
-            listDict.contentName.content,
-            listDict.fullName.content,
-            listDict.lastName.content,
-            listDict.firstName.content,
-            listDict.primaryTitle.content,
-            listDict.emailAddress.content,
-            listDict.fullTextLink.content
-        ]
-    );
+    // trimArray(
+    //     [
+    //         listDict.contentName.content,
+    //         listDict.fullName.content,
+    //         listDict.lastName.content,
+    //         listDict.firstName.content,
+    //         listDict.primaryTitle.content,
+    //         listDict.emailAddress.content,
+    //         listDict.fullTextLink.content
+    //     ]
+    // );
 
 
 
