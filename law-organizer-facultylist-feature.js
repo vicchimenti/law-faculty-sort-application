@@ -8,7 +8,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 7.12
+ *      @version 7.13
  */
 
 
@@ -38,9 +38,11 @@ function getContentValues(tag) {
     // listDict.keys(listDict).map(k => listDict[k] = typeof listDict[k] == 'string' ? listDict[k].trim() : listDict[k]);
 
     try {
-        let _tag = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, tag).trim();
+        let _tag = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, tag);
 
-        let trimmedTag = (typeof _tag == 'string') ? _tag.trim() : _tag;
+        // typeof _tag === 'string'
+
+        // let trimmedTag = (typeof _tag == 'string') ? _tag.trim() : _tag;
         return {
             isError: false,
             content: _tag == '' ? null : _tag
@@ -87,7 +89,7 @@ function readMedia(mediaID) {
 /***
  *      Trim any string values
  */
-function writeDocument(array) {
+function trimArray(array) {
 
     for (let i = 0; i < array.length; i++) {
 
@@ -146,6 +148,23 @@ try {
     // var listDict = listDict.ToDictionary( x => x.Value.Trim());
 
     // let listDict = listDict.ToDictionary(x => x.Key.Trim(), x => typeof x.Value == 'string' ? x.Value.Trim() : x.Value);
+
+
+    /***
+     *  trim only the string value
+     * 
+     * */
+    trimArray(
+        [
+            listDict.contentName.content,
+            listDict.fullName.content,
+            listDict.lastName.content,
+            listDict.firstName.content,
+            listDict.primaryTitle.content,
+            listDict.emailAddress.content,
+            listDict.fullTextLink.content
+        ]
+    );
 
 
 
