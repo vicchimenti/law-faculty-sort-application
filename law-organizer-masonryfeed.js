@@ -8,7 +8,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 5.9
+ *      @version 5.10
  */
 
 
@@ -158,11 +158,9 @@ try {
      * 
      * */
 
-    let cardTitle = (masonDict.biography.content) ?
-        '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0">\
-                            <a class="card-link" target="_blank" href="' + masonDict.fullTextLink.content + '" title="' + masonDict.firstName.content + ' ' + masonDict.lastName.content + ', ' + masonDict.primaryTitle.content + '">\
-                            ' + masonDict.firstName.content + ' ' + masonDict.lastName.content + '</a></h3>' :
-        '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0">' + masonDict.firstName.content + ' ' + masonDict.lastName.content + '</h3>';
+    let cardTitle = (masonDict.biography.content)
+        ? '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0"><a class="card-link" target="_blank" href="' + masonDict.fullTextLink.content + '" title="' + masonDict.firstName.content + ' ' + masonDict.lastName.content + ', ' + masonDict.primaryTitle.content + '">' + masonDict.firstName.content + ' ' + masonDict.lastName.content + '</a></h3>'
+        : '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0">' + masonDict.firstName.content + ' ' + masonDict.lastName.content + '</h3>';
 
 
 
