@@ -1,6 +1,6 @@
 /***
  *    @author Victor Chimenti, MSCS
- *    @see Seattle University School of Law Faculty Profile Masonry View
+ *    @see Seattle University School of Law Faculty Profile List View
  *    @file law-organizer-facultylist.js
  *          Law - Faculty Profile
  *          ID: 5143
