@@ -6,6 +6,14 @@ input[type="radio"].form-check-input {
     display: none;
 }
 
+input[type="radio"].form-check-input:checked+label { 
+    color: #088099;
+}
+
+.form-check-input:checked[type=radio] {
+    color: #088099;
+}
+
 #facultyFilter .form-check {
     padding-left: 0;
 }
