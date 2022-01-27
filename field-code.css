@@ -2,15 +2,19 @@
   padding: 0 0 30px 0;
 }
 
+#facultyFilter .form-check-label {
+    color: #333333;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.45rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
 input[type="radio"].form-check-input {
     display: none;
 }
 
-input[type="radio"].form-check-input:checked+label { 
-    color: #088099;
-}
-
-.form-check-input:checked[type=radio] {
+#facultyFilter input[type="radio"].form-check-input:checked + label { 
     color: #088099;
 }
 
@@ -20,14 +24,6 @@ input[type="radio"].form-check-input:checked+label {
 
 #facultyFilter .form-check-label {
     font-weight: 500;
-}
-
-#facultyFilter .form-check-label {
-    color: #333333;
-    font-family: "Montserrat", sans-serif;
-    font-size: 1.45rem;
-    font-weight: 500;
-    text-transform: uppercase;
 }
 
 #facultyFilter .form-check-label:hover {
