@@ -37,7 +37,7 @@
 
             <t4 type="content" name="Email" output="selective-output" modifiers="striptags,htmlentities,encode_emails"
               format='<p class="facultyProfileEmail flex-grow-1"><span class="fas fa-envelope"></span>
-                Email <t4 type="content" name="First Name" output="normal" modifiers="striptags,htmlentities" /></p>' />
+                Email <t4 type="content" name="First Name" output="selective-output" modifiers="striptags,htmlentities" format="$value" /></p>' />
           </div> <!-- end .d-flex -->
         </div>
         <div class="clearfix"></div>
