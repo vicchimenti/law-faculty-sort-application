@@ -135,8 +135,6 @@ try {
     let closeBodyWrapper = '</div>';
     let openImageWrapper = '<div class="col-md-4 d-flex align-items-center">';
     let closeImageWrapper = '</div>';
-    // let openFig = '<figure class="figure visually-hidden">';
-    // let closeFig = '</figure>'
     let openRow = '<div class="row g-0">';
     let closeRow = '</div>';
     let openCard = '<div class="card h-100 w-100 border-0">';
