@@ -135,8 +135,8 @@ try {
     let closeBodyWrapper = '</div>';
     let openImageWrapper = '<div class="col-md-4 d-flex align-items-center">';
     let closeImageWrapper = '</div>';
-    let openFig = '<figure class="figure visually-hidden">';
-    let closeFig = '</figure>'
+    // let openFig = '<figure class="figure visually-hidden">';
+    // let closeFig = '</figure>'
     let openRow = '<div class="row g-0">';
     let closeRow = '</div>';
     let openCard = '<div class="card h-100 w-100 border-0">';
@@ -188,10 +188,8 @@ try {
         let imageDefaultAlt = masonDict.fullName.content || masonDict.contentName.content;
 
         primaryImageString = (info.check()) ?
-            '<img src="' + masonDict.primaryImage.content + '" class="articleImage figure-img card-img rounded-circle" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />' :
-            '<img src="' + masonDict.primaryImage.content + '" class="articleImage figure-img card-img rounded-circle" alt="' + imageDefaultAlt + '" loading="auto" />';
-
-        openFig = '<figure class="figure">';
+            '<figure class="figure"><img src="' + masonDict.primaryImage.content + '" class="articleImage figure-img card-img rounded-circle" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" /></figure>' :
+            '<figure class="figure"><img src="' + masonDict.primaryImage.content + '" class="articleImage figure-img card-img rounded-circle" alt="' + imageDefaultAlt + '" loading="auto" /></figure>';
     }
 
 
@@ -207,9 +205,7 @@ try {
             openCard,
             openRow,
             openImageWrapper,
-            openFig,
             primaryImageString,
-            closeFig,
             closeImageWrapper,
             openBodyWrapper,
             openCardBody,
