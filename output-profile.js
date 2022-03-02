@@ -9,7 +9,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 5.6
+ *      @version 5.6.1 not published yet 20220302
  */
 
 
@@ -31,7 +31,7 @@ importClass(com.terminalfour.media.utils.ImageInfo);
  *      Extract values from T4 element tags
  *      and confirm valid existing content item field and trim strings
  */
- function getContentValues(tag) {
+function getContentValues(tag) {
 
     try {
 
@@ -115,7 +115,7 @@ try {
         primaryTitle: getContentValues('<t4 type="content" name="Primary Title" output="normal" modifiers="striptags,htmlentities" />'),
         emailAddress: getContentValues('<t4 type="content" name="Email" output="normal" modifiers="striptags,htmlentities,encode_emails" />'),
         primaryImage: getContentValues('<t4 type="content" name="Profile Pic" output="normal" formatter="path/*" />'),
-        biography: getContentValues('<t4 type="content" name="Biography" output="normal" modifiers="medialibrary,nav_sections" />'),
+        // biography: getContentValues('<t4 type="content" name="Biography" output="normal" modifiers="medialibrary,nav_sections" />'),
         fullTextLink: getContentValues('<t4 type="content" name="Name" output="fulltext" use-element="true" filename-element="Name" modifiers="striptags,htmlentities" />'),
         contentId: getContentValues('<t4 type="meta" meta="content_id" />')
 
