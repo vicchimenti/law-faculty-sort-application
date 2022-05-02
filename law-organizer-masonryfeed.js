@@ -1,12 +1,13 @@
 /***
  *    @author Victor Chimenti, MSCS
- *    @see Seattle University School of Law Faculty Profile Masonry View
+ *    @see Seattle University School of Law Faculty Directory Application
  *    @file law-organizer-masonryfeed.js
  *          Law - Faculty Profile
  *          ID: 5143
  *          law/organizer/masonryfeed/
  *
  *      Document will write once when the page loads
+ *      Custom feed for the searchable, sortable faculty app directory
  *
  *      @version 5.10
  */
