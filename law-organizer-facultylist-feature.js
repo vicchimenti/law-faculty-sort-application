@@ -160,9 +160,15 @@ try {
      * 
      * */
 
-    let cardTitle = (listDict.biography.content) ?
+    let cardTitle = (listDict.fullName.content && listDict.primaryTitle.content) ?
+        '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0"><a class="card-link" target="_blank" href="' + listDict.fullTextLink.content + '" title="' + listDict.fullName.content + ', ' + listDict.primaryTitle.content + '">' + listDict.fullName.content + '</a></h3>' :
+        (listDict.fullName.content && !listDict.primaryTitle.content) ?
+        '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0"><a class="card-link" target="_blank" href="' + listDict.fullTextLink.content + '" title="' + listDict.fullName.content + '">' + listDict.fullName.content + '</a></h3>' :
+        (listDict.firstName.content && listDict.lastName.content && listDict.primaryTitle.content) ?
         '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0"><a class="card-link" target="_blank" href="' + listDict.fullTextLink.content + '" title="' + listDict.firstName.content + ' ' + listDict.lastName.content + ', ' + listDict.primaryTitle.content + '">' + listDict.firstName.content + ' ' + listDict.lastName.content + '</a></h3>' :
-        '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0">' + listDict.firstName.content + ' ' + listDict.lastName.content + '</h3>';
+        (listDict.firstName.content && listDict.lastName.content && !listDict.primaryTitle.content) ?
+        '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0"><a class="card-link" target="_blank" href="' + listDict.fullTextLink.content + '" title="' + listDict.firstName.content + ' ' + listDict.lastName.content + '">' + listDict.firstName.content + ' ' + listDict.lastName.content + '</a></h3>' :
+        '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0"><a class="card-link" target="_blank" href="' + listDict.fullTextLink.content + '" title="' + listDict.contentName.content + '">' + listDict.contentName.content + '</a></h3>';
 
 
 
