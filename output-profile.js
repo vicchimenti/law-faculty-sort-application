@@ -9,7 +9,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 5.6.5
+ *      @version 5.6.6
  */
 
 
@@ -140,7 +140,6 @@ try {
     let openCard = '<div class="card h-100 w-100 border-0">';
     let closeCard = '</div>';
     let primaryImageString = '<span class="primaryImageString hidden visually-hidden">No Image Provided</span>';
-    let emailAddressString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start"><a class="emailAddress card-link" href="mailto:' + masonDict.emailAddress.content + '?subject=From your Faculty Profile" title="Email ' + masonDict.firstName.content + ' ' + masonDict.lastName.content + '">Contact ' + masonDict.firstName.content + '</a></p>';
     let primaryTitleString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start">' + masonDict.primaryTitle.content + '</p>';
     let beginningHTML = '<article class="lawFacultyWrapper col flex-fill w-50" id="masonbio' + masonDict.contentId.content + '" aria-label="' + masonDict.firstName.content + ' ' + masonDict.lastName.content + '">';
     let endingHTML = '</article>';
@@ -167,12 +166,28 @@ try {
 
 
     /***
+     *  parse email fields
+     * 
+     * */
+    let emailAddressString = (masonDict.firstName.content && masonDict.lastName.content && masonDict.emailAddress.content) ?
+        '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start"><a class="emailAddress card-link" href="mailto:' + masonDict.emailAddress.content + '?subject=From your Faculty Profile" title="Email ' + masonDict.firstName.content + ' ' + masonDict.lastName.content + '">Contact ' + masonDict.firstName.content + '</a></p>' :
+        '<span class="hidden visually-hidden">No valid email information provided</span>';
+
+
+
+
+    /***
      *  parse hidden search fields
      * 
      * */
     let facultyStatusString = (masonDict.facultyStatus.content) ?
         '<span class="visually-hidden facultyStatus">' + masonDict.facultyStatus.content + '</span>' :
         '<span class="visually-hidden facultyStatus">No Status Entered</span>';
+
+
+
+
+
 
 
 
