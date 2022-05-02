@@ -9,7 +9,7 @@
  *      Document will write once when the page loads
  *      Custom feed for the searchable, sortable faculty app directory
  *
- *      @version 5.10
+ *      @version 5.11
  */
 
 
