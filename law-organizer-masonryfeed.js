@@ -159,9 +159,15 @@ try {
      * 
      * */
 
-    let cardTitle = (directoryDict.biography.content)
-        ? '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0"><a class="card-link" target="_blank" href="' + directoryDict.fullTextLink.content + '" title="' + directoryDict.firstName.content + ' ' + directoryDict.lastName.content + ', ' + directoryDict.primaryTitle.content + '">' + directoryDict.firstName.content + ' ' + directoryDict.lastName.content + '</a></h3>'
-        : '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0">' + directoryDict.firstName.content + ' ' + directoryDict.lastName.content + '</h3>';
+    let cardTitle = (directoryDict.fullName.content && directoryDict.primaryTitle.content) ?
+        '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0"><a class="card-link" target="_blank" href="' + directoryDict.fullTextLink.content + '" title="' + directoryDict.fullName.content + ', ' + directoryDict.primaryTitle.content + '">' + directoryDict.fullName.content + '</a></h3>' :
+        (directoryDict.fullName.content && !directoryDict.primaryTitle.content) ?
+        '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0"><a class="card-link" target="_blank" href="' + directoryDict.fullTextLink.content + '" title="' + directoryDict.fullName.content + '">' + directoryDict.fullName.content + '</a></h3>' :
+        (directoryDict.firstName.content && directoryDict.lastName.content && directoryDict.primaryTitle.content) ?
+        '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0"><a class="card-link" target="_blank" href="' + directoryDict.fullTextLink.content + '" title="' + directoryDict.firstName.content + ' ' + directoryDict.lastName.content + ', ' + directoryDict.primaryTitle.content + '">' + directoryDict.firstName.content + ' ' + directoryDict.lastName.content + '</a></h3>' :
+        (directoryDict.firstName.content && directoryDict.lastName.content && !directoryDict.primaryTitle.content) ?
+        '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0"><a class="card-link" target="_blank" href="' + directoryDict.fullTextLink.content + '" title="' + directoryDict.firstName.content + ' ' + directoryDict.lastName.content + '">' + directoryDict.firstName.content + ' ' + directoryDict.lastName.content + '</a></h3>' :
+        '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0"><a class="card-link" target="_blank" href="' + directoryDict.fullTextLink.content + '" title="' + directoryDict.contentName.content + '">' + directoryDict.contentName.content + '</a></h3>';
 
 
 
