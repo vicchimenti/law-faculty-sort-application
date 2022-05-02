@@ -155,7 +155,7 @@ try {
 
 
     /***
-     *  determine if the article contains full text content
+     *  parse title link for full name and primary title
      * 
      * */
 
