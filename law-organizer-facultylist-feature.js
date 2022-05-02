@@ -8,7 +8,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 7.18
+ *      @version 7.18.1
  */
 
 
@@ -156,10 +156,9 @@ try {
 
 
     /***
-     *  determine if the article contains full text content
+     *  prioritize fullname h3 with primary title
      * 
      * */
-
     let cardTitle = (listDict.fullName.content && listDict.primaryTitle.content) ?
         '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0"><a class="card-link" target="_blank" href="' + listDict.fullTextLink.content + '" title="' + listDict.fullName.content + ', ' + listDict.primaryTitle.content + '">' + listDict.fullName.content + '</a></h3>' :
         (listDict.fullName.content && !listDict.primaryTitle.content) ?
