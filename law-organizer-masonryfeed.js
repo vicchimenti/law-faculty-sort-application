@@ -9,7 +9,7 @@
  *      Document will write once when the page loads
  *      Custom feed for the searchable, sortable faculty app directory
  *
- *      @version 5.12
+ *      @version 5.12.1
  */
 
 
@@ -148,7 +148,6 @@ try {
     let primaryImageString = '<span class="primaryImageString hidden visually-hidden">No Image Provided</span>';
     let emailAddressString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start"><a class="emailAddress card-link" href="mailto:' + directoryDict.emailAddress.content + '?subject=From your Faculty Profile" title="Email ' + directoryDict.firstName.content + ' ' + directoryDict.lastName.content + '">Contact ' + directoryDict.firstName.content + '</a></p>';
     let primaryTitleString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start">' + directoryDict.primaryTitle.content + '</p>';
-    let beginningHTML = '<article class="lawFacultyWrapper col flex-fill w-50" id="directoryBio' + directoryDict.contentId.content + '" aria-label="' + directoryDict.firstName.content + ' ' + directoryDict.lastName.content + '">';
     let endingHTML = '</article>';
 
 
@@ -158,7 +157,17 @@ try {
      *  parse title link for full name and primary title
      * 
      * */
+    let beginningHTML = (directoryDict.firstName.content && directoryDict.lastName.content) ?
+        '<article class="lawFacultyWrapper col flex-fill w-50" id="directoryBio' + directoryDict.contentId.content + '" aria-label="' + directoryDict.firstName.content + ' ' + directoryDict.lastName.content + '">' :
+        '<article class="lawFacultyWrapper col flex-fill w-50" id="directoryBio' + directoryDict.contentId.content + '" aria-label="' + directoryDict.contentName.content + '">';
 
+
+
+
+    /***
+     *  parse title link for full name and primary title
+     * 
+     * */
     let cardTitle = (directoryDict.fullName.content && directoryDict.primaryTitle.content) ?
         '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0"><a class="card-link" target="_blank" href="' + directoryDict.fullTextLink.content + '" title="' + directoryDict.fullName.content + ', ' + directoryDict.primaryTitle.content + '">' + directoryDict.fullName.content + '</a></h3>' :
         (directoryDict.fullName.content && !directoryDict.primaryTitle.content) ?
