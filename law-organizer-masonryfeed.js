@@ -108,7 +108,7 @@ try {
     /***
      *      Dictionary of content
      * */
-    let masonDict = {
+    let directoryDict = {
 
         contentName: getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
         fullName: getContentValues('<t4 type="content" name="Full Name" output="normal" modifiers="striptags,htmlentities" />'),
@@ -146,9 +146,9 @@ try {
     let openCard = '<div class="card h-100 w-100 border-0">';
     let closeCard = '</div>';
     let primaryImageString = '<span class="primaryImageString hidden visually-hidden">No Image Provided</span>';
-    let emailAddressString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start"><a class="emailAddress card-link" href="mailto:' + masonDict.emailAddress.content + '?subject=From your Faculty Profile" title="Email ' + masonDict.firstName.content + ' ' + masonDict.lastName.content + '">Contact ' + masonDict.firstName.content + '</a></p>';
-    let primaryTitleString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start">' + masonDict.primaryTitle.content + '</p>';
-    let beginningHTML = '<article class="lawFacultyWrapper col flex-fill w-50" id="masonbio' + masonDict.contentId.content + '" aria-label="' + masonDict.firstName.content + ' ' + masonDict.lastName.content + '">';
+    let emailAddressString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start"><a class="emailAddress card-link" href="mailto:' + directoryDict.emailAddress.content + '?subject=From your Faculty Profile" title="Email ' + directoryDict.firstName.content + ' ' + directoryDict.lastName.content + '">Contact ' + directoryDict.firstName.content + '</a></p>';
+    let primaryTitleString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start">' + directoryDict.primaryTitle.content + '</p>';
+    let beginningHTML = '<article class="lawFacultyWrapper col flex-fill w-50" id="directoryBio' + directoryDict.contentId.content + '" aria-label="' + directoryDict.firstName.content + ' ' + directoryDict.lastName.content + '">';
     let endingHTML = '</article>';
 
 
@@ -159,9 +159,9 @@ try {
      * 
      * */
 
-    let cardTitle = (masonDict.biography.content)
-        ? '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0"><a class="card-link" target="_blank" href="' + masonDict.fullTextLink.content + '" title="' + masonDict.firstName.content + ' ' + masonDict.lastName.content + ', ' + masonDict.primaryTitle.content + '">' + masonDict.firstName.content + ' ' + masonDict.lastName.content + '</a></h3>'
-        : '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0">' + masonDict.firstName.content + ' ' + masonDict.lastName.content + '</h3>';
+    let cardTitle = (directoryDict.biography.content)
+        ? '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0"><a class="card-link" target="_blank" href="' + directoryDict.fullTextLink.content + '" title="' + directoryDict.firstName.content + ' ' + directoryDict.lastName.content + ', ' + directoryDict.primaryTitle.content + '">' + directoryDict.firstName.content + ' ' + directoryDict.lastName.content + '</a></h3>'
+        : '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0">' + directoryDict.firstName.content + ' ' + directoryDict.lastName.content + '</h3>';
 
 
 
@@ -170,8 +170,8 @@ try {
      *  parse hidden search fields
      * 
      * */
-    let facultyStatusString = (masonDict.facultyStatus.content) ?
-        '<span class="visually-hidden facultyStatus">' + masonDict.facultyStatus.content + '</span>' :
+    let facultyStatusString = (directoryDict.facultyStatus.content) ?
+        '<span class="visually-hidden facultyStatus">' + directoryDict.facultyStatus.content + '</span>' :
         '<span class="visually-hidden facultyStatus">No Status Entered</span>';
 
 
@@ -181,7 +181,7 @@ try {
      *  Parse for image
      * 
      * */
-    if (masonDict.primaryImage.content) {
+    if (directoryDict.primaryImage.content) {
 
         let imageID = content.get('Profile Pic').getID();
         let mediaInfo = getMediaInfo(imageID);
@@ -189,11 +189,11 @@ try {
         let info = new ImageInfo;
         info.setInput(media);
 
-        let imageDefaultAlt = masonDict.fullName.content || masonDict.contentName.content;
+        let imageDefaultAlt = directoryDict.fullName.content || directoryDict.contentName.content;
 
         primaryImageString = (info.check()) ?
-            '<img src="' + masonDict.primaryImage.content + '" class="articleImage figure-img card-img rounded-circle" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />' :
-            '<img src="' + masonDict.primaryImage.content + '" class="articleImage figure-img card-img rounded-circle" alt="' + imageDefaultAlt + '" loading="auto" />';
+            '<img src="' + directoryDict.primaryImage.content + '" class="articleImage figure-img card-img rounded-circle" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />' :
+            '<img src="' + directoryDict.primaryImage.content + '" class="articleImage figure-img card-img rounded-circle" alt="' + imageDefaultAlt + '" loading="auto" />';
 
         openFig = '<figure class="figure">';
     }
