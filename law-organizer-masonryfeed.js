@@ -9,7 +9,7 @@
  *      Document will write once when the page loads
  *      Custom feed for the searchable, sortable faculty app directory
  *
- *      @version 5.12.2
+ *      @version 5.12.3
  */
 
 
@@ -146,7 +146,6 @@ try {
     let openCard = '<div class="card h-100 w-100 border-0">';
     let closeCard = '</div>';
     let primaryImageString = '<span class="primaryImageString hidden visually-hidden">No Image Provided</span>';
-    let primaryTitleString = '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start">' + directoryDict.primaryTitle.content + '</p>';
     let endingHTML = '</article>';
 
 
@@ -187,6 +186,17 @@ try {
     let emailAddressString = (directoryDict.emailAddress.content && directoryDict.firstName.content && directoryDict.lastName.content) ?
         '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start"><a class="emailAddress card-link" href="mailto:' + directoryDict.emailAddress.content + '?subject=From your Faculty Profile" title="Email ' + directoryDict.firstName.content + ' ' + directoryDict.lastName.content + '">Contact ' + directoryDict.firstName.content + '</a></p>' :
         '<span class="hidden visually-hidden">No valid email attributes entered</span>';
+
+
+
+
+    /***
+     *  parse primary title
+     * 
+     * */
+    let primaryTitleString = (directoryDict.primaryTitle.content) ?
+        '<p class="card-text mb-0 d-flex justify-content-center justify-content-md-start text-center text-md-start">' + directoryDict.primaryTitle.content + '</p>' :
+        '<span class="hidden visually-hidden">No valid primary title entered</span>';
 
 
 
