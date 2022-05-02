@@ -9,7 +9,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 5.6.4
+ *      @version 5.6.5
  */
 
 
@@ -153,9 +153,15 @@ try {
      * 
      * */
 
-    let cardTitle = (masonDict.primaryTitle.content && masonDict.fullName.content) ?
+    let cardTitle = (masonDict.fullName.content && masonDict.primaryTitle.content) ?
         '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0"><a class="card-link" target="_blank" href="' + masonDict.fullTextLink.content + '" title="View the full profile of ' + masonDict.fullName.content + ', ' + masonDict.primaryTitle.content + '">' + masonDict.fullName.content + '</a></h3>' :
-        '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0">' + masonDict.contentName.content + '</h3>';
+        (masonDict.fullName.content && !masonDict.primaryTitle.content) ?
+        '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0"><a class="card-link" target="_blank" href="' + masonDict.fullTextLink.content + '" title="View the full profile of ' + masonDict.fullName.content + '">' + masonDict.fullName.content + '</a></h3>' :
+        (masonDict.firstName.content && masonDict.lastName.content && masonDict.primaryTitle.content) ?
+        '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0"><a class="card-link" target="_blank" href="' + masonDict.fullTextLink.content + '" title="View the full profile of ' + masonDict.firstName.content + ' ' + masonDict.lastName.content + ', ' + masonDict.primaryTitle.content + '">' + masonDict.firstName.content + ' ' + masonDict.lastName.content + '</a></h3>' :
+        (masonDict.firstName.content && masonDict.lastName.content && !masonDict.primaryTitle.content) ?
+        '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0"><a class="card-link" target="_blank" href="' + masonDict.fullTextLink.content + '" title="View the full profile of ' + masonDict.firstName.content + ' ' + masonDict.lastName.content + '">' + masonDict.firstName.content + ' ' + masonDict.lastName.content + '</a></h3>' :
+        '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0"><a class="card-link" target="_blank" href="' + masonDict.fullTextLink.content + '" title="View the full profile of ' + masonDict.contentName.content + '">' + masonDict.contentName.content + '</a></h3>';
 
 
 
