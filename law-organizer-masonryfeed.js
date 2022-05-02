@@ -38,19 +38,19 @@ importClass(com.terminalfour.media.utils.ImageInfo);
 
     try {
 
-        let _tag = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, tag).trim()
+        let _tag = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, tag).trim();
 
         return {
             isError: false,
             content: _tag == '' ? null : _tag
-        }
+        };
 
     } catch (error) {
 
         return {
             isError: true,
             message: error.message
-        }
+        };
     }
 }
 
@@ -122,7 +122,7 @@ try {
         fullTextLink: getContentValues('<t4 type="content" name="Name" output="fulltext" use-element="true" filename-element="Name" modifiers="striptags,htmlentities" />'),
         contentId: getContentValues('<t4 type="meta" meta="content_id" />')
 
-    }
+    };
 
 
 
