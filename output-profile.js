@@ -9,7 +9,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 5.6.2 not published yet 20220302
+ *      @version 5.6.3
  */
 
 
@@ -153,8 +153,8 @@ try {
      * 
      * */
 
-    let cardTitle = (masonDict.fullTextLink.content && masonDict.fullName.content) ?
-        '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0"><a class="card-link" target="_blank" href="' + masonDict.fullTextLink.content + '" title="View the full profile of ' + masonDict.fullName.content + '">' + masonDict.fullName.content + '</a></h3>' :
+    let cardTitle = (masonDict.primaryTitle.content && masonDict.fullName.content) ?
+        '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0"><a class="card-link" target="_blank" href="' + masonDict.fullTextLink.content + '" title="View the full profile of ' + masonDict.fullName.content + ', ' + masonDict.primaryTitle.content + '">' + masonDict.fullName.content + '</a></h3>' :
         '<h3 class="card-title d-flex justify-content-center justify-content-md-start text-center text-md-start mt-0">' + masonDict.contentName.content + '</h3>';
 
 
