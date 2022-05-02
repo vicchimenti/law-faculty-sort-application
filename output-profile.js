@@ -9,7 +9,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 5.6.3
+ *      @version 5.6.4
  */
 
 
@@ -35,19 +35,19 @@ function getContentValues(tag) {
 
     try {
 
-        let _tag = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, tag).trim()
+        let _tag = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, tag).trim();
 
         return {
             isError: false,
             content: _tag == '' ? null : _tag
-        }
+        };
 
     } catch (error) {
 
         return {
             isError: true,
             message: error.message
-        }
+        };
     }
 }
 
@@ -118,7 +118,7 @@ try {
         fullTextLink: getContentValues('<t4 type="content" name="Name" output="fulltext" use-element="true" filename-element="Name" modifiers="striptags,htmlentities" />'),
         contentId: getContentValues('<t4 type="meta" meta="content_id" />')
 
-    }
+    };
 
 
 
