@@ -120,24 +120,24 @@
         </div> {{! end .facultyProfileSidebar }}
 
         <div class="primaryProfileContent col-lg-8 order-2 order-lg-1 pe-lg-5">
-        <div class="facultyProfileBiography">
-            <h2>Biography</h2>
-            {{{publish element="Biography"}}}
-        </div> {{! end .facultyProfileBiography }}
+            <div class="facultyProfileBiography">
+                <h2>Biography</h2>
+                {{{publish element="Biography"}}}
+            </div> {{! end .facultyProfileBiography }}
 
-        {{#ifSet element="Publications"}}
-            <div class="facultyProfilePublications">
-            <h2>Publications</h2>
-            {{{publish element="Publications"}}}
-            </div> {{! end .facultyProfilePublications }}
-        {{/ifSet}}
+            {{#ifSet element="Publications"}}
+                <div class="facultyProfilePublications">
+                <h2>Publications</h2>
+                {{{publish element="Publications"}}}
+                </div> {{! end .facultyProfilePublications }}
+            {{/ifSet}}
 
-        {{#ifSet element="Activity"}}
-            <div class="facultyProfileActivity">
-            <h2>Activity</h2>
-            {{{publish element="Activity"}}}
-            </div> {{! end .facultyProfileActivity }}
-        {{/ifSet}}
+            {{#ifSet element="Activity"}}
+                <div class="facultyProfileActivity">
+                <h2>Activity</h2>
+                {{{publish element="Activity"}}}
+                </div> {{! end .facultyProfileActivity }}
+            {{/ifSet}}
         </div> {{! end .primaryProfileContent }}
     </div> {{! end .facultyProfileMiddle }}
 </div>{{! end .facultyProfileWrapper }}
