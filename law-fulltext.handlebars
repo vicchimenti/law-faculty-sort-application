@@ -1,0 +1,151 @@
+{{! Law Faculty Profile Template }}
+<div class="facultyProfileWrapper contentItem" id="{{contentId}}-fulltext" data-position-default="Main" data-position-selected="Main">
+  {{anchor}}
+  
+  <div class="facultyProfileTop">
+    <div class="standardContent row">
+
+      <div class="facultyProfilePicture col-lg-4">
+        {{#ifSet element="Profile Pic"}}
+          <div class="facultyPhoto">
+            {{embed layout="v10/media/faculty-profile-image" alt=(concat "Photo of " (publish element="First Name") " " (publish element="Last Name"))}}
+          </div>
+        {{/ifSet}}
+
+        <div class="clearfix"></div>
+      </div>
+
+      {{! START profile header text }}
+      <div class="facultyProfileInfo col-lg-8 flex-grow-1">
+        <h1>{{publish element="Full Name"}}</h1>
+
+        <div class="facultyProfileTitles">
+          <p>
+            {{#ifSet element="Primary Title"}}
+              {{publish element="Primary Title"}}<br>
+            {{/ifSet}}
+            {{#ifSet element="Secondary Title"}}
+              {{publish element="Secondary Title"}}<br>
+            {{/ifSet}}
+          </p>
+        </div>
+
+        <div class="facultyProfileContactInfo">
+          <div class="d-flex flex-column flex-xxl-row">
+            {{#ifSet element="Room"}}
+              <p class="facultyProfileRoom me-xxl-5">
+                <span class="fas fa-map-marker"></span>&nbsp;{{publish element="Room"}}
+              </p>
+            {{/ifSet}}
+
+            {{#ifSet element="Contact Phone"}}
+              <p class="facultyProfilePhone me-xxl-5">
+                <span class="fas fa-phone-alt"></span>&nbsp;{{publish element="Contact Phone"}}
+              </p>
+            {{/ifSet}}
+
+            {{#ifSet element="Email"}}
+              <p class="facultyProfileEmail flex-grow-1">
+                <span class="fas fa-envelope"></span> 
+                <a class="emailAddress card-link" 
+                   href="mailto:{{encodeEmail (publish element="Email")}}?subject=From your Faculty Profile" 
+                   title="Contact {{publish element="Full Name"}}">
+                   Email {{publish element="First Name"}}
+                </a>
+              </p>
+            {{/ifSet}}
+
+          </div> {{! end .d-flex }}
+        </div>
+        <div class="clearfix"></div>
+        <div class="d-flex flex-column flex-lg-row">
+          {{#ifSet element="Show link to CV"}}
+            <div class="facultyProfileCV flex-grow-1 flex-lg-grow-0 cv-twitter">
+              <span class="boxlinkItem">
+                <a href="{{fileUrl element="CV"}}" 
+                   title="Download {{publish element="First Name"}} {{publish element="Last Name"}} Curriculum Vitae">
+                   <span class="fas fa-download"></span> Curriculum Vitae
+                </a>
+              </span>
+            </div>
+          {{/ifSet}}
+
+          {{#ifSet element="Twitter Handle"}}
+            <div class="facultyProfileTwitter flex-grow-1 flex-lg-grow-0 cv-twitter">
+              <span class="boxlinkItem">
+                <a href="https://twitter.com/{{publish element="Twitter Handle"}}">
+                  <span class="fab fa-twitter"></span> {{publish element="Twitter Handle"}}
+                </a>
+              </span>
+            </div>
+          {{/ifSet}}
+        </div> {{! end .d-flex cv-twitter }}
+      </div> {{! facultyProfileInfo }}
+      <div class="clearfix"></div>
+      {{! END profile header text }}
+
+    </div> {{! end .standardContent }}
+  </div> {{! end .facultyProfileTop }}
+
+  {{! start Law - Breadcrumbs }}
+  <div class="standardContent row"> 
+    <div id="breadcrumbsWrapper" class="container">
+      <nav id="breadcrumbs" class="facultyProfileBreadcrumbs" aria-label="Breadcrumb">
+        {{nav id="739" name="Law - Breadcrumbs on Faculty Profile page"}}
+      </nav>
+    </div>
+  </div> 
+  {{! end Law - Breadcrumbs }}
+
+  <div class="facultyProfileMiddle standardContent row">
+
+    <div class="facultyProfileSidebar col-lg-4 order-1 order-lg-2">
+      {{! start .primary-profile-sidebar / Areas of Expertise }}
+      {{#ifSet element="Areas of Expertise"}}
+        <div class="primary-profile-sidebar">
+          <h3>AREAS OF EXPERTISE</h3>
+          {{{publish element="Areas of Expertise"}}}
+        </div> {{! end .primary-profile-sidebar }}
+      {{/ifSet}}
+
+      <div class="secondary-profile-sidebar">
+        {{#ifSet element="Education"}}
+          <h3>EDUCATION</h3>
+          {{{publish element="Education"}}}
+        {{/ifSet}}
+
+        {{#ifSet element="Affiliations"}}
+          <h3>AFFILIATIONS</h3>
+          {{{publish element="Affiliations"}}}
+        {{/ifSet}}
+
+        {{#ifSet element="Courses"}}
+          <h3>COURSES</h3>
+          {{{publish element="Courses"}}}
+        {{/ifSet}}
+      </div> {{! end .secondary-profile-sidebar }}
+
+    </div> {{! end .facultyProfileSidebar }}
+
+    <div class="primaryProfileContent col-lg-8 order-2 order-lg-1 pe-lg-5">
+      <div class="facultyProfileBiography">
+        <h2>Biography</h2>
+        {{{publish element="Biography"}}}
+      </div> {{! end .facultyProfileBiography }}
+
+      {{#ifSet element="Publications"}}
+        <div class="facultyProfilePublications">
+          <h2>Publications</h2>
+          {{{publish element="Publications"}}}
+        </div> {{! end .facultyProfilePublications }}
+      {{/ifSet}}
+
+      {{#ifSet element="Activity"}}
+        <div class="facultyProfileActivity">
+          <h2>Activity</h2>
+          {{{publish element="Activity"}}}
+        </div> {{! end .facultyProfileActivity }}
+      {{/ifSet}}
+    </div> {{! end .primaryProfileContent }}
+  </div> {{! end .facultyProfileMiddle }}
+</div>{{! end .facultyProfileWrapper }}
