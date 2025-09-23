@@ -94,27 +94,27 @@
     <div class="facultyProfileMiddle standardContent row">
         <div class="facultyProfileSidebar col-lg-4 order-1 order-lg-2">
             {{! start .primary-profile-sidebar / Areas of Expertise }}
-            {{#ifSet element="Areas of Expertise"}}
+            {{#ifSet element="Areas of Expertise" ~}}
                 <div class="primary-profile-sidebar">
                     <h3>AREAS OF EXPERTISE</h3>
-                    {{{publish element="Areas of Expertise"}}}
+                    {{{publish element="Areas of Expertise" ~}}}
                 </div> {{! end .primary-profile-sidebar }}
             {{/ifSet}}
 
             <div class="secondary-profile-sidebar">
-                {{#ifSet element="Education"}}
+                {{#ifSet element="Education" ~}}
                     <h3>EDUCATION</h3>
-                    {{{publish element="Education"}}}
+                    {{{publish element="Education" ~}}}
                 {{/ifSet}}
 
-                {{#ifSet element="Affiliations"}}
+                {{#ifSet element="Affiliations" ~}}
                     <h3>AFFILIATIONS</h3>
-                    {{{publish element="Affiliations"}}}
+                    {{{publish element="Affiliations" ~}}}
                 {{/ifSet}}
 
-                {{#ifSet element="Courses"}}
+                {{#ifSet element="Courses" ~}}
                     <h3>COURSES</h3>
-                    {{{publish element="Courses"}}}
+                    {{{publish element="Courses" ~}}}
                 {{/ifSet}}
             </div> {{! end .secondary-profile-sidebar }}
         </div> {{! end .facultyProfileSidebar }}
