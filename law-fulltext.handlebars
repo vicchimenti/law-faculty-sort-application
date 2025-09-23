@@ -1,4 +1,3 @@
-{{! Law Faculty Profile Template }}
 <div class="facultyProfileWrapper contentItem" id="{{contentId}}-fulltext" data-position-default="Main" data-position-selected="Main">  
     <div class="facultyProfileTop">
         <div class="standardContent row">
@@ -10,9 +9,8 @@
                     {{/ifSet}}
                 </div>
                 <div class="clearfix"></div>
-            </div> {{! end facultyProfilePicture }}
+            </div>
 
-            {{! START profile header text }}
             <div class="facultyProfileInfo col-lg-8 flex-grow-1">
                 <h1>{{publish element="Full Name"}}</h1>
 
@@ -49,8 +47,8 @@
                                 </a>
                             {{/ifSet}}
                         </p>
-                    </div> {{! end .d-flex }}
-                </div> {{! end facultyProfileContactInfo}}
+                    </div>
+                </div>
 
                 <div class="clearfix"></div>
                 <div class="d-flex flex-column flex-lg-row">
@@ -73,15 +71,13 @@
                                 </a>
                             </span>
                         {{/ifSet}}
-                    </div> {{! end facultyProfileTwitter }}
-                </div> {{! end d-flex flex-lg-row }}
-            </div> {{! facultyProfileInfo }}
+                    </div>
+                </div>
+            </div>
             <div class="clearfix"></div>
-            {{! END profile header text }}
-        </div> {{! end .standardContent }}
-    </div> {{! end .facultyProfileTop }}
+        </div>
+    </div>
 
-    {{! start Law - Breadcrumbs }}
     <div class="standardContent row"> 
         <div id="breadcrumbsWrapper" class="container">
             <nav id="breadcrumbs" class="facultyProfileBreadcrumbs" aria-label="Breadcrumbs">
@@ -89,16 +85,14 @@
             </nav>
         </div>
     </div> 
-    {{! end Law - Breadcrumbs }}
 
     <div class="facultyProfileMiddle standardContent row">
         <div class="facultyProfileSidebar col-lg-4 order-1 order-lg-2">
-            {{! start .primary-profile-sidebar / Areas of Expertise }}
             {{#ifSet element="Areas of Expertise" ~}}
                 <div class="primary-profile-sidebar">
                     <h3>{{uppercase "Areas of Expertise"}}</h3>
                     {{{publish element="Areas of Expertise" ~}}}
-                </div> {{! end .primary-profile-sidebar }}
+                </div>
             {{/ifSet}}
 
             <div class="secondary-profile-sidebar">
@@ -116,8 +110,8 @@
                     <h3>{{uppercase "Courses"}}</h3>
                     {{{publish element="Courses" ~}}}
                 {{/ifSet}}
-            </div> {{! end .secondary-profile-sidebar }}
-        </div> {{! end .facultyProfileSidebar }}
+            </div>
+        </div>
 
         <div class="primaryProfileContent col-lg-8 order-2 order-lg-1 pe-lg-5">
             <div class="facultyProfileBiography">
@@ -125,19 +119,19 @@
                     <h2>Biography</h2>
                     {{{publish element="Biography" ~}}}
                 {{/ifSet}}
-            </div> {{! end .facultyProfileBiography }}
+            </div>
             <div class="facultyProfilePublications">
                 {{#ifSet element="Publications" ~}}                
                     <h2>Publications</h2>
                     {{{publish element="Publications" ~}}}
                 {{/ifSet}}
-            </div> {{! end .facultyProfilePublications }}
+            </div>
             <div class="facultyProfileActivity">
                 {{#ifSet element="Activity" ~}}
                     <h2>Activity</h2>
                     {{{publish element="Activity" ~}}}
                 {{/ifSet}}
-            </div> {{! end .facultyProfileActivity }}
-        </div> {{! end .primaryProfileContent }}
-    </div> {{! end .facultyProfileMiddle }}
-</div>{{! end .facultyProfileWrapper }}
+            </div>
+        </div>
+    </div>
+</div>
