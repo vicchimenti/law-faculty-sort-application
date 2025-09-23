@@ -55,16 +55,16 @@
         </div>
         <div class="clearfix"></div>
         <div class="d-flex flex-column flex-lg-row">
-          {{#ifSet element="Show link to CV"}}
             <div class="facultyProfileCV flex-grow-1 flex-lg-grow-0 cv-twitter">
-              <span class="boxlinkItem">
-                <a href="{{fileUrl element="CV"}}" 
-                   title="Download {{publish element="First Name"}} {{publish element="Last Name"}} Curriculum Vitae">
-                   <span class="fas fa-download"></span> Curriculum Vitae
-                </a>
-              </span>
+                {{#ifSet element="Show link to CV"}}
+                    <span class="boxlinkItem">
+                        <a href="{{{media id=(mediaId element="CV") layout="path/*"}}}" 
+                        title="Download {{publish element="First Name"}} {{publish element="Last Name"}} Curriculum Vitae">
+                        <span class="fas fa-download"></span> Curriculum Vitae
+                        </a>
+                    </span>
+                {{/ifSet}}
             </div>
-          {{/ifSet}}
 
           {{#ifSet element="Twitter Handle"}}
             <div class="facultyProfileTwitter flex-grow-1 flex-lg-grow-0 cv-twitter">
