@@ -96,24 +96,24 @@
             {{! start .primary-profile-sidebar / Areas of Expertise }}
             {{#ifSet element="Areas of Expertise" ~}}
                 <div class="primary-profile-sidebar">
-                    <h3>AREAS OF EXPERTISE</h3>
+                    <h3>{{uppercase "Areas of Expertise"}}</h3>
                     {{{publish element="Areas of Expertise" ~}}}
                 </div> {{! end .primary-profile-sidebar }}
             {{/ifSet}}
 
             <div class="secondary-profile-sidebar">
                 {{#ifSet element="Education" ~}}
-                    <h3>EDUCATION</h3>
+                    <h3>{{uppercase "Education"}}</h3>
                     {{{publish element="Education" ~}}}
                 {{/ifSet}}
 
                 {{#ifSet element="Affiliations" ~}}
-                    <h3>AFFILIATIONS</h3>
+                    <h3>{{uppercase "Affiliations"}}</h3>
                     {{{publish element="Affiliations" ~}}}
                 {{/ifSet}}
 
                 {{#ifSet element="Courses" ~}}
-                    <h3>COURSES</h3>
+                    <h3>{{uppercase "Courses"}}</h3>
                     {{{publish element="Courses" ~}}}
                 {{/ifSet}}
             </div> {{! end .secondary-profile-sidebar }}
