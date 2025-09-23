@@ -1,14 +1,12 @@
 {{! Law Faculty Profile Template }}
-<div class="facultyProfileWrapper contentItem" id="{{contentId}}-fulltext" data-position-default="Main" data-position-selected="Main">
-  {{anchor}}
-  
+<div class="facultyProfileWrapper contentItem" id="{{contentId}}-fulltext" data-position-default="Main" data-position-selected="Main">  
   <div class="facultyProfileTop">
     <div class="standardContent row">
 
       <div class="facultyProfilePicture col-lg-4">
         {{#ifSet element="Profile Pic"}}
           <div class="facultyPhoto">
-            {{embed layout="v10/media/faculty-profile-image" alt=(concat "Photo of " (publish element="First Name") " " (publish element="Last Name"))}}
+            {{embed layout="v9/media/faculty-profile-image"}}
           </div>
         {{/ifSet}}
 
