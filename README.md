@@ -15,3 +15,4 @@
 - [] Image fill
 - [] Trim whitespaces
 - [] Handle orphaned items
+- [] Convert law/fulltext to handlebars
