@@ -10,7 +10,7 @@
                     </div>
                 {{/ifSet}}
                 <div class="clearfix"></div>
-            </div>
+            </div> {{! end facultyProfilePicture }}
 
             {{! START profile header text }}
             <div class="facultyProfileInfo col-lg-8 flex-grow-1">
@@ -19,68 +19,67 @@
                 <div class="facultyProfileTitles">
                     <p>
                         {{#ifSet element="Primary Title" ~}}
-                        {{publish element="Primary Title" ~}}<br>
+                            {{publish element="Primary Title" ~}}<br>
                         {{/ifSet}}
                         {{#ifSet element="Secondary Title" ~}}
-                        {{publish element="Secondary Title" ~}}<br>
+                            {{publish element="Secondary Title" ~}}<br>
                         {{/ifSet}}
                     </p>
                 </div>
 
-            <div class="facultyProfileContactInfo">
-                <div class="d-flex flex-column flex-xxl-row">
-                    <p class="facultyProfileRoom me-xxl-5"></p>
-                        {{#ifSet element="Room" ~}}
-                            <span class="fas fa-map-marker"></span>&nbsp;{{publish element="Room" ~}}
-                        {{/ifSet}}
-                    </p>
-                    <p class="facultyProfilePhone me-xxl-5">
-                        {{#ifSet element="Contact Phone" ~}}
-                            <span class="fas fa-phone-alt"></span>&nbsp;{{publish element="Contact Phone" ~}}
-                        {{/ifSet}}
-                    </p>
-                    <p class="facultyProfileEmail flex-grow-1">
-                        {{#ifSet element="Email" ~}}
-                            <span class="fas fa-envelope"></span>
-                            <a class="emailAddress card-link"
-                                href="mailto:{{publish element="Email" ~}}?subject=From your Faculty Profile"
-                                title="Contact {{publish element="Full Name" ~}}">
-                                Email {{publish element="First Name" ~}}
-                            </a>
-                        {{/ifSet}}
-                    </p>
-                </div> {{! end .d-flex }}
-            </div> {{! end facultyProfileContactInfo}}
+                <div class="facultyProfileContactInfo">
+                    <div class="d-flex flex-column flex-xxl-row">
+                        <p class="facultyProfileRoom me-xxl-5"></p>
+                            {{#ifSet element="Room" ~}}
+                                <span class="fas fa-map-marker"></span>&nbsp;{{publish element="Room" ~}}
+                            {{/ifSet}}
+                        </p>
+                        <p class="facultyProfilePhone me-xxl-5">
+                            {{#ifSet element="Contact Phone" ~}}
+                                <span class="fas fa-phone-alt"></span>&nbsp;{{publish element="Contact Phone" ~}}
+                            {{/ifSet}}
+                        </p>
+                        <p class="facultyProfileEmail flex-grow-1">
+                            {{#ifSet element="Email" ~}}
+                                <span class="fas fa-envelope"></span>
+                                <a class="emailAddress card-link"
+                                    href="mailto:{{publish element="Email" ~}}?subject=From your Faculty Profile"
+                                    title="Contact {{publish element="Full Name" ~}}">
+                                    Email {{publish element="First Name" ~}}
+                                </a>
+                            {{/ifSet}}
+                        </p>
+                    </div> {{! end .d-flex }}
+                </div> {{! end facultyProfileContactInfo}}
 
-        <div class="clearfix"></div>
-        <div class="d-flex flex-column flex-lg-row">
-            <div class="facultyProfileCV flex-grow-1 flex-lg-grow-0 cv-twitter">
-                {{#ifSet element="Show link to CV"}}
-                    <span class="boxlinkItem">
-                        <a href="{{{media id=(mediaId element="CV") layout="path/*"}}}" 
-                        title="Download {{publish element="First Name"}} {{publish element="Last Name"}} Curriculum Vitae">
-                        <span class="fas fa-download"></span> Curriculum Vitae
-                        </a>
-                    </span>
-                {{/ifSet}}
-            </div>
+                <div class="clearfix"></div>
+                <div class="d-flex flex-column flex-lg-row">
+                    <div class="facultyProfileCV flex-grow-1 flex-lg-grow-0 cv-twitter">
+                        {{#ifSet element="CV"}}
+                            <span class="boxlinkItem">
+                                <a href="{{{media id=(mediaId element="CV") layout="path/*"}}}" 
+                                title="Download {{publish element="First Name"}} {{publish element="Last Name"}} Curriculum Vitae">
+                                <span class="fas fa-download"></span> Curriculum Vitae
+                                </a>
+                            </span>
+                        {{/ifSet}}
+                    </div>
 
-            <div class="facultyProfileTwitter flex-grow-1 flex-lg-grow-0 cv-twitter">
-                {{#ifSet element="Twitter Handle"}}
-                    <span class="boxlinkItem">
-                        <a href="https://twitter.com/{{publish element="Twitter Handle"}}">
-                            <span class="fab fa-twitter"></span> {{publish element="Twitter Handle"}}
-                        </a>
-                    </span>
-                {{/ifSet}}
-            </div> {{! end facultyProfileTwitter }}
-        </div> {{! end .d-flex cv-twitter }}
-      </div> {{! facultyProfileInfo }}
-      <div class="clearfix"></div>
-      {{! END profile header text }}
-
-    </div> {{! end .standardContent }}
-  </div> {{! end .facultyProfileTop }}
+                    <div class="facultyProfileTwitter flex-grow-1 flex-lg-grow-0 cv-twitter">
+                        {{#ifSet element="Twitter Handle" ~}}
+                            <span class="boxlinkItem">
+                                <a href="https://twitter.com/{{publish element="Twitter Handle" ~}}">
+                                    <span class="fab fa-twitter"></span> {{publish element="Twitter Handle" ~}}
+                                </a>
+                            </span>
+                        {{/ifSet}}
+                    </div> {{! end facultyProfileTwitter }}
+                </div> {{! end d-flex flex-lg-row }}
+            </div> {{! facultyProfileInfo }}
+            <div class="clearfix"></div>
+            {{! END profile header text }}
+        </div> {{! end .standardContent }}
+    </div> {{! end .facultyProfileTop }}
 
   {{! start Law - Breadcrumbs }}
   <div class="standardContent row"> 
