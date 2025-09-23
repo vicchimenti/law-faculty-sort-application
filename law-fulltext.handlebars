@@ -19,39 +19,37 @@
 
         <div class="facultyProfileTitles">
           <p>
-            {{#ifSet element="Primary Title"}}
-              {{publish element="Primary Title"}}<br>
+            {{#ifSet element="Primary Title" ~}}
+              {{publish element="Primary Title" ~}}<br>
             {{/ifSet}}
-            {{#ifSet element="Secondary Title"}}
-              {{publish element="Secondary Title"}}<br>
+            {{#ifSet element="Secondary Title" ~}}
+              {{publish element="Secondary Title" ~}}<br>
             {{/ifSet}}
           </p>
         </div>
 
         <div class="facultyProfileContactInfo">
           <div class="d-flex flex-column flex-xxl-row">
-            {{#ifSet element="Room"}}
-              <p class="facultyProfileRoom me-xxl-5">
-                <span class="fas fa-map-marker"></span>&nbsp;{{publish element="Room"}}
-              </p>
-            {{/ifSet}}
-
-            {{#ifSet element="Contact Phone"}}
-              <p class="facultyProfilePhone me-xxl-5">
-                <span class="fas fa-phone-alt"></span>&nbsp;{{publish element="Contact Phone"}}
-              </p>
-            {{/ifSet}}
-
-            {{#ifSet element="Email"}}
-              <p class="facultyProfileEmail flex-grow-1">
-                <span class="fas fa-envelope"></span> 
-                <a class="emailAddress card-link" 
-                   href="mailto:{{encodeEmail (publish element="Email")}}?subject=From your Faculty Profile" 
-                   title="Contact {{publish element="Full Name"}}">
-                   Email {{publish element="First Name"}}
-                </a>
-              </p>
-            {{/ifSet}}
+            <p class="facultyProfileRoom me-xxl-5"></p>
+                {{#ifSet element="Room" ~}}
+                    <span class="fas fa-map-marker"></span>&nbsp;{{publish element="Room" ~}}
+                {{/ifSet}}
+            </p>
+            <p class="facultyProfilePhone me-xxl-5">
+                {{#ifSet element="Contact Phone" ~}}
+                    <span class="fas fa-phone-alt"></span>&nbsp;{{publish element="Contact Phone" ~}}
+                {{/ifSet}}
+            </p>
+            <p class="facultyProfileEmail flex-grow-1">
+                {{#ifSet element="Email" ~}}
+                    <span class="fas fa-envelope"></span>
+                    <a class="emailAddress card-link"
+                        href="mailto:{{publish element="Email" ~}}?subject=From your Faculty Profile"
+                        title="Contact {{publish element="Full Name" ~}}">
+                        Email {{publish element="First Name" ~}}
+                    </a>
+                {{/ifSet}}
+            </p>
 
           </div> {{! end .d-flex }}
         </div>
