@@ -88,48 +88,48 @@
 
     <div class="facultyProfileMiddle standardContent row">
         <div class="facultyProfileSidebar col-lg-4 order-1 order-lg-2">
-            {{{#ifSet element="Areas of Expertise"}}}
-                <div class="primary-profile-sidebar">
+            <div class="primary-profile-sidebar">
+                {{#ifSet element="Areas of Expertise"}}
                     <h3>{{uppercase "Areas of Expertise"}}</h3>
                     {{{publish element="Areas of Expertise"}}}
-                </div>
-            {{{/ifSet}}}
+                {{/ifSet}}
+            </div>
 
             <div class="secondary-profile-sidebar">
-                {{#ifSet element="Education" ~}}
+                {{#ifSet element="Education"}}
                     <h3>{{uppercase "Education"}}</h3>
-                    {{{publish element="Education" ~}}}
+                    {{{publish element="Education"}}}
                 {{/ifSet}}
 
-                {{#ifSet element="Affiliations" ~}}
+                {{#ifSet element="Affiliations"}}
                     <h3>{{uppercase "Affiliations"}}</h3>
-                    {{{publish element="Affiliations" ~}}}
+                    {{{publish element="Affiliations"}}}
                 {{/ifSet}}
 
-                {{#ifSet element="Courses" ~}}
+                {{#ifSet element="Courses"}}
                     <h3>{{uppercase "Courses"}}</h3>
-                    {{{publish element="Courses" ~}}}
+                    {{{publish element="Courses"}}}
                 {{/ifSet}}
             </div>
         </div>
 
         <div class="primaryProfileContent col-lg-8 order-2 order-lg-1 pe-lg-5">
             <div class="facultyProfileBiography">
-                {{#ifSet element="Biography" ~}}
+                {{#ifSet element="Biography"}}
                     <h2>Biography</h2>
-                    {{{publish element="Biography" ~}}}
+                    {{{publish element="Biography"}}}
                 {{/ifSet}}
             </div>
             <div class="facultyProfilePublications">
-                {{#ifSet element="Publications" ~}}                
+                {{#ifSet element="Publications"}}
                     <h2>Publications</h2>
-                    {{{publish element="Publications" ~}}}
+                    {{{publish element="Publications"}}}
                 {{/ifSet}}
             </div>
             <div class="facultyProfileActivity">
-                {{#ifSet element="Activity" ~}}
+                {{#ifSet element="Activity"}}
                     <h2>Activity</h2>
-                    {{{publish element="Activity" ~}}}
+                    {{{publish element="Activity"}}}
                 {{/ifSet}}
             </div>
         </div>
