@@ -88,12 +88,12 @@
 
     <div class="facultyProfileMiddle standardContent row">
         <div class="facultyProfileSidebar col-lg-4 order-1 order-lg-2">
-            {{#ifSet element="Areas of Expertise" ~}}
+            {{{#ifSet element="Areas of Expertise"}}}
                 <div class="primary-profile-sidebar">
                     <h3>{{uppercase "Areas of Expertise"}}</h3>
-                    {{{publish element="Areas of Expertise" ~}}}
+                    {{{publish element="Areas of Expertise"}}}
                 </div>
-            {{/ifSet}}
+            {{{/ifSet}}}
 
             <div class="secondary-profile-sidebar">
                 {{#ifSet element="Education" ~}}
