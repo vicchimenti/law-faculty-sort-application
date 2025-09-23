@@ -81,65 +81,63 @@
         </div> {{! end .standardContent }}
     </div> {{! end .facultyProfileTop }}
 
-  {{! start Law - Breadcrumbs }}
-  <div class="standardContent row"> 
-    <div id="breadcrumbsWrapper" class="container">
-      <nav id="breadcrumbs" class="facultyProfileBreadcrumbs" aria-label="Breadcrumb">
-        {{nav id="739" name="Law - Breadcrumbs on Faculty Profile page"}}
-      </nav>
-    </div>
-  </div> 
-  {{! end Law - Breadcrumbs }}
+    {{! start Law - Breadcrumbs }}
+    <div class="standardContent row"> 
+        <div id="breadcrumbsWrapper" class="container">
+            <nav id="breadcrumbs" class="facultyProfileBreadcrumbs" aria-label="Breadcrumbs">
+                {{nav id="739" name="Law - Breadcrumbs on Faculty Profile page"}}
+            </nav>
+        </div>
+    </div> 
+    {{! end Law - Breadcrumbs }}
 
-  <div class="facultyProfileMiddle standardContent row">
+    <div class="facultyProfileMiddle standardContent row">
+        <div class="facultyProfileSidebar col-lg-4 order-1 order-lg-2">
+            {{! start .primary-profile-sidebar / Areas of Expertise }}
+            {{#ifSet element="Areas of Expertise"}}
+                <div class="primary-profile-sidebar">
+                    <h3>AREAS OF EXPERTISE</h3>
+                    {{{publish element="Areas of Expertise"}}}
+                </div> {{! end .primary-profile-sidebar }}
+            {{/ifSet}}
 
-    <div class="facultyProfileSidebar col-lg-4 order-1 order-lg-2">
-      {{! start .primary-profile-sidebar / Areas of Expertise }}
-      {{#ifSet element="Areas of Expertise"}}
-        <div class="primary-profile-sidebar">
-          <h3>AREAS OF EXPERTISE</h3>
-          {{{publish element="Areas of Expertise"}}}
-        </div> {{! end .primary-profile-sidebar }}
-      {{/ifSet}}
+            <div class="secondary-profile-sidebar">
+                {{#ifSet element="Education"}}
+                    <h3>EDUCATION</h3>
+                    {{{publish element="Education"}}}
+                {{/ifSet}}
 
-      <div class="secondary-profile-sidebar">
-        {{#ifSet element="Education"}}
-          <h3>EDUCATION</h3>
-          {{{publish element="Education"}}}
+                {{#ifSet element="Affiliations"}}
+                    <h3>AFFILIATIONS</h3>
+                    {{{publish element="Affiliations"}}}
+                {{/ifSet}}
+
+                {{#ifSet element="Courses"}}
+                    <h3>COURSES</h3>
+                    {{{publish element="Courses"}}}
+                {{/ifSet}}
+            </div> {{! end .secondary-profile-sidebar }}
+        </div> {{! end .facultyProfileSidebar }}
+
+        <div class="primaryProfileContent col-lg-8 order-2 order-lg-1 pe-lg-5">
+        <div class="facultyProfileBiography">
+            <h2>Biography</h2>
+            {{{publish element="Biography"}}}
+        </div> {{! end .facultyProfileBiography }}
+
+        {{#ifSet element="Publications"}}
+            <div class="facultyProfilePublications">
+            <h2>Publications</h2>
+            {{{publish element="Publications"}}}
+            </div> {{! end .facultyProfilePublications }}
         {{/ifSet}}
 
-        {{#ifSet element="Affiliations"}}
-          <h3>AFFILIATIONS</h3>
-          {{{publish element="Affiliations"}}}
+        {{#ifSet element="Activity"}}
+            <div class="facultyProfileActivity">
+            <h2>Activity</h2>
+            {{{publish element="Activity"}}}
+            </div> {{! end .facultyProfileActivity }}
         {{/ifSet}}
-
-        {{#ifSet element="Courses"}}
-          <h3>COURSES</h3>
-          {{{publish element="Courses"}}}
-        {{/ifSet}}
-      </div> {{! end .secondary-profile-sidebar }}
-
-    </div> {{! end .facultyProfileSidebar }}
-
-    <div class="primaryProfileContent col-lg-8 order-2 order-lg-1 pe-lg-5">
-      <div class="facultyProfileBiography">
-        <h2>Biography</h2>
-        {{{publish element="Biography"}}}
-      </div> {{! end .facultyProfileBiography }}
-
-      {{#ifSet element="Publications"}}
-        <div class="facultyProfilePublications">
-          <h2>Publications</h2>
-          {{{publish element="Publications"}}}
-        </div> {{! end .facultyProfilePublications }}
-      {{/ifSet}}
-
-      {{#ifSet element="Activity"}}
-        <div class="facultyProfileActivity">
-          <h2>Activity</h2>
-          {{{publish element="Activity"}}}
-        </div> {{! end .facultyProfileActivity }}
-      {{/ifSet}}
-    </div> {{! end .primaryProfileContent }}
-  </div> {{! end .facultyProfileMiddle }}
+        </div> {{! end .primaryProfileContent }}
+    </div> {{! end .facultyProfileMiddle }}
 </div>{{! end .facultyProfileWrapper }}
