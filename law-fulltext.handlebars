@@ -86,10 +86,10 @@
     </div> 
 
     <div class="facultyProfileMiddle standardContent row">
-        {{#or (ifSet element="Areas of Expertise") (ifSet element="Education") (ifSet element="Affiliations") (ifSet element="Courses")}}
-            <h2 class="sr-only">Areas of Expertise, Education, Affiliations, Courses</h2>
-        {{/or}}
         <div class="facultyProfileSidebar col-lg-4 order-1 order-lg-2">
+            {{#or (ifSet element="Areas of Expertise") (ifSet element="Education") (ifSet element="Affiliations") (ifSet element="Courses")}}
+                <h2 class="sr-only">Areas of Expertise, Education, Affiliations, Courses</h2>
+            {{/or}}
             {{#ifSet element="Areas of Expertise"}}
                 <div class="primary-profile-sidebar">
                     <h3>Areas of Expertise</h3>
